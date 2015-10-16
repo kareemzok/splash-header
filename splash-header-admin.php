@@ -36,7 +36,9 @@ function splash_header_admin() {
 }
 
 function splash_header_admin_actions() {
-    add_options_page("Splash Header Display", "Splash header", 1, "Splash_Header_Display", "splash_header_admin");
+    if (function_exists('add_options_page')) {
+        add_options_page("Splash Header Display", "Splash header", "manage_options", "Splash_Header_Display", "splash_header_admin");
+    }
 }
 
 /**
@@ -96,26 +98,25 @@ function splash_header_activate() {
  */
 function splash_header_deactivation() {
     /*
-    delete_option('sh_show');
-    delete_option('sh_title');
-    delete_option('sh_show_links_1');
-    delete_option('sh_show_links_2');
-    delete_option('sh_message');
-    delete_option('sh_bg_color');
-    delete_option('sh_title_color');
-    delete_option('sh_message_color');
-    delete_option('sh_title_font_size');
-    delete_option('sh_message_font_size');
-    delete_option('sh_code_message');
-    for ($i = 1; $i <= 6; $i++) {
-        delete_option('sh_link_title_' . $i);
-        delete_option('sh_link_url_' . $i);
-        delete_option('sh_link_title_color_' . $i);
-        delete_option('sh_link_font_size_' . $i);
-        delete_option('sh_link_thumb_img_' . $i);
-    }
-  */
-     
+      delete_option('sh_show');
+      delete_option('sh_title');
+      delete_option('sh_show_links_1');
+      delete_option('sh_show_links_2');
+      delete_option('sh_message');
+      delete_option('sh_bg_color');
+      delete_option('sh_title_color');
+      delete_option('sh_message_color');
+      delete_option('sh_title_font_size');
+      delete_option('sh_message_font_size');
+      delete_option('sh_code_message');
+      for ($i = 1; $i <= 6; $i++) {
+      delete_option('sh_link_title_' . $i);
+      delete_option('sh_link_url_' . $i);
+      delete_option('sh_link_title_color_' . $i);
+      delete_option('sh_link_font_size_' . $i);
+      delete_option('sh_link_thumb_img_' . $i);
+      }
+     */
 }
 
 add_action('init', 'splashheader_init');
@@ -143,9 +144,9 @@ function _splashheader_shortcode() {
     $enabled_links_2 = get_option('sh_show_links_2');
     $color_element = 'color:';
     $font_size_element = 'font-size:';
-    $appearence = 0 ;
+    $appearence = 0;
     if ($enabled) {
-          $appearence++;
+        $appearence++;
         $title = get_option('sh_title');
         $message = get_option('sh_message');
         $title_font_size = get_option('sh_title_font_size');
@@ -153,7 +154,7 @@ function _splashheader_shortcode() {
         $title_color = get_option('sh_title_color');
         $message_color = get_option('sh_message_color');
         $bg_color = get_option('sh_bg_color');
-        $custom_code =  get_option('sh_code_message'); 
+        $custom_code = get_option('sh_code_message');
         $target = 'target="_blank"';
         // set font color and size for title and message 
         if ($title_font_size != '')
@@ -175,25 +176,25 @@ function _splashheader_shortcode() {
     if ($enabled_links_2) {
         $appearence++;
     }
-    if ($custom_code!='') {
+    if ($custom_code != '') {
         $appearence++;
     }
-    if($appearence==4)
+    if ($appearence == 4)
         $col_class = 'sh-col-25';
-    else     if($appearence==3)
+    else if ($appearence == 3)
         $col_class = 'sh-col-33';
-    else     if($appearence==2)
+    else if ($appearence == 2)
         $col_class = 'sh-col-50';
-    else    if($appearence==1)
+    else if ($appearence == 1)
         $col_class = 'sh-col-100';
     $content = '
 <div id="splash-header" class="splash-header" style="width:85%;margin:0 auto;background-color:' . $bg_color . ';">
-<div class="sh-col '.$col_class.'">
+<div class="sh-col ' . $col_class . '">
 <h3 class="sh-title" style="' . $title_color . $title_font_size . 'margin:10px 0 0 0">' . $title . '</h3>
     <div class="sh-message" style="' . $style_message . 'margin:10px 0 0 0">' . $message . '</div>
 </div>';
     if ($enabled_links_1) {
-        $content.='<div class="sh-col '.$col_class.'">';
+        $content.='<div class="sh-col ' . $col_class . '">';
         //set up links 1 section 
         for ($i = 1; $i <= 3; $i++) {
             if (get_option('sh_link_font_size_' . $i) != '') {
@@ -208,17 +209,17 @@ function _splashheader_shortcode() {
 
             $thumg_url = get_option('sh_link_thumb_img_' . $i);
             if ($thumg_url != '') {
-                $img_element_1= '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
+                $img_element_1 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
             }
 
 
-            $content.= '<div class="sh-links">'.$img_element_1.'<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+            $content.= '<div class="sh-links">' . $img_element_1 . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
     if ($enabled_links_2) {
 
-        $content.='<div class="sh-col '.$col_class.'">';
+        $content.='<div class="sh-col ' . $col_class . '">';
         //set up links 2 sections
         for ($i = 4; $i <= 6; $i++) {
             if (get_option('sh_link_font_size_' . $i) != '') {
@@ -230,18 +231,18 @@ function _splashheader_shortcode() {
             if ($font_size_2 != '' || $font_color_2 != '')
                 $style_2 = 'style="' . $font_size_2 . $font_color_2 . '"';
 
-            
-             if ($thumg_url != '') {
+
+            if ($thumg_url != '') {
                 $img_element_2 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
             }
-            
-            
-            $content.= '<div class="sh-links">'.$img_element_2.'<a ' . $style_2 . '  href="' . get_option('sh_link_url_' . $i) . '"  ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+
+
+            $content.= '<div class="sh-links">' . $img_element_2 . '<a ' . $style_2 . '  href="' . get_option('sh_link_url_' . $i) . '"  ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
     $content.='
-    <div class="sh-col '.$col_class.'">' . do_shortcode(get_option('sh_code_message')) . '</div>
+    <div class="sh-col ' . $col_class . '">' . do_shortcode(get_option('sh_code_message')) . '</div>
     </div><div class="sh-clearfix"></div>';
     if ($enabled == 0) {
         $content = '';
