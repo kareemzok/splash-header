@@ -1,6 +1,6 @@
-=== CBX Custom Taxonomy Filter ===
+=== Splash Header ===
 Contributors: kareem zok
-Tags: custom taxonomy, admin filter
+Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.3.1
 Stable tag: 1.0
@@ -46,3 +46,4 @@ How to install the plugin and get it working.
 == Changelog ==
 = 1.0 =
 * First Release
+
