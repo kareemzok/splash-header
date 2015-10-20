@@ -20,7 +20,7 @@ Features:
 *   Add a custom code such as html or wordpress shortcode code
 *   Ability to style the splash header with color or font size
 
-See more details and usages guide here http://techwebies.com/product/splash-header
+See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
 
 
 == Installation ==
