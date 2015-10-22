@@ -13,7 +13,7 @@ else
     $tab = 'homepage';
 
 
-$splashheader_settings_data = ['sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message'];
+$splashheader_settings_data = ['sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code'];
 $splashheader_design_data = ['sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size'];
 
 for ($i = 1; $i <= 6; $i++) {
@@ -162,7 +162,13 @@ $splashheader_design_data = implode(",", $splashheader_design_data);
                                                 </tr>
                                             </table>
                                             <table cellspacing="0" class="widefat post fixed">
-
+                                                <?php
+                                                if (get_option('sh_show_custom_code') == 1) {
+                                                    $checked_custom_code = 'checked';
+                                                } else {
+                                                    $checked_custom_code = '';
+                                                }
+                                                ?>
                                                 <tbody>
                                                     <tr style="font-weight: bold"> 
                                                         <th style="" class="manage-column sub-titles" scope="col"><?php _e("Custom shortcode"); ?></th>
@@ -170,15 +176,19 @@ $splashheader_design_data = implode(",", $splashheader_design_data);
                                                         <th style="" class="manage-column" scope="col"></th>
                                                     </tr>
                                                     <tr>
+                                                        <td colspan="2" ><input type="checkbox" name="sh_show_custom_code" value="1" <?php echo $checked_custom_code; ?>><?php echo _e("Display custom code"); ?></td>
+
+                                                    </tr>
+                                                    <tr>
                                                         <td style="" class="manage-column" scope="col"><textarea type="text" name="sh_code_message" cols="50" rows="5"><?php echo get_option('sh_code_message'); ?></textarea></td>
                                                         <td style="" class="manage-column" scope="col"></td>
                                                         <td style="" class="manage-column" scope="col"></td>
                                                     </tr>
-     <tr>
-                                                    <td colspan="4">          
-                                                        <p class="description"><?php _e("Add custom shortcode for any form or html code"); ?>.</p>
-                                                    </td>
-                                                </tr>
+                                                    <tr>
+                                                        <td colspan="4">          
+                                                            <p class="description"><?php _e("Add custom shortcode for any form or html code"); ?>.</p>
+                                                        </td>
+                                                    </tr>
                                                 </tbody></table>
                                             </tr>
                                             <?php break; ?>
@@ -207,53 +217,53 @@ $splashheader_design_data = implode(",", $splashheader_design_data);
                                                             <td style="" class="manage-column" scope="col"><?php echo _e("Title "); ?></td>
                                                             <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_title_color" value="<?php echo get_option('sh_title_color'); ?>"></td>
 
-                                         <td style="" class="manage-column" scope="col">
+                                                            <td style="" class="manage-column" scope="col">
 
-                                                                    <select id="sh_title_font_size" >
-                                                                        <?php   echo '>>'.get_option('sh_title_font_size');
-                                                                        for ($j = 11; $j <= 24; $j++) {
-                                                                            $selected = '';
-                                                                            if ($j == 11) {
-                                                                                //   $j=_e("Font size" );
-                                                                            }
-                                                                         
-                                                                            if ($j == get_option('sh_title_font_size')) {
-                                                                                $selected = 'selected';
-                                                                            }
-                                                                            echo '<option value="' . $j . '" ' . $selected . '>' . $j . 'px</option>';
-                                                                            echo "\n";
+                                                                <select id="sh_title_font_size" >
+                                                                    <?php
+                                                                    for ($j = 11; $j <= 24; $j++) {
+                                                                        $selected = '';
+                                                                        if ($j == 11) {
+                                                                            //   $j=_e("Font size" );
                                                                         }
-                                                                        ?>
-                                                                    </select>
 
-                                                                    <input type="hidden"  id="sh_hd_title_font_size" name="sh_title_font_size" value="<?php echo get_option('sh_title_font_size'); ?>" />
+                                                                        if ($j == get_option('sh_title_font_size')) {
+                                                                            $selected = 'selected';
+                                                                        }
+                                                                        echo '<option value="' . $j . '" ' . $selected . '>' . $j . 'px</option>';
+                                                                        echo "\n";
+                                                                    }
+                                                                    ?>
+                                                                </select>
 
-                                                                </td>
+                                                                <input type="hidden"  id="sh_hd_title_font_size" name="sh_title_font_size" value="<?php echo get_option('sh_title_font_size'); ?>" />
+
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="" class="manage-column" scope="col"><?php echo _e("Message "); ?></td>
                                                             <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_message_color" value="<?php echo get_option('sh_message_color'); ?>"></td>
-                                         <td style="" class="manage-column" scope="col">
+                                                            <td style="" class="manage-column" scope="col">
 
-                                                                    <select id="sh_message_font_size" >
-                                                                        <?php
-                                                                        for ($j = 11; $j <= 24; $j++) {
-                                                                            $selected = '';
-                                                                            if ($j == 11) {
-                                                                                //   $j=_e("Font size" );
-                                                                            }
-                                                                            if ($j == get_option('sh_message_font_size')) {
-                                                                                $selected = 'selected';
-                                                                            }
-                                                                            echo '<option value="' . $j . '" ' . $selected . '>' . $j . 'px</option>';
-                                                                            echo "\n";
+                                                                <select id="sh_message_font_size" >
+                                                                    <?php
+                                                                    for ($j = 11; $j <= 24; $j++) {
+                                                                        $selected = '';
+                                                                        if ($j == 11) {
+                                                                            //   $j=_e("Font size" );
                                                                         }
-                                                                        ?>
-                                                                    </select>
+                                                                        if ($j == get_option('sh_message_font_size')) {
+                                                                            $selected = 'selected';
+                                                                        }
+                                                                        echo '<option value="' . $j . '" ' . $selected . '>' . $j . 'px</option>';
+                                                                        echo "\n";
+                                                                    }
+                                                                    ?>
+                                                                </select>
 
-                                                                    <input type="hidden"  id="sh_hd_message_font_size" name="sh_message_font_size" value="<?php echo get_option('sh_message_font_size'); ?>" />
+                                                                <input type="hidden"  id="sh_hd_message_font_size" name="sh_message_font_size" value="<?php echo get_option('sh_message_font_size'); ?>" />
 
-                                                                </td>
+                                                            </td>
                                                         </tr>
                                                         <?php
                                                         for ($i = 1; $i <= 6; $i++) {

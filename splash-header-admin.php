@@ -78,6 +78,7 @@ function splash_header_activate() {
     add_option('sh_show');
     add_option('sh_show_links_1');
     add_option('sh_show_links_2');
+    add_option('sh_show_custom_code');
     add_option('sh_bg_color');
     add_option('sh_title_color');
     add_option('sh_message_color');
@@ -102,6 +103,7 @@ function splash_header_deactivation() {
       delete_option('sh_title');
       delete_option('sh_show_links_1');
       delete_option('sh_show_links_2');
+      delete_option('sh_show_custom_code');
       delete_option('sh_message');
       delete_option('sh_bg_color');
       delete_option('sh_title_color');
@@ -142,6 +144,7 @@ function _splashheader_shortcode() {
     $enabled = get_option('sh_show');
     $enabled_links_1 = get_option('sh_show_links_1');
     $enabled_links_2 = get_option('sh_show_links_2');
+     $enabled_custom_code = get_option('sh_show_custom_code');
     $color_element = 'color:';
     $font_size_element = 'font-size:';
     $appearence = 0;
@@ -176,7 +179,7 @@ function _splashheader_shortcode() {
     if ($enabled_links_2) {
         $appearence++;
     }
-    if ($custom_code != '') {
+    if ($enabled_custom_code) {
         $appearence++;
     }
     if ($appearence == 4)
@@ -241,9 +244,12 @@ function _splashheader_shortcode() {
         }
         $content.='</div>';
     }
+    if($enabled_custom_code){
     $content.='
     <div class="sh-col ' . $col_class . '">' . do_shortcode(get_option('sh_code_message')) . '</div>
     </div><div class="sh-clearfix"></div>';
+    }
+          $content.='</div>';
     if ($enabled == 0) {
         $content = '';
     }

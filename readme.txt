@@ -11,7 +11,8 @@ This plugin show a splash header welcome screen
 
 == Description ==
 
-Splash header in WordPress  will help you to create a welcome screen that contain welcome note , custom links , or any custom code
+Splash header in WordPress  will help you to create a welcome screen that contain welcome note , custom links , or any custom code 
+PS : this plugin still in beta version
 
 Features:
 
@@ -42,6 +43,10 @@ How to install the plugin and get it working.
 1. Splash sheader
 2. Plugin settings
 3. Design settings
+
+== Upgrade Notice ==
+
+Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
 = 1.0 =
