@@ -85,6 +85,8 @@ function splash_header_activate() {
     add_option('sh_title_font_size');
     add_option('sh_message_font_size');
     add_option('sh_code_message');
+    add_option('sh_width');
+    
     for ($i = 1; $i <= 6; $i++) {
         add_option('sh_link_title_' . $i);
         add_option('sh_link_url_' . $i);
@@ -111,6 +113,7 @@ function splash_header_deactivation() {
       delete_option('sh_title_font_size');
       delete_option('sh_message_font_size');
       delete_option('sh_code_message');
+      delete_option('sh_width');
       for ($i = 1; $i <= 6; $i++) {
       delete_option('sh_link_title_' . $i);
       delete_option('sh_link_url_' . $i);
@@ -144,10 +147,14 @@ function _splashheader_shortcode() {
     $enabled = get_option('sh_show');
     $enabled_links_1 = get_option('sh_show_links_1');
     $enabled_links_2 = get_option('sh_show_links_2');
-     $enabled_custom_code = get_option('sh_show_custom_code');
+    $enabled_custom_code = get_option('sh_show_custom_code');
     $color_element = 'color:';
     $font_size_element = 'font-size:';
     $appearence = 0;
+    $sh_width= get_option('sh_width');
+    if($sh_width==''){
+        $sh_width= 85;
+    }
     if ($enabled) {
         $appearence++;
         $title = get_option('sh_title');
@@ -171,7 +178,7 @@ function _splashheader_shortcode() {
             $message_color = $color_element . $message_color . ';';
 
         if ($message_font_size != '' || $message_color != '')
-            $style_message = $message_font_size . $message_color . ';';
+            $style_message = $message_font_size . $message_color;
     }
     if ($enabled_links_1) {
         $appearence++;
@@ -190,11 +197,18 @@ function _splashheader_shortcode() {
         $col_class = 'sh-col-50';
     else if ($appearence == 1)
         $col_class = 'sh-col-100';
+
+    if ($title != '') {
+        $title_div = '<h3 class="sh-title" style="' . $title_color . $title_font_size . 'margin:10px 0 0 0">' . $title . '</h3>';
+    }
+    if ($message != '') {
+        $message_div = ' <div class="sh-message" style="' . $style_message . 'margin:10px 0 0 0">' . $message . '</div>';
+    }
     $content = '
-<div id="splash-header" class="splash-header" style="width:85%;margin:0 auto;background-color:' . $bg_color . ';">
+<div id="splash-header" class="splash-header" style="width:'.$sh_width.'%;margin:0 auto;background-color:' . $bg_color . ';">
 <div class="sh-col ' . $col_class . '">
-<h3 class="sh-title" style="' . $title_color . $title_font_size . 'margin:10px 0 0 0">' . $title . '</h3>
-    <div class="sh-message" style="' . $style_message . 'margin:10px 0 0 0">' . $message . '</div>
+' . $title_div . '
+   ' . $message_div . '
 </div>';
     if ($enabled_links_1) {
         $content.='<div class="sh-col ' . $col_class . '">';
@@ -215,8 +229,8 @@ function _splashheader_shortcode() {
                 $img_element_1 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
             }
 
-
-            $content.= '<div class="sh-links">' . $img_element_1 . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+            if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
+                $content.= '<div class="sh-links">' . $img_element_1 . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
@@ -239,17 +253,17 @@ function _splashheader_shortcode() {
                 $img_element_2 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
             }
 
-
-            $content.= '<div class="sh-links">' . $img_element_2 . '<a ' . $style_2 . '  href="' . get_option('sh_link_url_' . $i) . '"  ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+            if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
+                $content.= '<div class="sh-links">' . $img_element_2 . '<a ' . $style_2 . '  href="' . get_option('sh_link_url_' . $i) . '"  ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
-    if($enabled_custom_code){
-    $content.='
+    if ($enabled_custom_code) {
+        $content.='
     <div class="sh-col ' . $col_class . '">' . do_shortcode(get_option('sh_code_message')) . '</div>
     </div><div class="sh-clearfix"></div>';
     }
-          $content.='</div>';
+    $content.='</div>';
     if ($enabled == 0) {
         $content = '';
     }
@@ -262,7 +276,7 @@ add_shortcode('splashheader', '_splashheader_shortcode');
  * admin tabs .
  */
 function splash_header_admin_tabs($current = 'homepage') {
-    $tabs = array('homepage' => 'Plugin Settings', 'design' => 'Design settings');
+    $tabs = array('homepage' => 'Plugin Settings', 'design' => 'Design settings','advancedsettings'=>'Advanced settings');
     echo '<div id="icon-themes" class="icon32"><br></div>';
     echo '<h2 class="nav-tab-wrapper">';
     foreach ($tabs as $tab => $name) {

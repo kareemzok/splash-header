@@ -30,9 +30,20 @@
     padding: 20px;
 }
 .splash-header .sh-links a {
-        margin: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }
 .splash-header .icon img{
     height:32px;
     width:32px;
+}
+
+@media (max-width: 550px) {
+    .splash-header .sh-col {
+        float: none;
+    }
+    .splash-header .sh-col-25,
+    .splash-header .sh-col-33,
+    .splash-header .sh-col-50{
+        width: 100%!important;
+    }
 }

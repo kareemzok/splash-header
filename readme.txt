@@ -49,6 +49,11 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.1 =
+* Bug Fixes
+* Add Responsive 
+* Add New Tab : Advanced Settings to set custom width
+
 = 1.0 =
 * First Release
 

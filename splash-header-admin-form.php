@@ -15,7 +15,7 @@ else
 
 $splashheader_settings_data = ['sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code'];
 $splashheader_design_data = ['sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size'];
-
+$splashheader_advanced_settings = ['sh_width'];
 for ($i = 1; $i <= 6; $i++) {
 
     array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_link_thumb_img_' . $i);
@@ -24,6 +24,7 @@ for ($i = 1; $i <= 6; $i++) {
 
 $splashheader_settings_data = implode(",", $splashheader_settings_data);
 $splashheader_design_data = implode(",", $splashheader_design_data);
+$splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 ?>
 
 
@@ -300,19 +301,55 @@ $splashheader_design_data = implode(",", $splashheader_design_data);
 
 
 
-                                                    <?php break; ?>
+                                                    <?php
+                                                    break;
+                                                case 'advancedsettings' :
+                                                    ?>
+                                                    <div class="handlediv" title="Click to toggle"><br></div>
+                                                    <!-- Toggle -->
 
-                                            <?php } ?>
+                                                    <h3 class="handle"><?php echo _e("Advanced options"); ?>
+                                                    </h3>
 
-                                            <tr valign="top">
-                                                <td></td>
-                                                <td><input type="submit" name="splashheadersubmit" class="button-primary" value="Save Changes" ></td>
-                                            </tr>
-                                            </tbody>
-                                            </table>
-                                        </form>
-                                    </div>
-                                    <!-- .e -->
+                                                    <div class="inside">
+
+                                                        <form method="post" action="options.php">
+                                                            <?php
+                                                            wp_nonce_field('update-options');
+                                                            ?>
+                                                            <input type="hidden" name="action" value="update" />
+                                                            <input type="hidden" name="page_options" value="<?php echo $splashheader_advanced_settings; ?>"  />
+
+
+
+                                                            <table cellspacing="0" class="widefat post ">
+
+                                                                <tbody>  <tr  style="font-weight: bold"> 
+                                                                        <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Container Width: "); ?></th>
+                                                                        <td><input type="text" name="sh_width" value="<?php echo get_option('sh_width'); ?>" size="10">%                                                     
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr><td> 
+                                                                <p class="description"><?php _e("Default value ( field empty ) is 85% "); ?>.</p>                                                             
+                                                                        </td></tr>
+
+
+                                                                </tbody>
+                                                            </table>
+
+                                                            </tr>
+                                                            <?php break; ?>
+                                                    <?php } ?>
+
+                                                    <tr valign="top">
+                                                        <td></td>
+                                                        <td><input type="submit" name="splashheadersubmit" class="button-primary" value="Save Changes" ></td>
+                                                    </tr>
+                                                    </tbody>
+                                                    </table>
+                                                </form>
+                                            </div>
+                                            <!-- .e -->
 
                                     </div>
                                     <!-- .postbox -->
