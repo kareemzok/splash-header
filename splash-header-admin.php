@@ -275,8 +275,8 @@ add_shortcode('splashheader', '_splashheader_shortcode');
 /**
  * admin tabs .
  */
-function splash_header_admin_tabs($current = 'homepage') {
-    $tabs = array('homepage' => 'Plugin Settings', 'design' => 'Design settings','advancedsettings'=>'Advanced settings');
+function splash_header_admin_tabs($current = 'general') {
+    $tabs = array('general' => 'General','homepage' => 'Plugin Settings', 'design' => 'Design settings','advancedsettings'=>'Advanced settings');
     echo '<div id="icon-themes" class="icon32"><br></div>';
     echo '<h2 class="nav-tab-wrapper">';
     foreach ($tabs as $tab => $name) {
