@@ -13,9 +13,10 @@ else
     $tab = 'general';
 
 
-$splashheader_settings_data = ['sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code'];
-$splashheader_design_data = ['sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size'];
-$splashheader_advanced_settings = ['sh_width'];
+$splashheader_settings_data = array('sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code');
+$splashheader_design_data =array('sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size');
+$splashheader_advanced_settings = array('sh_width');
+
 for ($i = 1; $i <= 6; $i++) {
 
     array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_link_thumb_img_' . $i);

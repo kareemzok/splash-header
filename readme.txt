@@ -2,8 +2,8 @@
 Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.4
-Stable tag: 1.2
+Tested up to: 4.4.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,11 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.3 =
+* Bug fixes 
+* Add plugin version in defined constant
+* Test compatibility with wordpress 4.4.2
+
 = 1.2 =
 * Add generral tab
 * Test compatibility with wordpress 4.4
