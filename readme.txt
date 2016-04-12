@@ -2,8 +2,8 @@
 Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.4
-Stable tag: 1.4
+Tested up to: 4.5
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,9 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.5 =
+* Test compatibility with wordpress 4.5
+
 = 1.4 =
 * Bug fixes : color picker, media uplaod, font size save 
 * Change labels text
