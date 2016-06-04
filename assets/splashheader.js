@@ -48,6 +48,16 @@
 
             $('#sh_hd_message_font_size').val(val);
         });
+        $("#sh_border_width").change(function () {
+            var val = this.value;
+
+            $('#sh_hd_border_width').val(val);
+        });
+        $("#sh_border_style").change(function () {
+            var val = this.value;
+
+            $('#sh_hd_border_style').val(val);
+        });
     });
 
 

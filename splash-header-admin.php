@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.5
+  Version: 1.6
   Author: Techwebies team
   Author URI: http://techwebies.com
   License: GPL2
@@ -53,7 +53,7 @@ function load_resources() {
 
         // Add the color picker css file       
         wp_enqueue_style('wp-color-picker');
-        wp_enqueue_script( 'wp-color-picker');
+        wp_enqueue_script('wp-color-picker');
 
         wp_enqueue_style('thickbox');
         wp_register_style('sh-admin', SPLASHHEADER__PLUGIN_URL . ASSETS . 'sh-admin.css', array(), SPLASHHEADER_VERSION);
@@ -66,6 +66,8 @@ function load_resources() {
 
         wp_register_script('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'splashheader.js', array(), SPLASHHEADER_VERSION);
         wp_enqueue_script('splashheader');
+        // load font awsome 
+        wp_enqueue_style('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'font-awesome.css', array(), SPLASHHEADER_VERSION);
     }
 }
 
@@ -88,13 +90,18 @@ function splash_header_activate() {
     add_option('sh_message_font_size');
     add_option('sh_code_message');
     add_option('sh_width');
-    
+    add_option('sh_border_color');
+     add_option('sh_border_style');
+    add_option('sh_border_width');
+
     for ($i = 1; $i <= 6; $i++) {
         add_option('sh_link_title_' . $i);
         add_option('sh_link_url_' . $i);
         add_option('sh_link_title_color_' . $i);
         add_option('sh_link_font_size_' . $i);
         add_option('sh_link_thumb_img_' . $i);
+        add_option('sh_font_icon_' . $i);
+        add_option('sh_link_open_' . $i);
     }
 }
 
@@ -102,6 +109,7 @@ function splash_header_activate() {
  *  Plugin deactivation action .
  */
 function splash_header_deactivation() {
+
     /*
       delete_option('sh_show');
       delete_option('sh_title');
@@ -116,6 +124,9 @@ function splash_header_deactivation() {
       delete_option('sh_message_font_size');
       delete_option('sh_code_message');
       delete_option('sh_width');
+      delete_option('sh_border_color');
+      delete_option('sh_border_style');
+      delete_option('sh_border_width');
       for ($i = 1; $i <= 6; $i++) {
       delete_option('sh_link_title_' . $i);
       delete_option('sh_link_url_' . $i);
@@ -124,6 +135,9 @@ function splash_header_deactivation() {
       delete_option('sh_link_thumb_img_' . $i);
       }
      */
+    for ($i = 1; $i <= 6; $i++) {
+        delete_option('sh_link_thumb_img_' . $i);
+    }
 }
 
 add_action('init', 'splashheader_init');
@@ -145,7 +159,8 @@ add_filter("plugin_action_links_$plugin", 'add_splashheader_settings_link');
  */
 function _splashheader_shortcode() {
     wp_enqueue_style('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'splashheader.css', array(), SPLASHHEADER_VERSION);
-    // wp_enqueue_style('splashheader');
+
+// wp_enqueue_style('splashheader');
     $enabled = get_option('sh_show');
     $enabled_links_1 = get_option('sh_show_links_1');
     $enabled_links_2 = get_option('sh_show_links_2');
@@ -153,12 +168,22 @@ function _splashheader_shortcode() {
     $color_element = 'color:';
     $font_size_element = 'font-size:';
     $appearence = 0;
-    $sh_width= get_option('sh_width');
-    if($sh_width==''){
-        $sh_width= 85;
+    $sh_width = get_option('sh_width');
+    if ($sh_width == '') {
+        $sh_width = 85;
     }
     if ($enabled) {
+
         $appearence++;
+        $border_color = get_option('sh_border_color');
+        if ($border_color != '') {
+            $border_style = get_option('sh_border_style');
+            if ($border_style == '')
+                $border_style = 'solid';
+            $border_width = get_option('sh_border_width');
+            if ($border_width == '')
+                $border_width = '1';
+        }
         $title = get_option('sh_title');
         $message = get_option('sh_message');
         $title_font_size = get_option('sh_title_font_size');
@@ -167,7 +192,23 @@ function _splashheader_shortcode() {
         $message_color = get_option('sh_message_color');
         $bg_color = get_option('sh_bg_color');
         $custom_code = get_option('sh_code_message');
-        $target = 'target="_blank"';
+
+        //set splash header border color , style and width 
+        if ($border_color != '') {
+            $sh_border_color = 'border-color:' . $border_color . ';';
+        }
+
+        if ($border_style != '') {
+            $sh_border_style = 'border-style:' . $border_style . ';';
+        }
+
+        if ($border_width != '') {
+            $sh_border_width = 'border-width:' . $border_width . 'px;';
+        }
+        // set background color for splach header
+        if ($bg_color != '') {
+            $sh_message_bgcolor = 'background-color:' . $bg_color . ';';
+        }
         // set font color and size for title and message 
         if ($title_font_size != '')
             $title_font_size = $font_size_element . $title_font_size . 'px;';
@@ -207,7 +248,7 @@ function _splashheader_shortcode() {
         $message_div = ' <div class="sh-message" style="' . $style_message . 'margin:10px 0 0 0">' . $message . '</div>';
     }
     $content = '
-<div id="splash-header" class="splash-header" style="width:'.$sh_width.'%;margin:0 auto;background-color:' . $bg_color . ';">
+<div id="splash-header" class="splash-header" style="width:' . $sh_width . '%;' . $sh_message_bgcolor . $sh_border_style . $sh_border_width . 'margin:0 auto;' . $sh_border_color . '">
 <div class="sh-col ' . $col_class . '">
 ' . $title_div . '
    ' . $message_div . '
@@ -216,6 +257,7 @@ function _splashheader_shortcode() {
         $content.='<div class="sh-col ' . $col_class . '">';
         //set up links 1 section 
         for ($i = 1; $i <= 3; $i++) {
+
             if (get_option('sh_link_font_size_' . $i) != '') {
                 $font_size_1 = $font_size_element . get_option('sh_link_font_size_' . $i) . "px;";
             }
@@ -226,10 +268,16 @@ function _splashheader_shortcode() {
             if ($font_size_1 != '' || $font_color_1 != '')
                 $style_1 = 'style="' . $font_size_1 . $font_color_1 . '"';
 
-            $thumg_url = get_option('sh_link_thumb_img_' . $i);
-            if ($thumg_url != '') {
-                $img_element_1 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
+            $font_icon = get_option('sh_font_icon_' . $i);
+
+            if ($font_icon != '') {
+                $img_element_1 = '<span class="fa ' . $font_icon . '"></span>';
             }
+            // set link target as _blank if its cheked
+            if (get_option('sh_link_open_' . $i))
+                $target = 'target="_blank"';
+            else
+                $target = 'target="_self"';
 
             if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
                 $content.= '<div class="sh-links">' . $img_element_1 . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
@@ -250,10 +298,16 @@ function _splashheader_shortcode() {
             if ($font_size_2 != '' || $font_color_2 != '')
                 $style_2 = 'style="' . $font_size_2 . $font_color_2 . '"';
 
+            $font_icon = get_option('sh_font_icon_' . $i);
 
-            if ($thumg_url != '') {
-                $img_element_2 = '<span class="icon"><img  src=' . $thumg_url . ' alt="" border="0" /></span>';
+            if ($font_icon != '') {
+                $img_element_2 = '<span class="fa ' . $font_icon . '"></span>';
             }
+            // set link target as _blank if its cheked
+            if (get_option('sh_link_open_' . $i))
+                $target = 'target="_blank"';
+            else
+                $target = 'target="_self"';
 
             if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
                 $content.= '<div class="sh-links">' . $img_element_2 . '<a ' . $style_2 . '  href="' . get_option('sh_link_url_' . $i) . '"  ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
@@ -278,7 +332,7 @@ add_shortcode('splashheader', '_splashheader_shortcode');
  * admin tabs .
  */
 function splash_header_admin_tabs($current = 'general') {
-    $tabs = array('general' => 'General','homepage' => 'Plugin Settings', 'design' => 'Design settings','advancedsettings'=>'Advanced settings');
+    $tabs = array('general' => 'General', 'homepage' => 'Plugin Settings', 'design' => 'Design settings', 'advancedsettings' => 'Advanced settings');
     echo '<div id="icon-themes" class="icon32"><br></div>';
     echo '<h2 class="nav-tab-wrapper">';
     foreach ($tabs as $tab => $name) {

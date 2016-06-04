@@ -14,12 +14,12 @@ else
 
 
 $splashheader_settings_data = array('sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code');
-$splashheader_design_data =array('sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size');
+$splashheader_design_data = array('sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_message_font_size,sh_border_width,sh_border_color,sh_border_style');
 $splashheader_advanced_settings = array('sh_width');
 
 for ($i = 1; $i <= 6; $i++) {
 
-    array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_link_thumb_img_' . $i);
+    array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_font_icon_' . $i, 'sh_link_open_' . $i);
     array_push($splashheader_design_data, 'sh_link_title_color_' . $i, 'sh_link_font_size_' . $i);
 }
 
@@ -51,15 +51,15 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                 ?>
                                 <div class="handlediv" title="Click to toggle"><br></div>
                                 <!-- Toggle -->
-
-                                <h3 class="handle"><?php echo _e("Instruction"); ?>
-                                </h3>
-
                                 <div class="inside">
+                                    <h3 class="handle"><?php echo _e("Instruction"); ?>
+                                    </h3>
+
+
                                     <table cellspacing="0" class="widefat post ">
 
                                         <tbody> 
-                                            <tr  style="font-weight: bold"> 
+                                            <tr  > 
                                                 <td>        
 
                                                     1. Fill in the forms in the settings tab <br/>
@@ -73,7 +73,30 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                         </tbody>
                                     </table>
+                                    <h3 class="handle"><?php echo _e("Plugin Features"); ?>
+                                    </h3>
 
+
+                                    <table cellspacing="0" class="widefat post ">
+
+                                        <tbody> 
+                                            <tr  > 
+                                                <td>        
+
+                                                    * Welcome note with title and message<br/>
+                                                    * Add up to 6 custom links with an option to insert an font icon instead of image<br/>
+                                                    * Ability to chose if the links open in same or new browser tab<br/>
+                                                    * Add a custom code such as html or wordpress shortcode code<br/>
+                                                    * Ability to style the splash header with color, font size and border style<br/>
+
+
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
 
                                     <?php break; ?>
                                 <?php case 'homepage' :
@@ -149,7 +172,15 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                         <td colspan="2" ><input type="checkbox" name="sh_show_links_1" value="1" <?php echo $checked_1; ?>><?php echo _e("Display first links cols"); ?></td>
 
                                                     </tr>
-                                                    <?php for ($i = 1; $i <= 6; $i++) { ?>
+                                                    <?php
+                                                    for ($i = 1; $i <= 6; $i++) {
+                                                        // check if link open in new window is checked 
+                                                        if (get_option('sh_link_open_' . $i) == 1) {
+                                                            $checked_open = 'checked';
+                                                        } else {
+                                                            $checked_open = '';
+                                                        }
+                                                        ?>
                                                         <?php
                                                         if ($i == 4) {
 
@@ -165,25 +196,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                             </tr>
                                                         <?php } ?>
                                                         <tr>
-                                                            <td style="" class="manage-column" scope="col"><?php echo _e("Link " . $i . ": "); ?></td>
-                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Title " . $i . ": "); ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="15"></td>
-                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Url " . $i . ": "); ?>" type="text" name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="30"></td>
-                                                            <td style="" class="manage-column" scope="col">
-                                                                <div id="sh_thumb_icon_<?php echo $i; ?>" class="sh_thumb_icon">
-                                                                    <?php
-                                                                    if (get_option('sh_link_thumb_img_' . $i) == '') {
-                                                                        $thumg_url = plugins_url() . '/splash-header/assets/no-icon.png';
-                                                                    } else {
-                                                                        $thumg_url = get_option('sh_link_thumb_img_' . $i);
-                                                                    }
-                                                                    echo $thumb_url;
-                                                                    ?>
-                                                                    <img id="" src="<?php echo $thumg_url; ?>" alt="" border="0" />
-                                                                </div>
-                                                                <input id="sh_link_thumb_img_btn_<?php echo $i; ?>" type="button" class="button" value="<?php _e("Upload icon"); ?>" />
-                                                                <input type="hidden" id="sh_link_thumb_img_<?php echo $i; ?>" name="sh_link_thumb_img_<?php echo $i; ?>" value="<?php get_option('sh_link_thumb_img_' . $i); ?>" />
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Title " . $i . ": "); ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="12"></td>
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Url " . $i . ": "); ?>" type="text" name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="25"></td>
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Ex : fa-camera-retro fa-lg"); ?>" type="text" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="20"></td>
 
-                                                            </td>
+                                                            <td style="" class="manage-column" scope="col"><input type="checkbox" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo _e("Open in a new tab"); ?></td>
+
                                                         </tr>
 
                                                     <?php } ?>
@@ -241,8 +259,57 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                         <table cellspacing="0" class="widefat post ">
 
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Backgound color"); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header backgound color"); ?></td>
                                                                 <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_bg_color" value="<?php echo get_option('sh_bg_color'); ?>"></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border style"); ?></td>
+                                                                <td style="" class="manage-column" scope="col">
+                                                                    <select id="sh_border_style" >
+                                                                        <?php
+                                                                        $border_style_array = array('solid', 'none', 'dotted', 'dashed', 'double', 'groove', 'inset', 'outset');
+
+                                                                        foreach ($border_style_array as $data) {
+                                                                            $selected = '';
+
+                                                                            if ($data == get_option('sh_border_style')) {
+                                                                                $selected = 'selected';
+                                                                            }
+                                                                            echo '<option value="' . $data . '" ' . $selected . '>' . $data . '</option>';
+                                                                            echo "\n";
+                                                                        }
+                                                                        ?>
+                                                                    </select>
+                                                                    <input type="hidden"  id="sh_hd_border_style" name="sh_border_style" value="<?php echo get_option('sh_border_style'); ?>" />
+
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border color and width in pixel"); ?></td>
+                                                                <td style="" class="manage-column" scope="col">
+                                                                    <input  type="text" class="sh-color-field" name="sh_border_color" value="<?php echo get_option('sh_border_color'); ?>">
+                                                                </td>
+                                                                <td style="" class="manage-column" scope="col">
+
+                                                                    <select id="sh_border_width" >
+                                                                        <?php
+                                                                        for ($j = 1; $j <= 11; $j++) {
+                                                                            $selected = '';
+
+                                                                            if ($j == get_option('sh_border_width')) {
+                                                                                $selected = 'selected';
+                                                                            }
+                                                                            echo '<option value="' . $j . '" ' . $selected . '>' . $j . 'px</option>';
+                                                                            echo "\n";
+                                                                        }
+                                                                        ?>
+                                                                    </select>
+
+                                                                    <input type="hidden"  id="sh_hd_border_width" name="sh_border_width" value="<?php echo get_option('sh_border_width'); ?>" />
+
+                                                                </td>
 
                                                             </tr>
                                                             <tr>
@@ -255,9 +322,6 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                         <?php
                                                                         for ($j = 11; $j <= 24; $j++) {
                                                                             $selected = '';
-                                                                            if ($j == 11) {
-                                                                                //   $j=_e("Font size" );
-                                                                            }
 
                                                                             if ($j == get_option('sh_title_font_size')) {
                                                                                 $selected = 'selected';
@@ -281,9 +345,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                         <?php
                                                                         for ($j = 11; $j <= 24; $j++) {
                                                                             $selected = '';
-                                                                            if ($j == 11) {
-                                                                                //   $j=_e("Font size" );
-                                                                            }
+
                                                                             if ($j == get_option('sh_message_font_size')) {
                                                                                 $selected = 'selected';
                                                                             }
@@ -371,11 +433,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 </tr>
                                                                 <?php break; ?>
                                                         <?php } ?>
-
-                                                        <tr valign="top">
-                                                            <td></td>
-                                                            <td><input type="submit" name="splashheadersubmit" class="button-primary" value="Save Changes" ></td>
-                                                        </tr>
+                                                        <?php if ($tab != 'general') { ?>
+                                                            <tr valign="top">
+                                                                <td></td>
+                                                                <td><input type="submit" name="splashheadersubmit" class="button-primary" value="Save Changes" ></td>
+                                                            </tr>
+                                                        <?php } ?>
                                                         </tbody>
                                                         </table>
                                                     </form>
