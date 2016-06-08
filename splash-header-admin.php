@@ -282,7 +282,7 @@ function _splashheader_shortcode() {
                 $target = 'target="_self"';
 
             if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
-                $content.= '<div class="sh-links">' . $img_element_1 . $i . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+                $content.= '<div class="sh-links">' . $img_element_1. '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
