@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.5
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,10 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.7 =
+* Bug fixes : fix font icon repetition
+* Feature : add sentence explaining use of font awesome with link to documentation
+
 = 1.6 =
 * Add features in general tab
 * Test compatibility with wordpress 4.5.2

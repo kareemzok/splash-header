@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.6
+  Version: 1.7
   Author: Techwebies team
   Author URI: http://techwebies.com
   License: GPL2
@@ -17,7 +17,7 @@ if (!defined('WPINC')) {
 // define variables 
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.6');
+define('SPLASHHEADER_VERSION', '1.7');
 
 // register fonctions 
 register_activation_hook(__FILE__, 'splash_header_activate');
@@ -91,7 +91,7 @@ function splash_header_activate() {
     add_option('sh_code_message');
     add_option('sh_width');
     add_option('sh_border_color');
-     add_option('sh_border_style');
+    add_option('sh_border_style');
     add_option('sh_border_width');
 
     for ($i = 1; $i <= 6; $i++) {
@@ -257,21 +257,23 @@ function _splashheader_shortcode() {
         $content.='<div class="sh-col ' . $col_class . '">';
         //set up links 1 section 
         for ($i = 1; $i <= 3; $i++) {
-
+           $img_element_1="";
+            // set font size 
             if (get_option('sh_link_font_size_' . $i) != '') {
                 $font_size_1 = $font_size_element . get_option('sh_link_font_size_' . $i) . "px;";
             }
+            // set font color 
             if (get_option('sh_link_title_color_' . $i) != '') {
                 $font_color_1 = $color_element . get_option('sh_link_title_color_' . $i) . ";";
             }
-
+            // set font style
             if ($font_size_1 != '' || $font_color_1 != '')
                 $style_1 = 'style="' . $font_size_1 . $font_color_1 . '"';
-
-            $font_icon = get_option('sh_font_icon_' . $i);
-
-            if ($font_icon != '') {
-                $img_element_1 = '<span class="fa ' . $font_icon . '"></span>';
+            
+            // set font awsome icon
+            if (get_option('sh_font_icon_' . $i) != '') {
+           
+                $img_element_1 = '<span class="fa ' . get_option('sh_font_icon_' . $i) . '"></span>';
             }
             // set link target as _blank if its cheked
             if (get_option('sh_link_open_' . $i))
@@ -280,7 +282,7 @@ function _splashheader_shortcode() {
                 $target = 'target="_self"';
 
             if (get_option('sh_link_title_' . $i) != '' && get_option('sh_link_url_' . $i) != '')
-                $content.= '<div class="sh-links">' . $img_element_1 . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
+                $content.= '<div class="sh-links">' . $img_element_1 . $i . '<a ' . $style_1 . ' href="' . get_option('sh_link_url_' . $i) . '" ' . $target . '>' . get_option('sh_link_title_' . $i) . '</a></div>';
         }
         $content.='</div>';
     }
@@ -289,19 +291,21 @@ function _splashheader_shortcode() {
         $content.='<div class="sh-col ' . $col_class . '">';
         //set up links 2 sections
         for ($i = 4; $i <= 6; $i++) {
+            // set font size 
             if (get_option('sh_link_font_size_' . $i) != '') {
                 $font_size_2 = $font_size_element . get_option('sh_link_font_size_' . $i) . "px;";
             }
+            // set font color 
             if (get_option('sh_link_title_color_' . $i) != '') {
                 $font_color_2 = $color_element . get_option('sh_link_title_color_' . $i) . ";";
             }
+            // set font style  
             if ($font_size_2 != '' || $font_color_2 != '')
                 $style_2 = 'style="' . $font_size_2 . $font_color_2 . '"';
 
-            $font_icon = get_option('sh_font_icon_' . $i);
-
-            if ($font_icon != '') {
-                $img_element_2 = '<span class="fa ' . $font_icon . '"></span>';
+            // set font icon 
+            if (get_option('sh_font_icon_' . $i) != '') {
+                $img_element_2 = '<span class="fa ' . get_option('sh_font_icon_' . $i) . '"></span>';
             }
             // set link target as _blank if its cheked
             if (get_option('sh_link_open_' . $i))

@@ -207,7 +207,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     <?php } ?>
                                                     <tr>
                                                         <td colspan="4">          
-                                                            <p class="description"><?php _e("How-to: upload (or select) an image (32x32), set Size to Full and click on Upload. After it's done, hit on Apply to save changes"); ?>.</p>
+                                                            <p class="description"><?php _e("To use the Font Awesome for icons links please refere to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"); ?>.</p>
                                                         </td>
                                                     </tr>
                                                 </table>
