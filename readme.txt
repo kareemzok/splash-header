@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.5
-Stable tag: 1.7
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ This plugin show a splash header welcome screen
 
 == Description ==
 
-Splash header in WordPress  will help you to create a welcome screen that contain welcome note , custom links , or any custom code 
+Splash header in WordPress  will let you to create a welcome screen that contain title, description , custom links , or any custom code and can be added anywhere in your website using shortcode
 
 Features:
 
@@ -40,15 +40,22 @@ How to install the plugin and get it working.
 
 == Screenshots ==
 
-1. Splash sheader
+1. Splash header
 2. Plugin settings
 3. Design settings
+4. Advanced settings
+5. Splash header preview
 
 == Upgrade Notice ==
 
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.8 =
+* Update and add plugin images
+* Update description in readme file
+
+
 = 1.7 =
 * Bug fixes : fix font icon repetition
 * Feature : add sentence explaining use of font awesome with link to documentation
