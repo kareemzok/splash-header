@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.5
-Stable tag: 1.8
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,10 +51,12 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.9 =
+* Update Plugin author information
+
 = 1.8 =
 * Update and add plugin images
 * Update description in readme file
-
 
 = 1.7 =
 * Bug fixes : fix font icon repetition

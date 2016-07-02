@@ -468,9 +468,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     <div class="inside">
                                                         <p><a href="http://www.kareemzok.com" target="_blank">Name : Splash header</a></p>
 
-                                                        <p>Author : Techwebies team</p>
-                                                        <p>Email : <a href="mailto:info@techwebies.com" target="_blank">info@techwebies.com</a></p>
-                                                        <p>Contact : <a href="http://www.techwebies.com/contact-us" target="_blank">Contact Us</a></p>
+                                                        <p>Author : Zeesweb team</p>
+                                                        <p>Email : <a href="mailto:info@techwebies.com" target="_blank">info@zeesweb.com</a></p>
+                                                        <p>Contact : <a href="http://www.zeesweb.com/#contact" target="_blank">Contact Us</a></p>
                                                     </div>
                                                     <!-- .inside -->
                                                 </div>
@@ -479,9 +479,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     <div id="fb-root"></div>
                                                     <div class="handlediv" title="Click to toggle"><br></div>
                                                     <!-- Toggle -->
-                                                    <h3 class="inside">Techwebies on facebook</h3>
+                                                    <h3 class="inside">Zeesweb on facebook</h3>
                                                     <div class="inside">
-                                                        <div class="fb-page" data-href="https://www.facebook.com/techwebiies" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/techwebiies"><a href="https://www.facebook.com/techwebiies">TechWebies</a></blockquote></div></div>                                                
+                                                        <div class="fb-page" data-href="https://www.facebook.com/zeesweb" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/zeesweb"><a href="https://www.facebook.com/zeesweb">Zeesweb</a></blockquote></div></div>                                                
 
                                                     </div>
                                                 </div>
@@ -489,9 +489,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 <div class="postbox">
                                                     <div class="handlediv" title="Click to toggle"><br></div>
                                                     <!-- Toggle -->
-                                                    <h3 class="inside">Techwebies on Twitter</h3>
+                                                    <h3 class="inside">Zeesweb on Twitter</h3>
                                                     <div class="inside">
-                                                        <a class="twitter-timeline" href="https://twitter.com/TechWebies" data-widget-id="636631315291504640">Tweets by @TechWebies</a>
+                                                        <a class="twitter-timeline" href="https://twitter.com/zeesweb" data-widget-id="636631315291504640">Tweets by @TechWebies</a>
                                                         <script>!function (d, s, id) {
                                                                 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                                                                 if (!d.getElementById(id)) {
