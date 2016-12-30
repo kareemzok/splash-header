@@ -17,7 +17,7 @@ if (!defined('WPINC')) {
 // define variables 
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.10');
+define('SPLASHHEADER_VERSION', '1.11');
 
 // register fonctions 
 register_activation_hook(__FILE__, 'splash_header_activate');

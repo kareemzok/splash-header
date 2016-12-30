@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.6
-Stable tag: 1.10
+Stable tag: 1.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,7 @@ Features:
 
 See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
 
+Demo link to preview an example ( the box in yellow ) : http://www.techwebies.net/  
 
 == Installation ==
 
@@ -49,6 +50,12 @@ How to install the plugin and get it working.
 == Upgrade Notice ==
 
 Just the usual, deactivate plugin, replace files, activate.
+
+== Changelog ==
+= 1.11 =
+* Test compatibility with latest version of wordpress 4.7.0
+* Add demo link in description to preview an exampel of splash header
+* Update twiter widget
 
 == Changelog ==
 = 1.10 =

@@ -491,17 +491,8 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     <!-- Toggle -->
                                                     <h3 class="inside">Zeesweb on Twitter</h3>
                                                     <div class="inside">
-                                                        <a class="twitter-timeline" href="https://twitter.com/zeesweb" data-widget-id="636631315291504640">Tweets by @TechWebies</a>
-                                                        <script>!function (d, s, id) {
-                                                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                                                                if (!d.getElementById(id)) {
-                                                                    js = d.createElement(s);
-                                                                    js.id = id;
-                                                                    js.src = p + "://platform.twitter.com/widgets.js";
-                                                                    fjs.parentNode.insertBefore(js, fjs);
-                                                                }
-                                                            }(document, "script", "twitter-wjs");</script>
-
+													<a class="twitter-timeline" data-height="500" href="https://twitter.com/ZeeSWEB">Tweets by ZeeSWEB</a>
+													<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                                                     </div>
                                                 </div>
 
