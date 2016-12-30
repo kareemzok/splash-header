@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.10
+  Version: 1.11
   Author: Techwebies team
   Author URI: http://techwebies.com
   License: GPL2
