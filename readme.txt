@@ -57,7 +57,6 @@ Just the usual, deactivate plugin, replace files, activate.
 * Add demo link in description to preview an exampel of splash header
 * Update twiter widget
 
-== Changelog ==
 = 1.10 =
 * Test compatibility with latest version of wordpress 4.6.1
 
