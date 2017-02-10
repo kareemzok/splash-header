@@ -84,7 +84,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 <td>        
 
                                                     * Welcome note with title and message<br/>
-                                                    * Add up to 6 custom links with an option to insert an font icon instead of image<br/>
+                                                    * Add up to 6 custom links with an option to insert font icon instead of image<br/>
                                                     * Ability to chose if the links open in same or new browser tab<br/>
                                                     * Add a custom code such as html or wordpress shortcode code<br/>
                                                     * Ability to style the splash header with color, font size and border style<br/>
@@ -94,6 +94,23 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                             </tr>
 
 
+
+                                        </tbody>
+                                    </table>
+									   <h3 class="handle"><?php echo _e("To do in next releases"); ?>
+                                    </h3>
+
+
+                                    <table cellspacing="0" class="widefat post ">
+
+                                        <tbody> 
+                                            <tr  > 
+                                                <td>        
+
+                                                    * Make the plugin multilingual <br/>
+
+                                                </td>
+                                            </tr>
 
                                         </tbody>
                                     </table>

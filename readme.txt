@@ -2,8 +2,8 @@
 Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.6
-Stable tag: 1.11
+Tested up to: 4.7
+Stable tag: 1.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,11 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+= 1.12 =
+* Test compatibility with latest version of wordpress 4.7.2
+* Test compatibility with latest version of wordpress 4.7.1
+* ToDo : Make the plugin multilingual
+
 = 1.11 =
 * Test compatibility with latest version of wordpress 4.7.0
 * Add demo link in description to preview an exampel of splash header
