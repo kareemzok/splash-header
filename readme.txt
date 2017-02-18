@@ -25,9 +25,8 @@ See more details and usages guide here http://www.techwebies.com/2015/10/splash-
 
 Demo link to preview ( the box in yellow ) : http://www.techwebies.net/  
 
-== Bug Reports ==
-
-Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
+> <strong>Bug Reports</strong><br>
+> Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
 Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed.
 
 == Installation ==
