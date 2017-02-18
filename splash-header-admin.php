@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.12
+  Version: 1.13.0
   Author: Techwebies team
   Author URI: http://techwebies.com
   License: GPL2
@@ -16,9 +16,11 @@ if (!defined('WPINC')) {
 }
 // define variables 
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
+define('SPLASHHEADER__LANG_URL',plugin_basename(dirname( __FILE__ )).'/languages/');
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.12');
-
+define('SPLASHHEADER_VERSION', '1.13.0');
+//The text domain name is  used to form the name of the MO file for your plugin
+define('TEXT_DOMAIN', 'splash-header');
 // register fonctions 
 register_activation_hook(__FILE__, 'splash_header_activate');
 register_deactivation_hook(__FILE__, 'splash_header_deactivation');
@@ -27,8 +29,11 @@ register_deactivation_hook(__FILE__, 'splash_header_deactivation');
  *  Plugin init .
  */
 function splashheader_init() {
+   
     add_action('admin_enqueue_scripts', 'load_resources');
     add_action('admin_menu', 'splash_header_admin_actions');
+    load_plugin_textdomain(TEXT_DOMAIN, false, SPLASHHEADER__LANG_URL );
+
 }
 
 function splash_header_admin() {
@@ -37,7 +42,7 @@ function splash_header_admin() {
 
 function splash_header_admin_actions() {
     if (function_exists('add_options_page')) {
-        add_options_page("Splash Header Display", "Splash header", "manage_options", "Splash_Header_Display", "splash_header_admin");
+        add_options_page(__("Splash Header Display"), "Splash header", "manage_options", "Splash_Header_Display", "splash_header_admin");
     }
 }
 
@@ -146,7 +151,7 @@ add_action('init', 'splashheader_init');
  *  Plugin setting page link .
  */
 function add_splashheader_settings_link($links) {
-    $settings_link = '<a href="options-general.php?page=Splash_Header_Display">Settings</a>';
+    $settings_link = '<a href="options-general.php?page=Splash_Header_Display">'.__('Settings').'</a>';
     array_unshift($links, $settings_link);
     return $links;
 }
@@ -336,7 +341,7 @@ add_shortcode('splashheader', '_splashheader_shortcode');
  * admin tabs .
  */
 function splash_header_admin_tabs($current = 'general') {
-    $tabs = array('general' => 'General', 'homepage' => 'Plugin Settings', 'design' => 'Design settings', 'advancedsettings' => 'Advanced settings');
+    $tabs = array('general' => __('General'), 'homepage' => __('Plugin Settings'), 'design' => __('Design Settings'), 'advancedsettings' => __('Advanced Settings'));
     echo '<div id="icon-themes" class="icon32"><br></div>';
     echo '<h2 class="nav-tab-wrapper">';
     foreach ($tabs as $tab => $name) {

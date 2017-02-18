@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 1.12
+Stable tag: 1.13.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,12 @@ Features:
 
 See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
 
-Demo link to preview an example ( the box in yellow ) : http://www.techwebies.net/  
+Demo link to preview ( the box in yellow ) : http://www.techwebies.net/  
+
+== Bug Reports ==
+
+Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
+Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed.
 
 == Installation ==
 
@@ -46,12 +51,19 @@ How to install the plugin and get it working.
 3. Design settings
 4. Advanced settings
 5. Splash header preview
+6. Splash header mobile preview
 
 == Upgrade Notice ==
 
 Just the usual, deactivate plugin, replace files, activate.
 
 == Changelog ==
+
+= 1.13.0 =
+* Multilingual Plugin (Arabic and French languages)
+* Fix some labels in english
+* Update versioning number to handle more the bug fixes version Ex: major.minor.bugs
+
 = 1.12 =
 * Test compatibility with latest version of wordpress 4.7.2
 * Test compatibility with latest version of wordpress 4.7.1

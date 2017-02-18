@@ -1,0 +1,224 @@
+# Copyright (C) 2017 Splash header
+# This file is distributed under the same license as the Splash header package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Splash header 1.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
+"POT-Creation-Date: 2017-02-15 21:58+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-02-17 21:38+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: splash-header-admin.php:45
+msgid "Splash Header Display"
+msgstr "Affichage du Splash Header"
+
+#: splash-header-admin.php:344
+msgid "Plugin Settings"
+msgstr "Paramètres du plugin"
+
+#: splash-header-admin.php:344
+msgid "Design Settings"
+msgstr "Paramètres du désign"
+
+#: splash-header-admin.php:344
+msgid "Advanced Settings"
+msgstr "Paramètres avancés"
+
+#: splash-header-admin-form.php:4
+msgid "Splash Header"
+msgstr "Splash Header"
+
+#: splash-header-admin-form.php:55
+msgid "Instruction"
+msgstr "Instruction"
+
+#: splash-header-admin-form.php:67
+msgid "Fill in the forms in all tabs"
+msgstr "Remplissez les formulaires dans les onglets"
+
+#: splash-header-admin-form.php:68
+msgid "Use the shortcode"
+msgstr "Utilisez le code"
+
+#: splash-header-admin-form.php:69
+msgid "in your theme to show the"
+msgstr "dans votre thème pour montrer le"
+
+#: splash-header-admin-form.php:76
+msgid "Plugin Features"
+msgstr "Caractéristiques du plugin"
+
+#: splash-header-admin-form.php:88
+msgid "Welcome note with title and message"
+msgstr "Bienvenue note avec un titre et un message"
+
+#: splash-header-admin-form.php:89
+msgid "Add up to 6 custom links with an option to insert font icon instead of image"
+msgstr "Ajouter jusqu'à 6 liens personnalisés avec une option pour insérer une icône au lieu de l'image"
+
+#: splash-header-admin-form.php:90
+msgid "Ability to choose if the links open in same or new browser tab"
+msgstr "Possibilité de choisir si les liens s'ouvrent dans la même ou nouvelle onglet du navigateur"
+
+#: splash-header-admin-form.php:91
+msgid "Add a custom code such as html or wordpress shortcode code"
+msgstr "Ajouter un code personnalisé tel que html ou wordpress shortcode code"
+
+#: splash-header-admin-form.php:92
+msgid "Ability to style the splash header with color, font size and border style"
+msgstr "Possibilité de changer le style du splash header avec la couleur, la taille de police et le style de bordure"
+
+#: splash-header-admin-form.php:100
+msgid "To do in next releases"
+msgstr "À faire dans les prochaines parutions"
+
+#: splash-header-admin-form.php:110
+msgid "Add option for links to choose between static page or articles"
+msgstr "Ajout d'une option pour les liens à choisir entre une page statique ou des articles"
+
+#: splash-header-admin-form.php:111
+msgid "Multiple splash header"
+msgstr "Multiples splash header"
+
+#: splash-header-admin-form.php:112
+msgid "Add mobile image demo"
+msgstr "Ajout d'une image mobile comme un demo"
+
+#: splash-header-admin-form.php:113
+msgid "Add reset link or button to reset the form"
+msgstr "Ajouter un lien ou boutton de réinitialisation pour réinitialiser le formulaire"
+
+#: splash-header-admin-form.php:114
+msgid "Add option in advanced setting : width for col 1 and col 2"
+msgstr "Ajouter option en mode avancé : largeur pour la colonne 1 et colonne 2"
+
+#: splash-header-admin-form.php:115
+msgid "Add date and time display as analog, digital or text"
+msgstr "Ajout un affichage de l'heure et de la date en tant qu'analogue, numérique ou texte"
+
+#: splash-header-admin-form.php:124
+msgid "General"
+msgstr "Général"
+
+#: splash-header-admin-form.php:155
+msgid "Display Splash header welcome note"
+msgstr "Afficher la note d'accueil de Splash header"
+
+#: splash-header-admin-form.php:158
+msgid "Welcome note"
+msgstr "Bienvenue remarque"
+
+#: splash-header-admin-form.php:163
+msgid "Note title"
+msgstr "Titre de la note"
+
+#: splash-header-admin-form.php:164
+msgid "Note message"
+msgstr "Message de la note"
+
+#: splash-header-admin-form.php:178
+msgid "Links settings"
+msgstr "Paramètres des liens"
+
+#: splash-header-admin-form.php:189
+msgid "Display first links cols"
+msgstr "Afficher la premiere serie de liens"
+
+#: splash-header-admin-form.php:211
+msgid "Display second links cols"
+msgstr "Afficher la deuxièmes serie  liens"
+
+#: splash-header-admin-form.php:218
+msgid "Ex : fa-camera-retro fa-lg"
+msgstr "Ex : fa-camera-retro fa-lg"
+
+#: splash-header-admin-form.php:220
+msgid "Open in a new tab"
+msgstr "Ouvrir dans un nouveau onglet"
+
+#: splash-header-admin-form.php:220
+msgid "Link title"
+msgstr "Titre du lien"
+
+#: splash-header-admin-form.php:220
+msgid "Link url"
+msgstr "Lien"
+
+#: splash-header-admin-form.php:227
+msgid "To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
+msgstr "Pour utiliser Font Awesome pour les icônes des liens, veuillez consulter la <a target='_blank'href='http://fontawesome.io/icons/'> documentation </a> v 4.6.3. Ex: fa-camera-retro"
+
+#: splash-header-admin-form.php:241
+msgid "Custom shortcode"
+msgstr "Code personnalisé"
+
+#: splash-header-admin-form.php:246
+msgid "Display custom code"
+msgstr "Afficher le code personnalisé"
+
+#: splash-header-admin-form.php:256
+msgid "Add custom shortcode for any form or html code"
+msgstr "Ajouter un code personnalisé pour tout formulaire ou code html"
+
+#: splash-header-admin-form.php:266
+msgid "Design"
+msgstr "Désign"
+
+#: splash-header-admin-form.php:279
+msgid "Splash header background color"
+msgstr "Couleur d'arrière-plan du Splash header"
+
+#: splash-header-admin-form.php:284
+msgid "Splash header border style"
+msgstr "Style de bordure du Splash header"
+
+#: splash-header-admin-form.php:307
+msgid "Splash header border color and width in pixel"
+msgstr ""
+
+#: splash-header-admin-form.php:333
+msgid "Title"
+msgstr "Titre"
+
+#: splash-header-admin-form.php:357
+msgid "Message"
+msgstr "Message"
+
+#: splash-header-admin-form.php:421
+msgid "Advanced options"
+msgstr "Options avancées"
+
+#: splash-header-admin-form.php:438
+msgid "Container Width"
+msgstr "Largeur du contenu"
+
+#: splash-header-admin-form.php:443
+msgid "Default value ( field empty ) is 85%"
+msgstr "La valeur par défaut (champ vide) est 85%"
+
+#: splash-header-admin-form.php:461
+msgid "Save Changes"
+msgstr "Sauvegarder les modifications"
+
+#. Plugin Name of the plugin/theme
+msgid "Splash header"
+msgstr "Splash header"
+
+#. Description of the plugin/theme
+msgid "Plugin to create splash header"
+msgstr "Un plugin pour créer le Splash header"
+
+#. Author of the plugin/theme
+msgid "Techwebies team"
+msgstr "Techwebies team"
+
+#. Author URI of the plugin/theme
+msgid "http://techwebies.com"
+msgstr "http://techwebies.com"

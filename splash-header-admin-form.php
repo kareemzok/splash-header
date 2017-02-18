@@ -3,6 +3,8 @@
 
 <h3><?php echo _e("Splash Header"); ?></h3>
 <?php
+//The text domain name is  used to form the name of the MO file for your plugin
+$text_domain = 'splash-header';
 if (isset($_GET['tab']))
     splash_header_admin_tabs($_GET['tab']);
 else
@@ -49,22 +51,22 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                             case 'general' :
                                 ?>
-                                <div class="handlediv" title="Click to toggle"><br></div>
+                                <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                 <!-- Toggle -->
                                 <div class="inside">
-                                    <h3 class="handle"><?php echo _e("Instruction"); ?>
+                                    <h3 class="handle"><?php echo _e("Instruction", $text_domain); ?>
                                     </h3>
 
 
-                                    <table cellspacing="0" class="widefat post ">
+                                    <table cellspacing="0" class="widefat post">
 
                                         <tbody> 
                                             <tr  > 
                                                 <td>        
 
-                                                    1. Fill in the forms in the settings tab <br/>
-                                                    2. Use the shortcode [splashheader][/splashheader] or do_shortcode( '[splashheader]' );<br/>
-                                                    in your theme to show the splash header
+                                                    1.<?php echo _e("Fill in the forms in all tabs", $text_domain); ?> <br/>
+                                                    2.<?php echo _e("Use the shortcode", $text_domain); ?> [splashheader][/splashheader] or do_shortcode( '[splashheader]' );<br/>
+                                                    <?php echo _e("in your theme to show the", $text_domain) . " splash header"; ?> 
 
                                                 </td>
                                             </tr>
@@ -73,7 +75,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                         </tbody>
                                     </table>
-                                    <h3 class="handle"><?php echo _e("Plugin Features"); ?>
+                                    <h3 class="handle"><?php echo _e("Plugin Features", $text_domain); ?>
                                     </h3>
 
 
@@ -83,21 +85,19 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                             <tr  > 
                                                 <td>        
 
-                                                    * Welcome note with title and message<br/>
-                                                    * Add up to 6 custom links with an option to insert font icon instead of image<br/>
-                                                    * Ability to chose if the links open in same or new browser tab<br/>
-                                                    * Add a custom code such as html or wordpress shortcode code<br/>
-                                                    * Ability to style the splash header with color, font size and border style<br/>
+                                                    * <?php echo _e("Welcome note with title and message", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add up to 6 custom links with an option to insert font icon instead of image", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Ability to choose if the links open in same or new browser tab", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add a custom code such as html or wordpress shortcode code", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Ability to style the splash header with color, font size and border style", $text_domain); ?> <br/>
 
 
                                                 </td>
                                             </tr>
 
-
-
                                         </tbody>
                                     </table>
-									   <h3 class="handle"><?php echo _e("To do in next releases"); ?>
+                                    <h3 class="handle"><?php echo _e("To do in next releases", $text_domain); ?>
                                     </h3>
 
 
@@ -107,7 +107,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                             <tr  > 
                                                 <td>        
 
-                                                    * Make the plugin multilingual <br/>
+                                                    * <?php echo _e("Add option for links to choose between static page or articles", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Multiple splash header", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add mobile image demo", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add reset link or button to reset the form", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add option in advanced setting : width for col 1 and col 2", $text_domain); ?> <br/>
+                                                    * <?php echo _e("Add date and time display as analog, digital or text", $text_domain); ?> <br/>
 
                                                 </td>
                                             </tr>
@@ -118,10 +123,10 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                     <?php break; ?>
                                 <?php case 'homepage' :
                                     ?>
-                                    <div class="handlediv" title="Click to toggle"><br></div>
+                                    <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                     <!-- Toggle -->
 
-                                    <h3 class="handle"><?php echo _e("General"); ?>
+                                    <h3 class="handle"><?php echo _e("General", $text_domain); ?>
                                     </h3>
 
                                     <div class="inside">
@@ -152,16 +157,16 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     ?>
 
                                                     <tr>
-                                                        <td colspan="2" ><input type="checkbox" name="sh_show" value="1" <?php echo $checked; ?>><?php echo _e("Display Splash header welcome note"); ?></td>
+                                                        <td colspan="2" ><input type="checkbox" name="sh_show" value="1" <?php echo $checked; ?>><?php echo _e("Display Splash header welcome note", $text_domain); ?></td>
 
                                                     </tr>
-                                                    <tr><td colspan="2"><h3><?php echo _e("Welcome note"); ?></h3></td></tr>
+                                                    <tr><td colspan="2"><h3><?php echo _e("Welcome note", $text_domain); ?></h3></td></tr>
 
                                                 <table cellspacing="0" class="widefat post fixed">
 
                                                     <tr  style="font-weight: bold"> 
-                                                        <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Note title: "); ?></th>
-                                                        <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Note message: "); ?></th>
+                                                        <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Note title", $text_domain); ?>: </th>
+                                                        <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Note message", $text_domain); ?>: </th>
                                                         <th style="" class="manage-column" scope="col"></th>
                                                     </tr>
                                                     <tr>
@@ -175,7 +180,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 </tr>
 
 
-                                                <tr><td colspan="2"><h3><?php echo _e("Links settings"); ?></h3></td></tr>
+                                                <tr><td colspan="2"><h3><?php echo _e("Links settings", $text_domain); ?></h3></td></tr>
                                                 <?php
                                                 if (get_option('sh_show_links_1') == 1) {
                                                     $checked_1 = 'checked';
@@ -186,7 +191,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                                 <table cellspacing="0" class="widefat post ">
                                                     <tr>
-                                                        <td colspan="2" ><input type="checkbox" name="sh_show_links_1" value="1" <?php echo $checked_1; ?>><?php echo _e("Display first links cols"); ?></td>
+                                                        <td colspan="2" ><input type="checkbox" name="sh_show_links_1" value="1" <?php echo $checked_1; ?>><?php echo _e("Display first links cols", $text_domain); ?></td>
 
                                                     </tr>
                                                     <?php
@@ -208,23 +213,23 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                             }
                                                             ?>
                                                             <tr>
-                                                                <td colspan="2" ><input type="checkbox" name="sh_show_links_2" value="1" <?php echo $checked_2; ?>><?php echo _e("Display second links cols"); ?></td>
+                                                                <td colspan="2" ><input type="checkbox" name="sh_show_links_2" value="1" <?php echo $checked_2; ?>><?php echo _e("Display second links cols", $text_domain); ?></td>
 
                                                             </tr>
                                                         <?php } ?>
                                                         <tr>
-                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Title " . $i . ": "); ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="12"></td>
-                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link Url " . $i . ": "); ?>" type="text" name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="25"></td>
-                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Ex : fa-camera-retro fa-lg"); ?>" type="text" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="20"></td>
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link title", $text_domain) .' '. $i; ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="12"></td>
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Link url", $text_domain) .' '. $i; ?>" type="text" name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="25"></td>
+                                                            <td style="" class="manage-column" scope="col"><input placeholder="<?php echo _e("Ex : fa-camera-retro fa-lg", $text_domain); ?>" type="text" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="20"></td>
 
-                                                            <td style="" class="manage-column" scope="col"><input type="checkbox" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo _e("Open in a new tab"); ?></td>
+                                                            <td style="" class="manage-column" scope="col"><input type="checkbox" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo _e("Open in a new tab", $text_domain); ?></td>
 
                                                         </tr>
 
                                                     <?php } ?>
                                                     <tr>
                                                         <td colspan="4">          
-                                                            <p class="description"><?php _e("To use the Font Awesome for icons links please refere to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"); ?>.</p>
+                                                            <p class="description"><?php _e("To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro", $text_domain); ?>.</p>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -238,32 +243,32 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     ?>
                                                     <tbody>
                                                         <tr style="font-weight: bold"> 
-                                                            <th style="" class="manage-column sub-titles" scope="col"><?php _e("Custom shortcode"); ?></th>
+                                                            <th style="" class="manage-column sub-titles" scope="col"><?php _e("Custom shortcode", $text_domain); ?></th>
                                                             <th style="" class="manage-column sub-titles" scope="col"> </th>
                                                             <th style="" class="manage-column" scope="col"></th>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2" ><input type="checkbox" name="sh_show_custom_code" value="1" <?php echo $checked_custom_code; ?>><?php echo _e("Display custom code"); ?></td>
+                                                            <td colspan="2" ><input type="checkbox" name="sh_show_custom_code" value="1" <?php echo $checked_custom_code; ?>><?php echo _e("Display custom code", $text_domain); ?></td>
 
                                                         </tr>
                                                         <tr>
-                                                            <td style="" class="manage-column" scope="col"><textarea type="text" name="sh_code_message" cols="50" rows="5"><?php echo get_option('sh_code_message'); ?></textarea></td>
+                                                            <td style="" class="manage-column" scope="col"><textarea type="text" name="sh_code_message" cols="50" rows="5"><?php echo get_option('sh_code_message', $text_domain); ?></textarea></td>
                                                             <td style="" class="manage-column" scope="col"></td>
                                                             <td style="" class="manage-column" scope="col"></td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="4">          
-                                                                <p class="description"><?php _e("Add custom shortcode for any form or html code"); ?>.</p>
+                                                                <p class="description"><?php _e("Add custom shortcode for any form or html code", $text_domain); ?>.</p>
                                                             </td>
                                                         </tr>
                                                     </tbody></table>
                                                 </tr>
                                                 <?php break; ?>
                                             <?php case 'design'; ?>
-                                                <div class="handlediv" title="Click to toggle"><br></div>
+                                                <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                                 <!-- Toggle -->
 
-                                                <h3 class="handle"><?php echo _e("Design"); ?>
+                                                <h3 class="handle"><?php echo _e("Design", $text_domain); ?>
                                                 </h3>
 
                                                 <div class="inside">
@@ -276,12 +281,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                         <table cellspacing="0" class="widefat post ">
 
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header backgound color"); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header background color", $text_domain); ?></td>
                                                                 <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_bg_color" value="<?php echo get_option('sh_bg_color'); ?>"></td>
 
                                                             </tr>
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border style"); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border style", $text_domain); ?></td>
                                                                 <td style="" class="manage-column" scope="col">
                                                                     <select id="sh_border_style" >
                                                                         <?php
@@ -304,7 +309,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                                             </tr>
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border color and width in pixel"); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Splash header border color and width in pixel", $text_domain); ?></td>
                                                                 <td style="" class="manage-column" scope="col">
                                                                     <input  type="text" class="sh-color-field" name="sh_border_color" value="<?php echo get_option('sh_border_color'); ?>">
                                                                 </td>
@@ -330,7 +335,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                                             </tr>
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Title "); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Title", $text_domain); ?></td>
                                                                 <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_title_color" value="<?php echo get_option('sh_title_color'); ?>"></td>
 
                                                                 <td style="" class="manage-column" scope="col">
@@ -354,7 +359,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Message "); ?></td>
+                                                                <td style="" class="manage-column" scope="col"><?php echo _e("Message", $text_domain); ?></td>
                                                                 <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_message_color" value="<?php echo get_option('sh_message_color'); ?>"></td>
                                                                 <td style="" class="manage-column" scope="col">
 
@@ -380,7 +385,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                             for ($i = 1; $i <= 6; $i++) {
                                                                 ?>
                                                                 <tr>
-                                                                    <td style="" class="manage-column" scope="col"><?php echo _e("Link title  " . $i); ?></td>
+                                                                    <td style="" class="manage-column" scope="col"><?php echo _e("Link title" , $text_domain).' '. $i; ?></td>
                                                                     <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_link_title_color_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_color_' . $i); ?>"></td>
                                                                     <td style="" class="manage-column" scope="col">
 
@@ -415,10 +420,10 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                         break;
                                                     case 'advancedsettings' :
                                                         ?>
-                                                        <div class="handlediv" title="Click to toggle"><br></div>
+                                                        <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                                         <!-- Toggle -->
 
-                                                        <h3 class="handle"><?php echo _e("Advanced options"); ?>
+                                                        <h3 class="handle"><?php echo _e("Advanced options", $text_domain); ?>
                                                         </h3>
 
                                                         <div class="inside">
@@ -435,12 +440,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 <table cellspacing="0" class="widefat post ">
 
                                                                     <tbody>  <tr  style="font-weight: bold"> 
-                                                                            <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Container Width: "); ?></th>
+                                                                            <th style="" class="manage-column sub-titles" scope="col"><?php echo _e("Container Width", $text_domain); ?>: </th>
                                                                             <td><input type="text" name="sh_width" value="<?php echo get_option('sh_width'); ?>" size="10">%                                                     
                                                                             </td>
                                                                         </tr>
                                                                         <tr><td> 
-                                                                                <p class="description"><?php _e("Default value ( field empty ) is 85% "); ?>.</p>                                                             
+                                                                                <p class="description"><?php _e("Default value ( field empty ) is 85%", $text_domain); ?>.</p>                                                             
                                                                             </td></tr>
 
 
@@ -451,9 +456,10 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 <?php break; ?>
                                                         <?php } ?>
                                                         <?php if ($tab != 'general') { ?>
+                                                             
                                                             <tr valign="top">
                                                                 <td></td>
-                                                                <td><input type="submit" name="splashheadersubmit" class="button-primary" value="Save Changes" ></td>
+                                                                <td><br/><input type="submit" name="splashheadersubmit" class="button-primary" value="<?php echo _e("Save Changes", $text_domain); ?>"></td>
                                                             </tr>
                                                         <?php } ?>
                                                         </tbody>
@@ -478,7 +484,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                                 <div class="postbox">
 
-                                                    <div class="handlediv" title="Click to toggle"><br></div>
+                                                    <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                                     <!-- Toggle -->
                                                     <h3 class="hndle">Plugin Info</h3>
 
@@ -494,7 +500,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 <!-- .postbox -->
                                                 <div class="postbox">
                                                     <div id="fb-root"></div>
-                                                    <div class="handlediv" title="Click to toggle"><br></div>
+                                                    <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                                     <!-- Toggle -->
                                                     <h3 class="inside">Zeesweb on facebook</h3>
                                                     <div class="inside">
@@ -504,12 +510,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 </div>
                                                 <!-- .postbox -->
                                                 <div class="postbox">
-                                                    <div class="handlediv" title="Click to toggle"><br></div>
+                                                    <div class="handlediv" title="<?php echo _e("Click to toggle", $text_domain); ?>"><br></div>
                                                     <!-- Toggle -->
                                                     <h3 class="inside">Zeesweb on Twitter</h3>
                                                     <div class="inside">
-													<a class="twitter-timeline" data-height="500" href="https://twitter.com/ZeeSWEB">Tweets by ZeeSWEB</a>
-													<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                                        <a class="twitter-timeline" data-height="500" href="https://twitter.com/ZeeSWEB">Tweets by ZeeSWEB</a>
+                                                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                                                     </div>
                                                 </div>
 

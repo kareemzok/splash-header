@@ -1,0 +1,233 @@
+# Copyright (C) 2017 Splash header
+# This file is distributed under the same license as the Splash header package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Splash header 1.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
+"POT-Creation-Date: 2017-02-17 17:59+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-02-17 20:25+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Language: ar\n"
+
+#: splash-header-admin.php:45
+msgid "Splash Header Display"
+msgstr "عرض  Splash Header "
+
+#: splash-header-admin.php:344
+msgid "Plugin Settings"
+msgstr "إعدادات الإضافة"
+
+#: splash-header-admin.php:344
+msgid "Design Settings"
+msgstr "إعدادات التصميم"
+
+#: splash-header-admin.php:344
+msgid "Advanced Settings"
+msgstr "إعدادات متقدمة"
+
+#: splash-header-admin-form.php:4
+msgid "Splash Header"
+msgstr "Splash Header"
+
+#: splash-header-admin-form.php:55
+msgid "Instruction"
+msgstr "تعليمات"
+
+#: splash-header-admin-form.php:67
+msgid "Fill in the forms in all tabs"
+msgstr "ملء النماذج في جميع علامات التبويب"
+
+#: splash-header-admin-form.php:68
+msgid "Use the shortcode"
+msgstr "استخدم الرمز القصير"
+
+#: splash-header-admin-form.php:69
+msgid "in your theme to show the"
+msgstr "في المظهر الخاص بك لإظهار"
+
+#: splash-header-admin-form.php:76
+msgid "Plugin Features"
+msgstr "ميزات الإضافة"
+
+#: splash-header-admin-form.php:88
+msgid "Welcome note with title and message"
+msgstr "ملحوظة أهلا وسهلا بك مع عنوان ورسالة"
+
+#: splash-header-admin-form.php:89
+msgid ""
+"Add up to 6 custom links with an option to insert font icon instead of image"
+msgstr "إضافة ما يصل الى 6 وصلات مخصصة مع خيار لادخال رمز الخط بدلا من الصورة"
+
+#: splash-header-admin-form.php:90
+msgid "Ability to choose if the links open in same or new browser tab"
+msgstr "القدرة على اختيار بين فتح الروابط في علامة تبويب المتصفح نفسه أو جديد"
+
+#: splash-header-admin-form.php:91
+msgid "Add a custom code such as html or wordpress shortcode code"
+msgstr "إضافة رمز مخصص مثل Html أو رمز وورد برس القصير"
+
+#: splash-header-admin-form.php:92
+msgid ""
+"Ability to style the splash header with color, font size and border style"
+msgstr "إمكانية إضافة اللون وحجم الخط ونمط الحدود على splash header"
+
+#: splash-header-admin-form.php:100
+msgid "To do in next releases"
+msgstr "يجب القيام به في الإصدارات القادمة"
+
+#: splash-header-admin-form.php:110
+msgid "Add option for links to choose between static page or articles"
+msgstr "إضافة خيار للحصول على ارتباطات للاختيار صفحة ثابتة أو مقالات"
+
+#: splash-header-admin-form.php:111
+msgid "Multiple splash header"
+msgstr "إمكانيات إضافة أكثر من splash header"
+
+#: splash-header-admin-form.php:112
+msgid "Add mobile image demo"
+msgstr "إضافة عرض صورة splash header من المحمول"
+
+#: splash-header-admin-form.php:113
+msgid "Add reset link or button to reset the form"
+msgstr "إضافة رابط إعادة تعيين"
+
+#: splash-header-admin-form.php:114
+msgid "Add option in advanced setting : width for col 1 and col 2"
+msgstr "إضافة خيار في وضع متقدم: عرض للعمود 1 وعمود 2"
+
+#: splash-header-admin-form.php:115
+msgid "Add date and time display as analog, digital or text"
+msgstr "إضافة لعرض التاريخ و الوقتعلة بشكل رقمي أو نص"
+
+#: splash-header-admin-form.php:124
+msgid "General"
+msgstr "عام"
+
+#: splash-header-admin-form.php:155
+msgid "Display Splash header welcome note"
+msgstr "عرض  كلمة ترحيب"
+
+#: splash-header-admin-form.php:158
+msgid "Welcome note"
+msgstr "كلمة الترحيب"
+
+#: splash-header-admin-form.php:163
+msgid "Note title"
+msgstr "عنوان المذكرة"
+
+#: splash-header-admin-form.php:164
+msgid "Note message"
+msgstr "رسالة المذكرة"
+
+#: splash-header-admin-form.php:178
+msgid "Links settings"
+msgstr "إعدادات الروابط"
+
+#: splash-header-admin-form.php:189
+msgid "Display first links cols"
+msgstr "عرض روابط الأولى"
+
+#: splash-header-admin-form.php:211
+msgid "Display second links cols"
+msgstr "عرض روابط الثانية"
+
+#: splash-header-admin-form.php:218
+msgid "Ex : fa-camera-retro fa-lg"
+msgstr "Ex : fa-camera-retro fa-lg"
+
+#: splash-header-admin-form.php:220
+msgid "Open in a new tab"
+msgstr "فتح في علامة تبويب جديدة"
+
+#: splash-header-admin-form.php:220
+msgid "Link title"
+msgstr "عنوان الرابط"
+
+#: splash-header-admin-form.php:220
+msgid "Link url"
+msgstr "الرابط"
+
+#: splash-header-admin-form.php:227
+msgid ""
+"To use the Font Awesome for icons links please refer to the <a "
+"target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v "
+"4.6.3. Ex:fa-camera-retro"
+msgstr ""
+"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' "
+"href='http://fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-"
+"retro"
+
+#: splash-header-admin-form.php:241
+msgid "Custom shortcode"
+msgstr "الرمز القصير المخصص"
+
+#: splash-header-admin-form.php:246
+msgid "Display custom code"
+msgstr "إظهار رمز القصير المخصص"
+
+#: splash-header-admin-form.php:256
+msgid "Add custom shortcode for any form or html code"
+msgstr "إضافة الرمز القصير مخصصة لأي نموذج أو html"
+
+#: splash-header-admin-form.php:266
+msgid "Design"
+msgstr "التصميم"
+
+#: splash-header-admin-form.php:279
+msgid "Splash header background color"
+msgstr "لون الخلفية"
+
+#: splash-header-admin-form.php:284
+msgid "Splash header border style"
+msgstr "شكل الحدود"
+
+#: splash-header-admin-form.php:307
+msgid "Splash header border color and width in pixel"
+msgstr "لون الحدود وعرض (بكسل)"
+
+#: splash-header-admin-form.php:333
+msgid "Title"
+msgstr "عنوان"
+
+#: splash-header-admin-form.php:357
+msgid "Message"
+msgstr "رسالة"
+
+#: splash-header-admin-form.php:421
+msgid "Advanced options"
+msgstr "خيارات متقدمة"
+
+#: splash-header-admin-form.php:438
+msgid "Container Width"
+msgstr "عرض الحاوية"
+
+#: splash-header-admin-form.php:443
+msgid "Default value ( field empty ) is 85%"
+msgstr "القيمة الافتراضية (حقل فارغ) هي ٨٥٪"
+
+#: splash-header-admin-form.php:461
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#. Plugin Name of the plugin/theme
+msgid "Splash header"
+msgstr "Splash header"
+
+#. Description of the plugin/theme
+msgid "Plugin to create splash header"
+msgstr "إضافة لخلق splash header"
+
+#. Author of the plugin/theme
+msgid "Techwebies team"
+msgstr "Techwebies team"
+
+#. Author URI of the plugin/theme
+msgid "http://techwebies.com"
+msgstr "http://techwebies.com"
