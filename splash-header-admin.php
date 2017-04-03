@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.14.0
+  Version: 1.14.1
   Author: Zeesweb Team
   Author URI: http://zeesweb.com
   License: GPL2
@@ -18,7 +18,7 @@ if (!defined('WPINC')) {
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('SPLASHHEADER__LANG_URL', plugin_basename(dirname(__FILE__)) . '/languages/');
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.14.0');
+define('SPLASHHEADER_VERSION', '1.14.1');
 //The text domain name is  used to form the name of the MO file for your plugin
 define('TEXT_DOMAIN', 'splash-header');
 //define the root url of the plugin
@@ -82,13 +82,13 @@ function load_resources() {
         wp_enqueue_script('wp-color-picker');
 
         wp_enqueue_style('thickbox');
-        wp_register_style('sh-admin', SPLASHHEADER__PLUGIN_URL . ASSETS . 'sh-admin.css', array(), SPLASHHEADER_VERSION);
+        wp_register_style('sh-admin', SPLASHHEADER__PLUGIN_URL . ASSETS . 'css/sh-admin.css', array(), SPLASHHEADER_VERSION);
         wp_enqueue_style('sh-admin');
         // load media library
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
 
-        wp_register_script('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'splashheader.js', array(), SPLASHHEADER_VERSION);
+        wp_register_script('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'js/splashheader.js', array(), SPLASHHEADER_VERSION);
         wp_enqueue_script('splashheader');
         // load jquery ui 
     }
@@ -191,8 +191,8 @@ add_filter("plugin_action_links_$plugin", 'add_splashheader_settings_link');
  * Plugin short code .
  */
 function _splashheader_shortcode() {
-    wp_enqueue_style('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'splashheader.css', array(), SPLASHHEADER_VERSION);
-    wp_enqueue_style('font-awesome', SPLASHHEADER__PLUGIN_URL . ASSETS . 'font-awesome.css', array(), SPLASHHEADER_VERSION);
+    wp_enqueue_style('splashheader', SPLASHHEADER__PLUGIN_URL . ASSETS . 'css/splashheader.css', array(), SPLASHHEADER_VERSION);
+    wp_enqueue_style('font-awesome', SPLASHHEADER__PLUGIN_URL . ASSETS . 'css/font-awesome.css', array(), SPLASHHEADER_VERSION);
 
 // wp_enqueue_style('splashheader');
     $enabled = get_option('sh_show');

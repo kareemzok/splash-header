@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 1.14.0
+Stable tag: 1.14.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,11 @@ Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 
 == Changelog ==
+
+= 1.14.1 =
+* Fix bugs	  : Loading font-awsome webfont
+* Fix bugs	  : Update readme file
+* Improvement : Organize more assets files
 
 = 1.14.0 =
 * Test compatibility with latest version of wordpress 4.7.3
