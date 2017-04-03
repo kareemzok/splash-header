@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-17 21:38+0200\n"
+"PO-Revision-Date: 2017-03-26 20:27+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
@@ -79,17 +79,9 @@ msgstr "Possibilité de changer le style du splash header avec la couleur, la ta
 msgid "To do in next releases"
 msgstr "À faire dans les prochaines parutions"
 
-#: splash-header-admin-form.php:110
-msgid "Add option for links to choose between static page or articles"
-msgstr "Ajout d'une option pour les liens à choisir entre une page statique ou des articles"
-
 #: splash-header-admin-form.php:111
 msgid "Multiple splash header"
 msgstr "Multiples splash header"
-
-#: splash-header-admin-form.php:112
-msgid "Add mobile image demo"
-msgstr "Ajout d'une image mobile comme un demo"
 
 #: splash-header-admin-form.php:113
 msgid "Add reset link or button to reset the form"
@@ -100,8 +92,8 @@ msgid "Add option in advanced setting : width for col 1 and col 2"
 msgstr "Ajouter option en mode avancé : largeur pour la colonne 1 et colonne 2"
 
 #: splash-header-admin-form.php:115
-msgid "Add date and time display as analog, digital or text"
-msgstr "Ajout un affichage de l'heure et de la date en tant qu'analogue, numérique ou texte"
+msgid "Add time display as analog, digital or text"
+msgstr "Ajout un affichage de l'heure en tant qu'analogue, numérique ou texte"
 
 #: splash-header-admin-form.php:124
 msgid "General"
@@ -127,6 +119,14 @@ msgstr "Message de la note"
 msgid "Links settings"
 msgstr "Paramètres des liens"
 
+#: splash-header-admin-form.php:178
+msgid "First links cols"
+msgstr "Premiers liens cols"
+
+#: splash-header-admin-form.php:178
+msgid "Second links cols"
+msgstr "Deuxièmes liens cols"
+
 #: splash-header-admin-form.php:189
 msgid "Display first links cols"
 msgstr "Afficher la premiere serie de liens"
@@ -151,9 +151,25 @@ msgstr "Titre du lien"
 msgid "Link url"
 msgstr "Lien"
 
-#: splash-header-admin-form.php:227
+#: splash-header-admin-form.php:11
 msgid "To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
-msgstr "Pour utiliser Font Awesome pour les icônes des liens, veuillez consulter la <a target='_blank'href='http://fontawesome.io/icons/'> documentation </a> v 4.6.3. Ex: fa-camera-retro"
+msgstr "Pour utiliser Font Awesome pour les icônes des liens, veuillez consulter la <a target='_blank' href='http://fontawesome.io/icons/'> documentation </a> v 4.6.3. Ex: fa-camera-retro"
+
+#: splash-header-admin-form.php:241
+msgid "Link of the selected post or page dropdown will be inserted into Link Url field"
+msgstr "Le lien du message sélectionné ou du menu déroulant de la page sera inséré dans le champ Url du lien"
+
+#: splash-header-admin-form.php:241
+msgid "Link"
+msgstr "Lien"
+
+#: splash-header-admin.php:241
+msgid "Select a post"
+msgstr "Sélectionnez un article"
+
+#: splash-header-admin.php:241
+msgid "Select a page"
+msgstr "Sélectionnez une page"
 
 #: splash-header-admin-form.php:241
 msgid "Custom shortcode"
@@ -202,6 +218,58 @@ msgstr "Largeur du contenu"
 #: splash-header-admin-form.php:443
 msgid "Default value ( field empty ) is 85%"
 msgstr "La valeur par défaut (champ vide) est 85%"
+
+#: splash-header-admin-form.php:443
+msgid "Clock Settings"
+msgstr "Paramètres de l'horloge"
+
+#: splash-header-admin-form.php:443
+msgid "Date settings"
+msgstr "Paramètres de la date"
+
+#: splash-header-admin-form.php:443
+msgid "Time settings"
+msgstr "Réglages de l'heure"
+
+#: splash-header-admin-form.php:443
+msgid "Display clock date"
+msgstr "Afficher la date de l'horloge"
+
+#: splash-header-admin-form.php:443
+msgid "Date format"
+msgstr "Format de la date"
+
+#: splash-header-admin-form.php:443
+msgid "Display clock time"
+msgstr "Afficher l'heure de l'horloge"
+
+#: splash-header-admin-form.php:443
+msgid "Select date format"
+msgstr "Sélectionner le format de la date"
+
+#: splash-header-admin-form.php:443
+msgid "Date position"
+msgstr "Position de la date"
+
+#: splash-header-admin-form.php:443
+msgid "Font size"
+msgstr "Taille de police"
+
+#: splash-header-admin-form.php:443
+msgid "Font color"
+msgstr "Couleur de la police"
+
+#: splash-header-admin-form.php:556
+msgid "Currently timezone is wordpress default value"
+msgstr "Actuellement, timezone est la valeur par défaut de wordpress"
+
+#: splash-header-admin-form.php:443
+msgid "Default value ( no selection) is default wordpress date format"
+msgstr "Valeur par défaut (aucune sélection) est le format de date par défaut de wordpress"
+
+#: splash-header-admin-form.php:443
+msgid "For custom value please refer to wordpress custom format date"
+msgstr "Pour la valeur personnalisée s'il vous plaît se référer à wordpress format personnalisé date"
 
 #: splash-header-admin-form.php:461
 msgid "Save Changes"

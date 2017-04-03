@@ -8,12 +8,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-17 20:25+0200\n"
+"PO-Revision-Date: 2017-03-11 20:10+0200\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
+"%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Language: ar\n"
 
 #: splash-header-admin.php:45
@@ -61,8 +61,7 @@ msgid "Welcome note with title and message"
 msgstr "ملحوظة أهلا وسهلا بك مع عنوان ورسالة"
 
 #: splash-header-admin-form.php:89
-msgid ""
-"Add up to 6 custom links with an option to insert font icon instead of image"
+msgid "Add up to 6 custom links with an option to insert font icon instead of image"
 msgstr "إضافة ما يصل الى 6 وصلات مخصصة مع خيار لادخال رمز الخط بدلا من الصورة"
 
 #: splash-header-admin-form.php:90
@@ -74,25 +73,16 @@ msgid "Add a custom code such as html or wordpress shortcode code"
 msgstr "إضافة رمز مخصص مثل Html أو رمز وورد برس القصير"
 
 #: splash-header-admin-form.php:92
-msgid ""
-"Ability to style the splash header with color, font size and border style"
+msgid "Ability to style the splash header with color, font size and border style"
 msgstr "إمكانية إضافة اللون وحجم الخط ونمط الحدود على splash header"
 
 #: splash-header-admin-form.php:100
 msgid "To do in next releases"
 msgstr "يجب القيام به في الإصدارات القادمة"
 
-#: splash-header-admin-form.php:110
-msgid "Add option for links to choose between static page or articles"
-msgstr "إضافة خيار للحصول على ارتباطات للاختيار صفحة ثابتة أو مقالات"
-
 #: splash-header-admin-form.php:111
 msgid "Multiple splash header"
 msgstr "إمكانيات إضافة أكثر من splash header"
-
-#: splash-header-admin-form.php:112
-msgid "Add mobile image demo"
-msgstr "إضافة عرض صورة splash header من المحمول"
 
 #: splash-header-admin-form.php:113
 msgid "Add reset link or button to reset the form"
@@ -103,7 +93,7 @@ msgid "Add option in advanced setting : width for col 1 and col 2"
 msgstr "إضافة خيار في وضع متقدم: عرض للعمود 1 وعمود 2"
 
 #: splash-header-admin-form.php:115
-msgid "Add date and time display as analog, digital or text"
+msgid "Add time display as analog, digital or text"
 msgstr "إضافة لعرض التاريخ و الوقتعلة بشكل رقمي أو نص"
 
 #: splash-header-admin-form.php:124
@@ -129,6 +119,14 @@ msgstr "رسالة المذكرة"
 #: splash-header-admin-form.php:178
 msgid "Links settings"
 msgstr "إعدادات الروابط"
+
+#: splash-header-admin-form.php:178
+msgid "First links cols"
+msgstr "أعمدة روابط الأولى"
+
+#: splash-header-admin-form.php:178
+msgid "Second links cols"
+msgstr "أعمدة روابط الثانية"
 
 #: splash-header-admin-form.php:189
 msgid "Display first links cols"
@@ -156,13 +154,27 @@ msgstr "الرابط"
 
 #: splash-header-admin-form.php:227
 msgid ""
-"To use the Font Awesome for icons links please refer to the <a "
-"target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v "
-"4.6.3. Ex:fa-camera-retro"
+"To use the Font Awesome for icons links please refer to the <a target='_blank' "
+"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
 msgstr ""
-"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' "
-"href='http://fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-"
-"retro"
+"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' href='http://"
+"fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-retro"
+
+#: splash-header-admin-form.php:241
+msgid "Link of the selected post or page dropdown will be inserted into Link Url field"
+msgstr "سيتم إدراج رابط للمقال أوالصفحة المنسدلة المحددة في الحقل الرابط"
+
+#: splash-header-admin-form.php:241
+msgid "Link"
+msgstr "الرابط"
+
+#: splash-header-admin.php:241
+msgid "Select a post"
+msgstr "حدد مقال"
+
+#: splash-header-admin.php:241
+msgid "Select a page"
+msgstr "تحديد صفحة"
 
 #: splash-header-admin-form.php:241
 msgid "Custom shortcode"
@@ -212,22 +224,74 @@ msgstr "عرض الحاوية"
 msgid "Default value ( field empty ) is 85%"
 msgstr "القيمة الافتراضية (حقل فارغ) هي ٨٥٪"
 
+#: splash-header-admin-form.php:443
+msgid "Clock Settings"
+msgstr "إعدادات مدار الساعة"
+
+#: splash-header-admin-form.php:443
+msgid "Date settings"
+msgstr "إعدادات التاريخ"
+
+#: splash-header-admin-form.php:443
+msgid "Time settings"
+msgstr "اعدادات الوقت"
+
+#: splash-header-admin-form.php:443
+msgid "Display clock date"
+msgstr "عرض تاريخ الساعة"
+
+#: splash-header-admin-form.php:443
+msgid "Date format"
+msgstr "صيغة التاريخ"
+
+#: splash-header-admin-form.php:443
+msgid "Display clock time"
+msgstr "عرض وقت الساعة"
+
+#: splash-header-admin-form.php:443
+msgid "Select date format"
+msgstr "حدد تنسيق التاريخ"
+
+#: splash-header-admin-form.php:443
+msgid "Date position"
+msgstr "مكان التاريخ"
+
+#: splash-header-admin-form.php:443
+msgid "Font size"
+msgstr "حجم الخط"
+
+#: splash-header-admin-form.php:443
+msgid "Font color"
+msgstr "لون الخط"
+
+#: splash-header-admin-form.php:556
+msgid "Currently timezone is wordpress default value"
+msgstr "حاليا التوقيت هو القيمة الافتراضية لوورد برس"
+
+#: splash-header-admin-form.php:443
+msgid "Default value ( no selection) is default wordpress date format"
+msgstr "القيمة الافتراضية (عدم التحديد) هو تنسيق التاريخ وورد الافتراضي"
+
+#: splash-header-admin-form.php:443
+msgid "For custom value please refer to wordpress custom format date"
+msgstr "للحصول على قيمة المخصص، يرجى الرجوع إلى تاريخ التنسيق والمخصص لووردبرس "
+
 #: splash-header-admin-form.php:461
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
-#. Plugin Name of the plugin/theme
+# #: Plugin Name of the plugin/theme
 msgid "Splash header"
 msgstr "Splash header"
 
-#. Description of the plugin/theme
+# #: Description of the plugin/theme
 msgid "Plugin to create splash header"
 msgstr "إضافة لخلق splash header"
 
-#. Author of the plugin/theme
+# #: Author of the plugin/theme
 msgid "Techwebies team"
 msgstr "Techwebies team"
 
-#. Author URI of the plugin/theme
+# #: Author URI of the plugin/theme
 msgid "http://techwebies.com"
 msgstr "http://techwebies.com"

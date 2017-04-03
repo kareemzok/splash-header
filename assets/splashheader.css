@@ -36,7 +36,16 @@
     height:32px;
     width:32px;
 }
-
+.splash-header .splash-header-date .left{
+	text-align:left;
+}
+.splash-header .splash-header-date .center{
+	text-align:center;
+}
+.splash-header .splash-header-date .right{
+	text-align:right;
+}
+.splash-header .no-timezone{color:red;}
 @media (max-width: 550px) {
     .splash-header .sh-col {
         float: none;
