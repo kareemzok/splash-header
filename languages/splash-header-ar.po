@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-11 20:10+0200\n"
+"PO-Revision-Date: 2017-04-04 21:11+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
@@ -75,6 +75,10 @@ msgstr "إضافة رمز مخصص مثل Html أو رمز وورد برس ال�
 #: splash-header-admin-form.php:92
 msgid "Ability to style the splash header with color, font size and border style"
 msgstr "إمكانية إضافة اللون وحجم الخط ونمط الحدود على splash header"
+
+#: splash-header-admin-form.php:85
+msgid "Ability to add current date in different format"
+msgstr "القدرة على إضافة التاريخ الحالي في عدة اشكال مختلفة"
 
 #: splash-header-admin-form.php:100
 msgid "To do in next releases"

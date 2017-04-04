@@ -81,9 +81,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 * <?php echo esc_html_e("Add up to 6 custom links with an option to insert font icon instead of image", TEXT_DOMAIN); ?> <br/>
                                                                 * <?php echo esc_html_e("Ability to choose if the links open in same or new browser tab", TEXT_DOMAIN); ?> <br/>
                                                                 * <?php echo esc_html_e("Add a custom code such as html or wordpress shortcode code", TEXT_DOMAIN); ?> <br/>
-                                                                * <?php echo esc_html_e("Ability to style the splash header with color, font size and border style", TEXT_DOMAIN); ?> <br/>
-
-
+                                                                * <?php echo esc_html_e("Ability to style the splash header with color, font size and border style", TEXT_DOMAIN); ?><br/> 
+                                                                * <?php echo esc_html_e("Ability to add current date in different format", TEXT_DOMAIN); ?> 
+																
                                                             </td>
                                                         </tr>
 

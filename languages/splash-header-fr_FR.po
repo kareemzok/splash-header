@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-26 20:27+0300\n"
+"PO-Revision-Date: 2017-04-04 21:11+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
@@ -66,6 +66,10 @@ msgstr "Ajouter jusqu'à 6 liens personnalisés avec une option pour insérer un
 #: splash-header-admin-form.php:90
 msgid "Ability to choose if the links open in same or new browser tab"
 msgstr "Possibilité de choisir si les liens s'ouvrent dans la même ou nouvelle onglet du navigateur"
+
+#: splash-header-admin-form.php:85
+msgid "Ability to add current date in different format"
+msgstr "Possibilité d'ajouter une date actuelle au format différent"
 
 #: splash-header-admin-form.php:91
 msgid "Add a custom code such as html or wordpress shortcode code"

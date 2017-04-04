@@ -1,16 +1,18 @@
 # Copyright (C) 2017 Splash header
 # This file is distributed under the same license as the Splash header package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Splash header 1.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
-"POT-Creation-Date: 2017-02-15 19:46:24+00:00\n"
+"POT-Creation-Date: 2017-04-04 21:15+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: splash-header-admin.php:64
 msgid "Splash Header Display"
@@ -70,6 +72,10 @@ msgstr ""
 
 #: splash-header-admin-form.php:92
 msgid "Ability to style the splash header with color, font size and border style"
+msgstr ""
+
+#: splash-header-admin-form.php:85
+msgid "Ability to add current date in different format"
 msgstr ""
 
 #: splash-header-admin-form.php:100
@@ -150,9 +156,8 @@ msgstr ""
 
 #: splash-header-admin-form.php:227
 msgid ""
-"To use the Font Awesome for icons links please refer to the <a "
-"target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v "
-"4.6.3. Ex:fa-camera-retro"
+"To use the Font Awesome for icons links please refer to the <a target='_blank' "
+"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
 msgstr ""
 
 #: splash-header-admin-form.php:241

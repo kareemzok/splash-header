@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 1.14.1
+Stable tag: 1.14.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ Features:
 *   Ability to chose if the links open in same or new browser tab
 *   Add a custom code such as html or wordpress shortcode code
 *   Ability to style the splash header with color, font size and border style
+*   Ability to add current date in different format
 
 See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
 
@@ -49,29 +50,29 @@ How to install the plugin and get it working.
 
 = Does Slash header supports shortcodes? =
 
-Yes, there is need to add shortcodes [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme or page.
+* Yes, there is a need to add shortcodes [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme or page.
 
 = Supports of multiple splash header? =
 
-No, currently you can create one splash header but it is considered in future release.
+* No, currently you can create one splash header but it is considered in future release.
 
 = Which WordPress versions are supported? =
 
 * To use all features, a minimum of version WordPress 3.0 with PHP 5.3 is required. 
-* Earlier versions will are also supported.
+* Earlier versions are also supported.
 
 = Does Slash header supports a demo? =
 
-Yes it does.You can check the demo on http://www.techwebies.net/, the yellow box on the top
+* Yes it does.You can check the demo on http://www.techwebies.net/, the yellow box on the top.
 
 = Does Slash header supports multilanguage? =
 
-* Yes it doesn . currently english, arabic, french.
-* You can contiute in other languages translation but contactin usages
+* Yes it does. currently english, arabic, french.
+* You can contribute in other languages translation by contacting us.
 
 = Is Splash Header free? =
 
-Currently the	 plugin is free.
+* Currently the plugin is free.
 
 == Screenshots ==
 
@@ -88,6 +89,11 @@ Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 
 == Changelog ==
+
+= 1.14.2 =
+* Fix bugs	  : Update readme file
+* Improvement : Add logo to the plugin directory
+* Improvement : Add logo to the admin menu
 
 = 1.14.1 =
 * Fix bugs	  : Loading font-awsome webfont
