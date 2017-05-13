@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.14.2
+  Version: 1.14.3
   Author: Zeesweb Team
   Author URI: http://zeesweb.com
   License: GPL2
@@ -18,7 +18,7 @@ if (!defined('WPINC')) {
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('SPLASHHEADER__LANG_URL', plugin_basename(dirname(__FILE__)) . '/languages/');
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.14.2');
+define('SPLASHHEADER_VERSION', '1.14.3');
 //The text domain name is  used to form the name of the MO file for your plugin
 define('TEXT_DOMAIN', 'splash-header');
 //define the root url of the plugin

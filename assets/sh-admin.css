@@ -27,15 +27,7 @@
 .splashheader #tabs-links-setting input.highlight{
     animation: yellowfade 2s;
 }
-.splashheader .survey-wrapper{
-	font-size:20px;	
-	margin: 20px 0 0 0;
 
-}
-.splashheader .survey-wrapper a{
-	color:red;
-	font-weight: bold;
-}
 @keyframes yellowfade {
   from {
     border:1px solid yellow;

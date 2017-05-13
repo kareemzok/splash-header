@@ -3,7 +3,7 @@ Contributors: kareem zok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 1.14.2
+Stable tag: 1.14.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,12 +76,11 @@ How to install the plugin and get it working.
 
 == Screenshots ==
 
-1. Splash header
+1. Splash header preview
 2. Plugin settings
 3. Design settings
 4. Advanced settings
-5. Splash header preview
-6. Splash header mobile preview
+5. Splash header on mobile
 
 == Upgrade Notice ==
 
@@ -89,6 +88,12 @@ Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 
 == Changelog ==
+
+= 1.14.3 =
+* Fix bugs	  : Fix contact email, plugin link
+* Improvement : Add survey section
+* Improvement : Update screenshots images
+* Test compatibility with latest version of wordpress 4.7.4
 
 = 1.14.2 =
 * Fix bugs	  : Update readme file

@@ -2,6 +2,7 @@
 <h3><?php echo esc_html_e("Splash Header"); ?>
 
 </h3>
+
 <?php settings_errors(); ?>
 <?php
 //The text domain name is  used to form the name of the MO file for your plugin
@@ -25,7 +26,7 @@ for ($i = 1; $i <= 6; $i++) {
 $splashheader_settings_data = implode(",", $splashheader_settings_data);
 $splashheader_design_data = implode(",", $splashheader_design_data);
 $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
-//echo splash_header_recentposts_dropdown();
+
 ?>
 
 
@@ -54,8 +55,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                         <form action="<?php echo esc_url(admin_url('options.php')) ?>" method="post" >
                                             <?php wp_nonce_field('update-options'); ?>
-                                            <?php if ($tab == 'general') { ?>
+										<div class="survey-wrapper"><a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><?php echo esc_html_e("Help us improving our plugin by taking this survey", TEXT_DOMAIN); ?> !</a> </div>
 
+                                            <?php if ($tab == 'general') { ?>
                                                 <h3 class="handle"><?php echo esc_html_e("Instruction", TEXT_DOMAIN); ?> </h3>
                                                 <table cellspacing="0" class="widefat post">
                                                     <tbody> 
@@ -637,11 +639,23 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                     <h3 class="hndle">Plugin Info</h3>
 
                                     <div class="inside">
-                                        <p><a href="http://www.kareemzok.com" target="_blank">Name : Splash header</a></p>
+                                        <p><a href="http://www.zeesweb.com" target="_blank">Name : Splash header</a></p>
 
                                         <p>Author : Zeesweb team</p>
-                                        <p>Email : <a href="mailto:info@techwebies.com" target="_blank">info@zeesweb.com</a></p>
+                                        <p>Email : <a href="mailto:info@zeesweb.com" target="_blank">info@zeesweb.com</a></p>
                                         <p>Contact : <a href="http://www.zeesweb.com/#contact" target="_blank">Contact Us</a></p>
+                                    </div>
+                                    <!-- .inside -->
+                                </div>
+								 <div class="postbox">
+
+                                    <div class="handlediv" title="<?php echo esc_html_e("Click to toggle", TEXT_DOMAIN); ?>"><br></div>
+                                    <!-- Toggle -->
+                                    <h3 class="hndle">Take our survey</h3>
+
+                                    <div class="inside">
+											<a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo  plugins_url( 'assets/img/survey.png', __FILE__ ); ?>" /></a>
+											<p><b>Help us improve the plugin</b></p>
                                     </div>
                                     <!-- .inside -->
                                 </div>
