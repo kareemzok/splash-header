@@ -1,4 +1,4 @@
-<div id="fb-root"></div>
+	<div id="fb-root"></div>
 <h3><?php echo esc_html_e("Splash Header"); ?>
 
 </h3>

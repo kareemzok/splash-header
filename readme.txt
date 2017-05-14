@@ -1,9 +1,9 @@
 === Splash Header ===
-Contributors: kareem zok
+Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 1.14.3
+Stable tag: 1.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,13 @@ Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 
 == Changelog ==
+
+= 1.15 =
+* Due to counting issue we moved to the version 1.15 
+* Fix bugs	  : Fix contact email, plugin link
+* Improvement : Add survey section
+* Improvement : Update screenshots images
+* Test compatibility with latest version of wordpress 4.7.4
 
 = 1.14.3 =
 * Fix bugs	  : Fix contact email, plugin link
