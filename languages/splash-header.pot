@@ -14,6 +14,38 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: Poedit 1.8.11\n"
 
+#: splash-header-admin.php:59
+msgid "Help us improving our plugin by taking this survey"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Reset form"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Reset all"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Reset first form"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Reset second form"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Reset to default"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Example image"
+msgstr ""
+
+#: splash-header-admin.php:59
+msgid "Example image"
+msgstr ""
+
 #: splash-header-admin.php:64
 msgid "Splash Header Display"
 msgstr ""
@@ -82,16 +114,12 @@ msgstr ""
 msgid "To do in next releases"
 msgstr ""
 
+#: splash-header-admin-form.php:101
+msgid "Ability to reset forms completely or individually"
+msgstr ""
+
 #: splash-header-admin-form.php:111
 msgid "Multiple splash header"
-msgstr ""
-
-#: splash-header-admin-form.php:113
-msgid "Add reset link or button to reset the form"
-msgstr ""
-
-#: splash-header-admin-form.php:114
-msgid "Add option in advanced setting : width for col 1 and col 2"
 msgstr ""
 
 #: splash-header-admin-form.php:115
@@ -278,6 +306,22 @@ msgstr ""
 
 #: splash-header-admin-form.php:461
 msgid "Save Changes"
+msgstr ""
+
+#: splash-header-admin-form.php:516
+msgid "First Col Width"
+msgstr ""
+
+#: splash-header-admin-form.php:516
+msgid "Second Col Width"
+msgstr ""
+
+#: splash-header-admin-form.php:516
+msgid "Third Col Width"
+msgstr ""
+
+#: splash-header-admin-form.php:516
+msgid "Fourth Col Width"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

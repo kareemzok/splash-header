@@ -2,8 +2,8 @@
 Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: 1.15
+Tested up to: 4.8
+Stable tag: 1.15.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,9 +41,10 @@ How to install the plugin and get it working.
 
 1. Upload `splash-header` folder  to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. From 'Setting' menu see sub menu 'Splash header'.
+3. From left wordpress menu click on 'Splash header' then plugin settings
 4. Fill in the forms, then save setting.
 5. Use the shortcode [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme to show the splash header.
+6. You may use other sub link or tabs to the plugin features such as 'design settings' or 'advanced settings'
 
 
 == Frequently Asked Questions ==
@@ -88,6 +89,14 @@ Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 
 == Changelog ==
+
+= 1.15.1 =
+* Test compatibility with latest version of wordpress 4.8
+* Add reset button to forms
+* Update translation text and add new ones
+* Add new option in advanced setting : width for all columns
+* Add an illustrative image of the splash header
+
 
 = 1.15 =
 * Due to counting issue we moved to the version 1.15 

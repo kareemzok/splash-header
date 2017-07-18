@@ -8,13 +8,37 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-04-04 21:11+0300\n"
+"PO-Revision-Date: 2017-07-18 20:06+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
 "%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Language: ar\n"
+
+#: splash-header-admin.php:59
+msgid "Help us improving our plugin by taking this survey"
+msgstr "ساعدنا في تحسين الإضافة من خلال إجراء هذا الاستطلاع"
+
+#: splash-header-admin.php:59
+msgid "Reset form"
+msgstr "إعادة تعيين النموذج"
+
+#: splash-header-admin.php:59
+msgid "Reset all"
+msgstr "إعادة ضبط"
+
+#: splash-header-admin.php:59
+msgid "Reset first form"
+msgstr "إعادة تعيين النموذج الأول"
+
+#: splash-header-admin.php:59
+msgid "Reset second form"
+msgstr "إعادة تعيين النموذج الثاني"
+
+#: splash-header-admin.php:59
+msgid "Reset to default"
+msgstr "إعادة تعيين إلى الافتراضي"
 
 #: splash-header-admin.php:45
 msgid "Splash Header Display"
@@ -84,17 +108,13 @@ msgstr "القدرة على إضافة التاريخ الحالي في عدة �
 msgid "To do in next releases"
 msgstr "يجب القيام به في الإصدارات القادمة"
 
+#: splash-header-admin-form.php:101
+msgid "Ability to reset forms completely or individually"
+msgstr "القدرة على إعادة تعيين النماذج "
+
 #: splash-header-admin-form.php:111
 msgid "Multiple splash header"
 msgstr "إمكانيات إضافة أكثر من splash header"
-
-#: splash-header-admin-form.php:113
-msgid "Add reset link or button to reset the form"
-msgstr "إضافة رابط إعادة تعيين"
-
-#: splash-header-admin-form.php:114
-msgid "Add option in advanced setting : width for col 1 and col 2"
-msgstr "إضافة خيار في وضع متقدم: عرض للعمود 1 وعمود 2"
 
 #: splash-header-admin-form.php:115
 msgid "Add time display as analog, digital or text"
@@ -159,7 +179,7 @@ msgstr "الرابط"
 #: splash-header-admin-form.php:227
 msgid ""
 "To use the Font Awesome for icons links please refer to the <a target='_blank' "
-"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
+"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3.  Ex:fa-camera-retro"
 msgstr ""
 "لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' href='http://"
 "fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-retro"
@@ -283,6 +303,22 @@ msgstr "للحصول على قيمة المخصص، يرجى الرجوع إلى
 #: splash-header-admin-form.php:461
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
+
+#: splash-header-admin-form.php:516
+msgid "First Col Width"
+msgstr "عرض العمود الأول"
+
+#: splash-header-admin-form.php:516
+msgid "Second Col Width"
+msgstr "عرض العمود الثاني"
+
+#: splash-header-admin-form.php:516
+msgid "Third Col Width"
+msgstr "عرض العمود الثالث"
+
+#: splash-header-admin-form.php:516
+msgid "Fourth Col Width"
+msgstr "عرض العمود الرابع"
 
 # #: Plugin Name of the plugin/theme
 msgid "Splash header"

@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 1.15
+  Version: 1.15.1
   Author: Zeesweb Team
   Author URI: http://zeesweb.com
   License: GPL2
@@ -18,7 +18,7 @@ if (!defined('WPINC')) {
 define('SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('SPLASHHEADER__LANG_URL', plugin_basename(dirname(__FILE__)) . '/languages/');
 define('ASSETS', 'assets/');
-define('SPLASHHEADER_VERSION', '1.15');
+define('SPLASHHEADER_VERSION', '1.15.1');
 //The text domain name is  used to form the name of the MO file for your plugin
 define('TEXT_DOMAIN', 'splash-header');
 //define the root url of the plugin
@@ -131,6 +131,9 @@ function splash_header_activate() {
         add_option('sh_link_thumb_img_' . $i);
         add_option('sh_font_icon_' . $i);
         add_option('sh_link_open_' . $i);
+        if ($i <= 4) {
+            add_option('sh_col_width_' . $i);
+        }
     }
 }
 
@@ -166,11 +169,11 @@ function splash_header_deactivation() {
       delete_option('sh_link_title_color_' . $i);
       delete_option('sh_link_font_size_' . $i);
       delete_option('sh_link_thumb_img_' . $i);
+      if ($i <= 4) {
+      delete_option('sh_col_width_' . $i);
+      }
       }
      */
-    for ($i = 1; $i <= 6; $i++) {
-        delete_option('sh_link_thumb_img_' . $i);
-    }
 }
 
 add_action('init', 'splashheader_init');
@@ -208,7 +211,17 @@ function _splashheader_shortcode() {
     $color_element = 'color:';
     $font_size_element = 'font-size:';
     $appearence = 0;
+
+    // get container width
     $sh_width = get_option('sh_width');
+    // get cols width
+    for ($w = 1; $w <= 4; $w++) {
+        $sh_width_col = get_option('sh_col_width_' . $w);
+        if ($sh_width_col != '') {
+            $col_width_style[$w] = 'width:' . $sh_width_col . '%';
+        }
+    }
+    
     if ($sh_width == '') {
         $sh_width = 85;
     }
@@ -263,13 +276,13 @@ function _splashheader_shortcode() {
         if ($message_font_size != '' || $message_color != '')
             $style_message = $message_font_size . $message_color;
     }
-    if ($enabled_links_1) {
+    if ($enabled_links_1 && $sh_width_2 == '') {
         $appearence++;
     }
-    if ($enabled_links_2) {
+    if ($enabled_links_2 && $sh_width_3 == '') {
         $appearence++;
     }
-    if ($enabled_custom_code) {
+    if ($enabled_custom_code && $sh_width_4 == '') {
         $appearence++;
     }
     if ($appearence == 4)
@@ -280,6 +293,8 @@ function _splashheader_shortcode() {
         $col_class = 'sh-col-50';
     else if ($appearence == 1)
         $col_class = 'sh-col-100';
+
+
 
     if ($title != '') {
         $title_div = '<h3 class="sh-title" style="' . $title_color . $title_font_size . 'margin:10px 0 0 0">' . $title . '</h3>';
@@ -307,9 +322,9 @@ function _splashheader_shortcode() {
     }
 
     $content = '<div id="splash-header" class="splash-header" style="width:' . $sh_width . '%;' . $sh_message_bgcolor . $sh_border_style . $sh_border_width . 'margin:0 auto;' . $sh_border_color . '">'
-            . $date_content . '<div class="sh-col ' . $col_class . '">' . $title_div . '' . $message_div . '</div>';
+            . $date_content . '<div class="sh-col ' . $col_class . '" style="' . $col_width_style[1] . '">' . $title_div . '' . $message_div . '</div>';
     if ($enabled_links_1) {
-        $content.='<div class="sh-col ' . $col_class . '">';
+        $content.='<div class="sh-col ' . $col_class . '" style="' . $col_width_style[2] . '">';
         //set up links 1 section 
         for ($i = 1; $i <= 3; $i++) {
             $img_element_1 = "";
@@ -343,7 +358,7 @@ function _splashheader_shortcode() {
     }
     if ($enabled_links_2) {
 
-        $content.='<div class="sh-col ' . $col_class . '">';
+        $content.='<div class="sh-col ' . $col_class . '" style="' . $col_width_style[3] . '">';
         //set up links 2 sections
         for ($i = 4; $i <= 6; $i++) {
             // set font size 
@@ -375,7 +390,7 @@ function _splashheader_shortcode() {
     }
     if ($enabled_custom_code) {
         $content.='
-    <div class="sh-col ' . $col_class . '">' . do_shortcode(get_option('sh_code_message')) . '</div>
+    <div class="sh-col ' . $col_class . '" style="' . $col_width_style[4] . '">' . do_shortcode(get_option('sh_code_message')) . '</div>
     </div><div class="sh-clearfix"></div>';
     }
     $content.='</div>';
@@ -476,9 +491,9 @@ function splash_header_get_date($format) {
 
     if (get_option('timezone_string') == '') {
         $timezone = date_default_timezone_get();
-    }else{
-		$timezone = get_option('timezone_string');
-	}
+    } else {
+        $timezone = get_option('timezone_string');
+    }
     if ($format == '') {
         $format = get_option('date_format');
     }

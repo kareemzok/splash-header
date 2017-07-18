@@ -1,4 +1,4 @@
-	<div id="fb-root"></div>
+<div id="fb-root"></div>
 <h3><?php echo esc_html_e("Splash Header"); ?>
 
 </h3>
@@ -18,7 +18,9 @@ $splashheader_advanced_settings = array('sh_width', 'sh_show_clock_date', 'sh_sh
 
 
 for ($i = 1; $i <= 6; $i++) {
-
+    if ($i <= 4) {
+        array_push($splashheader_advanced_settings, 'sh_col_width_' . $i);
+    }
     array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_font_icon_' . $i, 'sh_link_open_' . $i);
     array_push($splashheader_design_data, 'sh_link_title_color_' . $i, 'sh_link_font_size_' . $i);
 }
@@ -28,7 +30,6 @@ $splashheader_design_data = implode(",", $splashheader_design_data);
 $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
 ?>
-
 
 <div class="wrap splashheader">
 
@@ -53,12 +54,24 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                     <!-- Toggle -->
                                     <div class="inside">
 
-                                        <form action="<?php echo esc_url(admin_url('options.php')) ?>" method="post" >
+                                        <form id="form1" action="<?php echo esc_url(admin_url('options.php')) ?>" method="post" >
                                             <?php wp_nonce_field('update-options'); ?>
-										<div class="survey-wrapper"><a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><?php echo esc_html_e("Help us improving our plugin by taking this survey", TEXT_DOMAIN); ?> !</a> </div>
+                                            <div class="survey-wrapper"><a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><?php echo esc_html_e("Help us improving our plugin by taking this survey", TEXT_DOMAIN); ?> !</a> </div>
 
                                             <?php if ($tab == 'general') { ?>
+                                                <h3 class="handle"><?php echo esc_html_e("Demo", TEXT_DOMAIN); ?> </h3>
+                                                <table cellspacing="0" class="widefat post">
+                                                    <tbody> 
+                                                        <tr  > 
+                                                            <td>        
+
+                                                                <img width="100%" src="<?php echo plugins_url('assets/img/demo-image.jpg', __FILE__); ?>?r=<?php echo time();?>" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                                 <h3 class="handle"><?php echo esc_html_e("Instruction", TEXT_DOMAIN); ?> </h3>
+
                                                 <table cellspacing="0" class="widefat post">
                                                     <tbody> 
                                                         <tr  > 
@@ -84,8 +97,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 * <?php echo esc_html_e("Ability to choose if the links open in same or new browser tab", TEXT_DOMAIN); ?> <br/>
                                                                 * <?php echo esc_html_e("Add a custom code such as html or wordpress shortcode code", TEXT_DOMAIN); ?> <br/>
                                                                 * <?php echo esc_html_e("Ability to style the splash header with color, font size and border style", TEXT_DOMAIN); ?><br/> 
-                                                                * <?php echo esc_html_e("Ability to add current date in different format", TEXT_DOMAIN); ?> 
-																
+                                                                * <?php echo esc_html_e("Ability to add current date in different format", TEXT_DOMAIN); ?> <br/> 
+                                                                * <?php echo esc_html_e("Ability to reset forms completely or individually", TEXT_DOMAIN); ?> 
+
                                                             </td>
                                                         </tr>
 
@@ -98,8 +112,6 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                             <td>        
 
                                                                 * <?php echo esc_html_e("Multiple splash header", TEXT_DOMAIN); ?> <br/>
-                                                                * <?php echo esc_html_e("Add reset link or button to reset the form", TEXT_DOMAIN); ?> <br/>
-                                                                * <?php echo esc_html_e("Add option in advanced setting : width for col 1 and col 2", TEXT_DOMAIN); ?> <br/>
                                                                 * <?php echo esc_html_e("Add time display as analog, digital or text", TEXT_DOMAIN); ?> <br/>
 
                                                             </td>
@@ -132,9 +144,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                             <th style="" class="manage-column" scope="col"></th>
                                                         </tr>
                                                         <tr>
-                                                            <td style="" class="manage-column" scope="col"><input type="text" name="sh_title" value="<?php echo get_option('sh_title'); ?>" size="30"></td>
-                                                            <td style="" class="manage-column" scope="col"><textarea type="text" name="sh_message" cols="50" rows="10"><?php echo get_option('sh_message'); ?></textarea></td>
+                                                            <td style="" class="manage-column" scope="col"><input type="text" id="sh_title" name="sh_title" value="<?php echo get_option('sh_title'); ?>" size="30"></td>
+                                                            <td style="" class="manage-column" scope="col"><textarea type="text" id="sh_message"  name="sh_message" cols="50" rows="10"><?php echo get_option('sh_message'); ?></textarea></td>
                                                             <td style="" class="manage-column" scope="col"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="button" class="button-primary" onClick="resetWelcomeForm()"  value="<?php echo esc_html_e("Reset form", TEXT_DOMAIN); ?>"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -191,21 +206,21 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td  class="label-link-title"><?php echo esc_html_e('Link', TEXT_DOMAIN) . ' ' . $i; ?></td>
-                                                                                        <td><input type="checkbox" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo esc_html_e("Open in a new tab", TEXT_DOMAIN); ?></td>
+                                                                                        <td><input type="checkbox" id="sh_link_open_<?php echo $i; ?>"  name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo esc_html_e("Open in a new tab", TEXT_DOMAIN); ?></td>
                                                                                         <td></td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Link title", TEXT_DOMAIN) . ' ' . $i; ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="30"></td>
+                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Link title", TEXT_DOMAIN) . ' ' . $i; ?>" type="text" id="sh_link_title_<?php echo $i; ?>"  name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="30"></td>
                                                                                         <td></td>
                                                                                         <td></td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td  ><input class="sh_link_url" placeholder="<?php echo esc_html_e("Link url", TEXT_DOMAIN) . ' ' . $i; ?>" type="text" id="sh_link_url_<?php echo $i; ?>"  name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="30"></td>
+                                                                                        <td  ><input class="sh_link_url" placeholder="<?php echo esc_html_e("Link url", TEXT_DOMAIN) . ' ' . $i; ?>" type="text"  id="sh_link_url_<?php echo $i; ?>"  name="sh_link_url_<?php echo $i; ?>" value="<?php echo get_option('sh_link_url_' . $i); ?>" size="30"></td>
                                                                                         <td><?php echo splash_header_recentposts_dropdown($i); ?> <?php echo esc_html_e('-'); ?> <?php echo splash_header_recentpages_dropdown($i); ?></td>
                                                                                         <td></td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Ex : fa-camera-retro fa-lg", TEXT_DOMAIN); ?>" type="text" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="30"></td>
+                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Ex : fa-camera-retro fa-lg", TEXT_DOMAIN); ?>" type="text" id="sh_font_icon_<?php echo $i; ?>"  name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="30"></td>
                                                                                         <td> 
                                                                                         </td>
                                                                                         <td></td>
@@ -216,7 +231,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                     </tr>
 
                                                                 <?php } ?>
-
+                                                                <tr>
+                                                                    <td><input type="button" class="button-primary" onClick="resetLinkForm(1, 3, 6)"  value="<?php echo esc_html_e("Reset first form", TEXT_DOMAIN); ?>"></td>
+                                                                </tr>
                                                             </table>
                                                             </p>
                                                         </div>
@@ -251,11 +268,11 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td  class="label-link-title"><?php echo esc_html_e('Link') . ' ' . $i; ?></td>
-                                                                                        <td><input type="checkbox" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo esc_html_e("Open in a new tab", TEXT_DOMAIN); ?></td>
+                                                                                        <td><input type="checkbox" id="sh_font_icon_<?php echo $i; ?>" name="sh_link_open_<?php echo $i; ?>" value="1" <?php echo $checked_open; ?>><?php echo esc_html_e("Open in a new tab", TEXT_DOMAIN); ?></td>
                                                                                         <td></td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Link title", TEXT_DOMAIN) . ' ' . $i; ?>" type="text" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="30"></td>
+                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Link title", TEXT_DOMAIN) . ' ' . $i; ?>" type="text" id="sh_link_title_<?php echo $i; ?>" name="sh_link_title_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_' . $i); ?>" size="30"></td>
                                                                                         <td></td>
                                                                                         <td></td>
                                                                                     </tr>
@@ -265,7 +282,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                                         <td></td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Ex : fa-camera-retro fa-lg", TEXT_DOMAIN); ?>" type="text" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="30"></td>
+                                                                                        <td  ><input placeholder="<?php echo esc_html_e("Ex : fa-camera-retro fa-lg", TEXT_DOMAIN); ?>" type="text" id="sh_font_icon_<?php echo $i; ?>" name="sh_font_icon_<?php echo $i; ?>" value="<?php echo get_option('sh_font_icon_' . $i); ?>" size="30"></td>
                                                                                         <td></td>
                                                                                         <td></td>
                                                                                     </tr>
@@ -275,7 +292,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                     </tr>
 
                                                                 <?php } ?>
-
+                                                                <tr>
+                                                                    <td><input type="button" class="button-primary" onClick="resetLinkForm(4, 6, 6)"  value="<?php echo esc_html_e("Reset second form", TEXT_DOMAIN); ?>"></td>
+                                                                </tr>
                                                             </table>
 
 
@@ -316,15 +335,17 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                                         </tr>
                                                         <tr>
-                                                            <td style="" class="manage-column" scope="col"><textarea type="text" name="sh_code_message" cols="100" rows="7"><?php echo get_option('sh_code_message', TEXT_DOMAIN); ?></textarea></td>
+                                                            <td style="" class="manage-column" scope="col"><textarea type="text" id="sh_code_message" name="sh_code_message" cols="100" rows="7"><?php echo get_option('sh_code_message', TEXT_DOMAIN); ?></textarea></td>
                                                             <td style="" class="manage-column" scope="col"></td>
                                                             <td style="" class="manage-column" scope="col"></td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="4">          
                                                                 <p class="description"><?php esc_html_e("Add custom shortcode for any form or html code", TEXT_DOMAIN); ?>.</p>
+                                                                <p class="description"><input type="button" class="button-primary" onClick="resetCodeForm()"  value="<?php echo esc_html_e("Reset form", TEXT_DOMAIN); ?>"></p>
                                                             </td>
                                                         </tr>
+
                                                     </tbody>
                                                 </table>
 
@@ -340,8 +361,8 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                 <table cellspacing="0" class="widefat post">
 
                                                     <tr>
-                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html_e("Splash header background color", TEXT_DOMAIN); ?></td>
-                                                        <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_bg_color" value="<?php echo get_option('sh_bg_color'); ?>"></td>
+                                                        <td style="" class="manage-column" scope="col" ><?php echo esc_html_e("Splash header background color", TEXT_DOMAIN); ?></td>
+                                                        <td style="" class="manage-column" scope="col" id="sh_bg_color_picker"><input  type="text" class="sh-color-field" id="sh_bg_color" name="sh_bg_color" value="<?php echo get_option('sh_bg_color'); ?>"></td>
 
                                                     </tr>
                                                     <tr>
@@ -362,15 +383,15 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                 }
                                                                 ?>
                                                             </select>
-                                                            <input type="hidden"  id="sh_hd_border_style" name="sh_border_style" value="<?php echo get_option('sh_border_style'); ?>" />
+                                                            <input type="hidden"  id="sh_hd_border_style" id="sh_border_style" name="sh_border_style" value="<?php echo get_option('sh_border_style'); ?>" />
 
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td style="" class="manage-column" scope="col"><?php echo esc_html_e("Splash header border color and width in pixel", TEXT_DOMAIN); ?></td>
-                                                        <td style="" class="manage-column" scope="col">
-                                                            <input  type="text" class="sh-color-field" name="sh_border_color" value="<?php echo get_option('sh_border_color'); ?>">
+                                                        <td style="" class="manage-column" scope="col" id="sh_border_color_picker">
+                                                            <input  type="text" class="sh-color-field" id="sh_border_color" name="sh_border_color" value="<?php echo get_option('sh_border_color'); ?>">
                                                         </td>
                                                         <td style="" class="manage-column" scope="col">
 
@@ -395,7 +416,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     </tr>
                                                     <tr>
                                                         <td style="" class="manage-column" scope="col"><?php echo esc_html_e("Title", TEXT_DOMAIN); ?></td>
-                                                        <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_title_color" value="<?php echo get_option('sh_title_color'); ?>"></td>
+                                                        <td style="" class="manage-column" scope="col" id="sh_title_color_picker"><input  type="text" class="sh-color-field" id="sh_title_color"  name="sh_title_color" value="<?php echo get_option('sh_title_color'); ?>"></td>
 
                                                         <td style="" class="manage-column" scope="col">
 
@@ -419,7 +440,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     </tr>
                                                     <tr>
                                                         <td style="" class="manage-column" scope="col"><?php echo esc_html_e("Message", TEXT_DOMAIN); ?></td>
-                                                        <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_message_color" value="<?php echo get_option('sh_message_color'); ?>"></td>
+                                                        <td style="" class="manage-column" scope="col" id="sh_message_color_picker"><input  type="text" class="sh-color-field" id="sh_message_color" name="sh_message_color" value="<?php echo get_option('sh_message_color'); ?>"></td>
                                                         <td style="" class="manage-column" scope="col">
 
                                                             <select id="sh_message_font_size" >
@@ -445,7 +466,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                         ?>
                                                         <tr>
                                                             <td style="" class="manage-column" scope="col"><?php echo esc_html_e("Link title", TEXT_DOMAIN) . ' ' . $i; ?></td>
-                                                            <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_link_title_color_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_color_' . $i); ?>"></td>
+                                                            <td style="" class="manage-column" scope="col" id="sh_link_wrapper_title_color_<?php echo $i; ?>"><input  type="text" class="sh-color-field" id="sh_link_title_color_<?php echo $i; ?>" name="sh_link_title_color_<?php echo $i; ?>" value="<?php echo get_option('sh_link_title_color_' . $i); ?>"></td>
                                                             <td style="" class="manage-column" scope="col">
 
                                                                 <select id="sh_link_font_size_<?php echo $i; ?>" >
@@ -485,12 +506,30 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     <tbody> 
                                                         <tr> 
                                                             <th style="" class="manage-column" scope="col"><?php echo esc_html_e("Container Width", TEXT_DOMAIN); ?>: </th>
-                                                            <td><input type="text" name="sh_width" value="<?php echo get_option('sh_width'); ?>" size="10">%                                                     
+                                                            <td><input type="text" id="sh_width"  name="sh_width" value="<?php echo get_option('sh_width'); ?>" size="10">%                                                     
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td> 
                                                                 <p class="description"><?php esc_html_e("Default value ( field empty ) is 85%", TEXT_DOMAIN); ?>.</p>                                                             
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                        $arr_text = array('First Col Width', 'Second Col Width', 'Third Col Width', 'Fourth Col Width');
+                                                        for ($i = 1; $i <= 4; $i++) {
+                                                            $j = $i - 1;
+                                                            ?>
+                                                            <tr> 
+                                                                <th style="" class="manage-column" scope="col"><?php echo esc_html_e($arr_text[$j], TEXT_DOMAIN); ?>: </th>
+                                                                <td><input type="text" id="sh_col_width_<?php echo $i; ?>" name="sh_col_width_<?php echo $i; ?>" value="<?php echo get_option('sh_col_width_'.$i); ?>" size="10">%                                                     
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
+
+                                                        <tr>
+                                                            <td>
+                                                                <input type="button" class="button-primary" onClick="resetAdvancedOptionForm()"  value="<?php echo esc_html_e("Reset to default", TEXT_DOMAIN); ?>">
+
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -522,9 +561,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                         <th style="" class="manage-column" scope="col"><?php echo esc_html_e("Date format", TEXT_DOMAIN); ?>: </th>
                                                                         <td><?php
                                                                             //if (splash_header_get_date_format(get_option('sh_date_format')) != '') {
-                                                                                echo splash_header_get_date_format(get_option('sh_date_format'));
+                                                                            echo splash_header_get_date_format(get_option('sh_date_format'));
                                                                             //} else {
-                                                                              //  echo esc_html_e("Please save your timezone settings", TEXT_DOMAIN);
+                                                                            //  echo esc_html_e("Please save your timezone settings", TEXT_DOMAIN);
                                                                             //}
                                                                             ?></td>
                                                                         <td> </td>
@@ -566,7 +605,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                     </tr>
                                                                     <tr>
                                                                         <th style="" class="manage-column" scope="col"><?php echo esc_html_e("Font color", TEXT_DOMAIN); ?>: </th>
-                                                                        <td style="" class="manage-column" scope="col"><input  type="text" class="sh-color-field" name="sh_date_font_color" value="<?php echo get_option('sh_date_font_color'); ?>"></td>
+                                                                        <td style="" class="manage-column" scope="col" id="sh_date_font_color_picker"  ><input  type="text" class="sh-color-field" id="sh_date_font_color"  name="sh_date_font_color"  name="sh_date_font_color" value="<?php echo get_option('sh_date_font_color'); ?>"></td>
 
                                                                     </tr>
                                                                     <tr>
@@ -574,6 +613,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                                             <p class="description"><?php echo esc_html_e("Currently timezone is wordpress default value", TEXT_DOMAIN); ?><?php echo ': <span style="font-weight:bold">' . get_option('timezone_string'); ?></span></p>                                                             
                                                                             <p class="description"><?php echo esc_html_e('Default value ( no selection) is default wordpress date format', TEXT_DOMAIN) . ': <span style="font-weight:bold">' . get_option('date_format'); ?></span></p>                                                             
                                                                             <p class="description"><?php echo esc_html_e('For custom value please refer to wordpress custom format date', TEXT_DOMAIN); ?> <p>                                                             
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="button" class="button-primary" onClick="resetAdvancedClockForm()"  value="<?php echo esc_html_e("Reset to default", TEXT_DOMAIN); ?>">
+
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -612,9 +657,16 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                                     </div>
                                                 </div>
                                             <?php } ?> 
-                                            <?php if ($tab != 'general') { ?>
+                                            <?php if ($tab != 'general') { ?> 
                                                 <input type="submit" name="splashheadersubmit" class="button-primary" value="<?php echo esc_html_e("Save Changes", TEXT_DOMAIN); ?>">
                                             <?php } ?>
+                                            <?php if ($tab == 'homepage') { ?>
+                                                <input type="button" class="button-primary" onClick="resetAllForms()"  value="<?php echo esc_html_e("Reset all", TEXT_DOMAIN); ?>">
+                                            <?php } ?>
+                                            <?php if ($tab == 'design') { ?>
+                                                <input type="button"  class="button-primary" onClick="resetDesignForm(1, 6, 6)"  value="<?php echo esc_html_e("Reset to default", TEXT_DOMAIN); ?>">
+                                            <?php } ?>
+
                                         </form>
                                     </div>
                                     <!-- .e -->
@@ -647,15 +699,15 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                     </div>
                                     <!-- .inside -->
                                 </div>
-								 <div class="postbox">
+                                <div class="postbox">
 
                                     <div class="handlediv" title="<?php echo esc_html_e("Click to toggle", TEXT_DOMAIN); ?>"><br></div>
                                     <!-- Toggle -->
                                     <h3 class="hndle">Take our survey</h3>
 
                                     <div class="inside">
-											<a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo  plugins_url( 'assets/img/survey.png', __FILE__ ); ?>" /></a>
-											<p><b>Help us improve the plugin</b></p>
+                                        <a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo plugins_url('assets/img/survey.png', __FILE__); ?>" /></a>
+                                        <p><b>Help us improve the plugin</b></p>
                                     </div>
                                     <!-- .inside -->
                                 </div>
@@ -696,4 +748,5 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                     <!-- #poststuff -->
 
                 </div> <!-- .wrap -->
+
 
