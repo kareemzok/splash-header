@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splash header 1.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
-"POT-Creation-Date: 2017-04-04 21:15+0300\n"
+"POT-Creation-Date: 2017-11-29 16:49+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -183,9 +183,7 @@ msgid "Link url"
 msgstr ""
 
 #: splash-header-admin-form.php:227
-msgid ""
-"To use the Font Awesome for icons links please refer to the <a target='_blank' "
-"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
+msgid "To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3. Ex:fa-camera-retro"
 msgstr ""
 
 #: splash-header-admin-form.php:241
@@ -304,6 +302,26 @@ msgstr ""
 msgid "For custom value please refer to wordpress custom format date"
 msgstr ""
 
+#: splash-header-admin-form.php:443
+msgid "Time format"
+msgstr ""
+
+#: splash-header-admin-form.php:443
+msgid "Select time format"
+msgstr ""
+
+#: splash-header-admin-form.php:443
+msgid "Time position"
+msgstr ""
+
+#: splash-header-admin-form.php:443
+msgid "Default value ( no selection) is default wordpress time format"
+msgstr ""
+
+#: splash-header-admin-form.php:443
+msgid "For custom value please refer to wordpress custom format time"
+msgstr ""
+
 #: splash-header-admin-form.php:461
 msgid "Save Changes"
 msgstr ""
@@ -339,3 +357,4 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://techwebies.com"
 msgstr ""
+

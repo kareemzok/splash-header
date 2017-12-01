@@ -1,127 +1,103 @@
-=== Splash Header ===
+=== Splash Header ===
 Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.8
-Stable tag: 1.15.1
+Tested up to: 4.8Stable tag: 1.16.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This plugin show a splash header welcome screen
+== Description ==
+Splash header in WordPress  will let you to create a welcome screen that contain title, description, custom links, or any custom code and can be added anywhere in your website using shortcode
 
-This plugin show a splash header welcome screen
-
-== Description ==
-
-Splash header in WordPress  will let you to create a welcome screen that contain title, description, custom links, or any custom code and can be added anywhere in your website using shortcode
-
-Features:
-
+Features:
 *   Welcome note with title and message
 *   Add up to 6 custom links with an option to insert an font icon instead of image
 *   Ability to chose if the links open in same or new browser tab
 *   Add a custom code such as html or wordpress shortcode code
 *   Ability to style the splash header with color, font size and border style
-*   Ability to add current date in different format
+*   Ability to add current date in different format
+
+See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
+Demo link to preview ( the box in yellow ) : http://www.techwebies.net/  
 
-See more details and usages guide here http://www.techwebies.com/2015/10/splash-header.html/
-
-Demo link to preview ( the box in yellow ) : http://www.techwebies.net/  
-
-> <strong>Bug Reports</strong><br>
-> Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
-Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed.
-
-> <strong>Problems and Support</strong><br>
-> To get faster response You can create a Topics our Website [Support Forum](https://wordpress.org/support/plugin/splash-header) Contact Page.
-If you have any query about Splah Header then please check our [F.A.Q.](https://wordpress.org/plugins/splash-header/faq/)
-
-== Installation ==
-
-How to install the plugin and get it working.
-
+> <strong>Bug Reports</strong><br>
+> Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
+Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed.
+> <strong>Problems and Support</strong><br>
+> To get faster response You can create a Topics our Website [Support Forum](https://wordpress.org/support/plugin/splash-header) Contact Page.
+If you have any query about Splah Header then please check our [F.A.Q.](https://wordpress.org/plugins/splash-header/faq/)
+
+== Installation ==
+How to install the plugin and get it working.
 
 1. Upload `splash-header` folder  to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. From left wordpress menu click on 'Splash header' then plugin settings
 4. Fill in the forms, then save setting.
 5. Use the shortcode [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme to show the splash header.
-6. You may use other sub link or tabs to the plugin features such as 'design settings' or 'advanced settings'
+6. You may use other sub link or tabs to the plugin features such as 'design settings' or 'advanced settings'
 
+== Frequently Asked Questions ==
+= Does Slash header supports shortcodes? =
+* Yes, there is a need to add shortcodes [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme or page.
 
-== Frequently Asked Questions ==
+= Supports of multiple splash header? =
 
-= Does Slash header supports shortcodes? =
-
-* Yes, there is a need to add shortcodes [splashheader][/splashheader] or do_shortcode( '[splashheader]' ); in your theme or page.
-
-= Supports of multiple splash header? =
-
-* No, currently you can create one splash header but it is considered in future release.
-
-= Which WordPress versions are supported? =
+* No, currently you can create one splash header but it is considered in future release.
+= Which WordPress versions are supported? =
 
 * To use all features, a minimum of version WordPress 3.0 with PHP 5.3 is required. 
-* Earlier versions are also supported.
-
-= Does Slash header supports a demo? =
-
+* Earlier versions are also supported.
+= Does Slash header supports a demo? =
 * Yes it does.You can check the demo on http://www.techwebies.net/, the yellow box on the top.
-
-= Does Slash header supports multilanguage? =
-
+
+= Does Slash header supports multilanguage? =
 * Yes it does. currently english, arabic, french.
-* You can contribute in other languages translation by contacting us.
-
-= Is Splash Header free? =
-
+* You can contribute in other languages translation by contacting us.
+= Is Splash Header free? =
 * Currently the plugin is free.
-
-== Screenshots ==
-
+
+== Screenshots ==
 1. Splash header preview
 2. Plugin settings
 3. Design settings
 4. Advanced settings
-5. Splash header on mobile
-
-== Upgrade Notice ==
-
+5. Splash header on mobile
+== Upgrade Notice ==
 Just the usual, deactivate plugin, replace files, activate.
-If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
-
-== Changelog ==
-
-= 1.15.1 =
+If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
+== Changelog ==
+= 1.16.0 =* Test compatibility with latest version of wordpress 4.9* Feature   	: Add new option in advanced setting to display time* Feature   	: Add translation for time in admin form* Fix bugs		: Fix tabs anchor to have a better UX* Improvement	: Code formatting improved and cleaning unusfull code
+= 1.15.1 =
 * Test compatibility with latest version of wordpress 4.8
 * Add reset button to forms
 * Update translation text and add new ones
 * Add new option in advanced setting : width for all columns
-* Add an illustrative image of the splash header
-
-
-= 1.15 =
+* Add an illustrative image of the splash header
+= 1.15 =
 * Due to counting issue we moved to the version 1.15 
 * Fix bugs	  : Fix contact email, plugin link
 * Improvement : Add survey section
 * Improvement : Update screenshots images
-* Test compatibility with latest version of wordpress 4.7.4
+* Test compatibility with latest version of wordpress 4.7.4
 
-= 1.14.3 =
+= 1.14.3 =
 * Fix bugs	  : Fix contact email, plugin link
 * Improvement : Add survey section
 * Improvement : Update screenshots images
-* Test compatibility with latest version of wordpress 4.7.4
-
-= 1.14.2 =
+* Test compatibility with latest version of wordpress 4.7.4
+= 1.14.2 =
 * Fix bugs	  : Update readme file
 * Improvement : Add logo to the plugin directory
-* Improvement : Add logo to the admin menu
+* Improvement : Add logo to the admin menu
 
-= 1.14.1 =
+= 1.14.1 =
 * Fix bugs	  : Loading font-awsome webfont
 * Fix bugs	  : Update readme file
-* Improvement : Organize more assets files
+* Improvement : Organize more assets files
 
-= 1.14.0 =
+= 1.14.0 =
 * Test compatibility with latest version of wordpress 4.7.3
 * Improvement: Internationalization security of the plugin
 * Improvement: Add title to tab pages
@@ -135,38 +111,34 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 * Feature    : Select desired post and page in links setings for better UX 
 * Feature    : Add clock ( date only for now ) with styling and size
 * Fix bugs   : Loading font awsome
-* Fix bugs   : Translation
+* Fix bugs   : Translation
 
-= 1.13.0 =
+= 1.13.0 =
 * Multilingual Plugin (Arabic and French languages)
 * Fix some labels in english
-* Update versioning number to handle more the bug fixes version Ex: major.minor.bugs
-
-= 1.12 =
+* Update versioning number to handle more the bug fixes version Ex: major.minor.bugs
+= 1.12 =
 * Test compatibility with latest version of wordpress 4.7.2
 * Test compatibility with latest version of wordpress 4.7.1
-* ToDo : Make the plugin multilingual
+* ToDo : Make the plugin multilingual
 
-= 1.11 =
+= 1.11 =
 * Test compatibility with latest version of wordpress 4.7.0
 * Add demo link in description to preview an exampel of splash header
-* Update twiter widget
+* Update twiter widget
+= 1.10 =
+* Test compatibility with latest version of wordpress 4.6.1
 
-= 1.10 =
-* Test compatibility with latest version of wordpress 4.6.1
-
-= 1.9 =
+= 1.9 =
 * Update Plugin author information
-
-= 1.8 =
+
+= 1.8 =
 * Update and add plugin images
-* Update description in readme file
-
-= 1.7 =
+* Update description in readme file
+= 1.7 =
 * Bug fixes : fix font icon repetition
-* Feature : add sentence explaining use of font awesome with link to documentation
-
-= 1.6 =
+* Feature : add sentence explaining use of font awesome with link to documentation
+= 1.6 =
 * Add features in general tab
 * Test compatibility with wordpress 4.5.2
 * Feature : Add font awesome library version 4.6.3 for links icons instead of image
@@ -175,27 +147,24 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 * Bug fixes : remove inline style if its not set 
 * Bug fixes : remove save button from general tab
 * Other minor bug fixes
+
+= 1.5 =
+* Test compatibility with wordpress 4.5
 
-= 1.5 =
-* Test compatibility with wordpress 4.5
-
-= 1.4 =
+= 1.4 =
 * Bug fixes : color picker, media uplaod, font size save 
-* Change labels text
-
-= 1.3 =
+* Change labels text
+= 1.3 =
 * Bug fixes 
-* Add plugin version in defined constant
+* Add plugin version in defined constant
 
-= 1.2 =
+= 1.2 =
 * Add generral tab
-* Test compatibility with wordpress 4.4
-
-= 1.1 =
+* Test compatibility with wordpress 4.4
+= 1.1 =
 * Bug Fixes
 * Add Responsive 
-* Add New Tab : Advanced Settings to set custom width
-
-= 1.0 =
-* First Release
-
+* Add New Tab : Advanced Settings to set custom width
+= 1.0 =
+* First Release
+
