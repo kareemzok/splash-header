@@ -1,1 +1,94 @@
-.splashheader .sub-titles{font-weight:700}.clearfix{clear:both}.splashheader .button-primary{margin:15px 0 0}.splashheader .ui-tabs .ui-tabs-active a{background-color:#fff}.splashheader #tabs-links-setting .description{font-size:14px;color:#6c7685;font-weight:700}.splashheader #tabs-links-setting .label-link-title{font-size:14px;font-weight:700}.bootstrap-wrapper{@import (less) url(bootstrap.css)}.splashheader #tabs-links-setting input.highlight{animation:yellowfade 2s}.splashheader .survey-wrapper{font-size:20px;margin:20px 0 0}.splashheader .survey-wrapper a{color:red;font-weight:700}@keyframes yellowfade{from{border:1px solid #ff0;background-color:#ff0}to{background:0 0}}div.tab{overflow:hidden;border:1px solid #ccc;background-color:#f1f1f1}div.tab span{background-color:inherit;float:left;border:none;outline:0;cursor:pointer;padding:14px 16px;transition:.3s;font-size:17px}div.tab span:hover{background-color:#ddd}div.tab span.active{background-color:#ccc}.tabcontent{padding:6px 12px;border:1px solid #ccc;border-top:none}.tabcontenthidden{display:none}
+.splashheader .sub-titles {
+    font-weight: 700
+}
+
+.clearfix {
+    clear: both
+}
+
+.splashheader .button-primary {
+    margin: 15px 0 0
+}
+
+.splashheader .ui-tabs .ui-tabs-active a {
+    background-color: #fff
+}
+
+.splashheader #tabs-links-setting .description {
+    font-size: 14px;
+    color: #6c7685;
+    font-weight: 700
+}
+
+.splashheader #tabs-links-setting .label-link-title {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.splashheader .col-header{
+    font-weight:bold;
+    font-size:16px;
+}
+
+.bootstrap-wrapper {
+    @import (less) url(bootstrap.css)
+}
+
+.splashheader #tabs-links-setting input.highlight {
+    animation: yellowfade 2s
+}
+
+.splashheader .survey-wrapper {
+    font-size: 20px;
+    margin: 20px 0 0
+}
+
+.splashheader .survey-wrapper a {
+    color: red;
+    font-weight: 700
+}
+
+@keyframes yellowfade {
+    from {
+        border: 1px solid #ff0;
+        background-color: #ff0
+    }
+    to {
+        background: 0 0
+    }
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1
+}
+
+div.tab span {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: .3s;
+    font-size: 17px
+}
+
+div.tab span:hover {
+    background-color: #ddd
+}
+
+div.tab span.active {
+    background-color: #ccc
+}
+
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none
+}
+
+.tabcontenthidden {
+    display: none
+}

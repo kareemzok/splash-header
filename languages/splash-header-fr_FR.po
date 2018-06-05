@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-11-29 16:56+0200\n"
+"PO-Revision-Date: 2018-06-05 23:21+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
@@ -334,6 +334,18 @@ msgstr "Largeur de la troisième colonne"
 #: splash-header-admin-form.php:516
 msgid "Fourth Col Width"
 msgstr "Largeur de la quatrième colonne"
+
+#: splash-header-admin-form.php:
+msgid "Font weight"
+msgstr "Poids de la police"
+
+#: splash-header-admin-form.php:
+msgid "Font style"
+msgstr "Style de police"
+
+#: splash-header-admin-form.php:
+msgid "Font decoration"
+msgstr "Décoration de police"
 
 #. Plugin Name of the plugin/theme
 msgid "Splash header"

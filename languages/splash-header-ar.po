@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-11-29 17:03+0200\n"
+"PO-Revision-Date: 2018-06-05 23:21+0300\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
 "Last-Translator: \n"
@@ -339,6 +339,18 @@ msgstr "عرض العمود الثالث"
 #: splash-header-admin-form.php:516
 msgid "Fourth Col Width"
 msgstr "عرض العمود الرابع"
+
+#: splash-header-admin-form.php:
+msgid "Font weight"
+msgstr "وزن الخط"
+
+#: splash-header-admin-form.php:
+msgid "Font style"
+msgstr "نوع الخط"
+
+#: splash-header-admin-form.php:
+msgid "Font decoration"
+msgstr "زخرفة الخط"
 
 # #: Plugin Name of the plugin/theme
 msgid "Splash header"

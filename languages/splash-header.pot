@@ -342,6 +342,19 @@ msgstr ""
 msgid "Fourth Col Width"
 msgstr ""
 
+#: splash-header-admin-form.php:
+msgid "Font weight"
+msgstr ""
+
+#: splash-header-admin-form.php:
+msgid "Font style"
+msgstr ""
+
+#: splash-header-admin-form.php:
+msgid "Font decoration"
+msgstr ""
+
+
 #. Plugin Name of the plugin/theme
 msgid "Splash header"
 msgstr ""

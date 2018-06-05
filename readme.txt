@@ -2,7 +2,7 @@
 Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 4.9Stable tag: 1.16.0
+Tested up to: 4.9Stable tag: 1.17.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,7 +68,7 @@ How to install the plugin and get it working.
 Just the usual, deactivate plugin, replace files, activate.
 If you directly updated your plugin from plugin page and changes didn't work please deactivate it then activate.
 == Changelog ==
-= 1.16.0 =* Test compatibility with latest version of wordpress 4.9* Feature   	: Add new option in advanced setting to display time* Feature   	: Add translation for time in admin form* Fix bugs		: Fix tabs anchor to have a better UX* Improvement	: Code formatting improved and cleaning unusfull code
+= 1.17.0 =* Test compatibility with latest version of wordpress 4.9* Feature   	: Add new font options in advanced setting for date and time ( style, weight, decoration )* Feature   	: Add new font options in design setting for title, message and links ( style, weight, decoration )* Improvement	: Refactoring code and better formatting* Improvement	: Arabic/French Translation= 1.16.0 =* Test compatibility with latest version of wordpress 4.9* Feature   	: Add new option in advanced setting to display time* Feature   	: Add translation for time in admin form* Fix bugs		: Fix tabs anchor to have a better UX* Improvement	: Code formatting improved and cleaning unusfull code
 = 1.15.1 =
 * Test compatibility with latest version of wordpress 4.8
 * Add reset button to forms
