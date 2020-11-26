@@ -8,9 +8,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-05 23:21+0300\n"
+"PO-Revision-Date: 2020-11-26 22:33+0200\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.4.2\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: fr_FR\n"
@@ -45,7 +45,7 @@ msgstr "Affichage du Splash Header"
 
 #: splash-header-admin.php:344
 msgid "Plugin Settings"
-msgstr "Paramètres du plugin"
+msgstr "Paramètres de l'extension"
 
 #: splash-header-admin.php:344
 msgid "Design Settings"
@@ -77,7 +77,7 @@ msgstr "dans votre thème pour montrer le"
 
 #: splash-header-admin-form.php:76
 msgid "Plugin Features"
-msgstr "Caractéristiques du plugin"
+msgstr "Caractéristiques de l'extension"
 
 #: splash-header-admin-form.php:88
 msgid "Welcome note with title and message"
@@ -221,7 +221,7 @@ msgstr "Style de bordure du Splash header"
 
 #: splash-header-admin-form.php:307
 msgid "Splash header border color and width in pixel"
-msgstr ""
+msgstr "Couleur et largeur de la bordure du Splash header en pixels"
 
 #: splash-header-admin-form.php:333
 msgid "Title"
@@ -362,3 +362,127 @@ msgstr "Techwebies team"
 #. Author URI of the plugin/theme
 msgid "http://techwebies.com"
 msgstr "http://techwebies.com"
+
+#. Author URI of the plugin/theme
+msgid "Plugin Info"
+msgstr "Information sur l'extension"
+
+#. Author URI of the plugin/theme
+msgid "Name: Splash header"
+msgstr "Nom: Splash header"
+
+#. Author URI of the plugin/theme
+msgid "Author: Zeesweb team"
+msgstr "Auteur: équipe Zeesweb"
+
+#. Author URI of the plugin/theme
+msgid "Email"
+msgstr "Courrier électronique"
+
+#. Author URI of the plugin/theme
+msgid "Contact"
+msgstr "Contacter"
+
+#. Author URI of the plugin/theme
+msgid "Contact Us"
+msgstr "Nous contacter"
+
+#. Author URI of the plugin/theme
+msgid "Try our new social app"
+msgstr "Essayez notre nouvelle application sociale"
+
+#. Author URI of the plugin/theme
+msgid "SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice."
+msgstr "SociaBatt est une application de réseau social qui permet aux utilisateurs de créer des batailles ou des débats en ligne à durée limitée - similaire au vote mais avec votre choix."
+
+#. Author URI of the plugin/theme
+msgid "Take our survey"
+msgstr "Participez à notre enquête"
+
+#. Author URI of the plugin/theme
+msgid "Help us improve the plugin"
+msgstr "Aidez-nous à améliorer l'extension"
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Facebook"
+msgstr "Zeesweb sur Facebook"
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Twitter"
+msgstr "Zeesweb sur Twitter"
+
+#. Author URI of the plugin/theme
+msgid "Size"
+msgstr "Taille"
+
+#. Author URI of the plugin/theme
+msgid "Align"
+msgstr "Aligner"
+
+#. Author URI of the plugin/theme
+msgid "Weight"
+msgstr "Poids"
+
+#. Author URI of the plugin/theme
+msgid "Style"
+msgstr "Style"
+
+#. Author URI of the plugin/theme
+msgid "Decoration"
+msgstr "Décoration"
+
+#. Author URI of the plugin/theme
+msgid "Normal"
+msgstr "Normal"
+
+#. Author URI of the plugin/theme
+msgid "Bolder"
+msgstr "Tres gras"
+
+#. Author URI of the plugin/theme
+msgid "Lighter"
+msgstr "Plus léger"
+
+#. Author URI of the plugin/theme
+msgid "Oblique"
+msgstr "Oblique"
+
+#. Author URI of the plugin/theme
+msgid "Overline"
+msgstr "Surligné"
+
+#. Author URI of the plugin/theme
+msgid "Underline Overline"
+msgstr "Souligner Surligné"
+
+#. Author URI of the plugin/theme
+msgid "Solid"
+msgstr "Solide"
+
+#. Author URI of the plugin/theme
+msgid "None"
+msgstr "Aucun"
+
+#. Author URI of the plugin/theme
+msgid "Dotted"
+msgstr "Pointé"
+
+#. Author URI of the plugin/theme
+msgid "Dashed"
+msgstr "Pointillé"
+
+#. Author URI of the plugin/theme
+msgid "Double"
+msgstr "Doubler"
+
+#. Author URI of the plugin/theme
+msgid "Groove"
+msgstr "Rainure"
+
+#. Author URI of the plugin/theme
+msgid "Inset"
+msgstr "Encart"
+
+#. Author URI of the plugin/theme
+msgid "Outset"
+msgstr "Extérieur"

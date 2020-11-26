@@ -8,12 +8,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-05 23:21+0300\n"
+"PO-Revision-Date: 2020-11-26 22:14+0200\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.4.2\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
-"%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Language: ar\n"
 
 #: splash-header-admin.php:59
@@ -42,7 +41,7 @@ msgstr "إعادة تعيين إلى الافتراضي"
 
 #: splash-header-admin.php:45
 msgid "Splash Header Display"
-msgstr "عرض  Splash Header "
+msgstr "عرض سبلاش هيدر"
 
 #: splash-header-admin.php:344
 msgid "Plugin Settings"
@@ -58,7 +57,7 @@ msgstr "إعدادات متقدمة"
 
 #: splash-header-admin-form.php:4
 msgid "Splash Header"
-msgstr "Splash Header"
+msgstr "سبلاش هيدر"
 
 #: splash-header-admin-form.php:55
 msgid "Instruction"
@@ -98,7 +97,7 @@ msgstr "إضافة رمز مخصص مثل Html أو رمز وورد برس ال�
 
 #: splash-header-admin-form.php:92
 msgid "Ability to style the splash header with color, font size and border style"
-msgstr "إمكانية إضافة اللون وحجم الخط ونمط الحدود على splash header"
+msgstr "إمكانية إضافة اللون وحجم الخط ونمط الحدود على عرض سبلاش هيدر"
 
 #: splash-header-admin-form.php:85
 msgid "Ability to add current date in different format"
@@ -110,11 +109,11 @@ msgstr "يجب القيام به في الإصدارات القادمة"
 
 #: splash-header-admin-form.php:101
 msgid "Ability to reset forms completely or individually"
-msgstr "القدرة على إعادة تعيين النماذج "
+msgstr "القدرة على إعادة تعيين النماذج"
 
 #: splash-header-admin-form.php:111
 msgid "Multiple splash header"
-msgstr "إمكانيات إضافة أكثر من splash header"
+msgstr "إمكانيات إضافة أكثر من عرض سبلاش هيدر"
 
 #: splash-header-admin-form.php:115
 msgid "Add time display as analog, digital or text"
@@ -178,11 +177,10 @@ msgstr "الرابط"
 
 #: splash-header-admin-form.php:227
 msgid ""
-"To use the Font Awesome for icons links please refer to the <a target='_blank' "
-"href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3.  Ex:fa-camera-retro"
+"To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3.  Ex:fa-"
+"camera-retro"
 msgstr ""
-"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' href='http://"
-"fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-retro"
+"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' href='http://fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-retro"
 
 #: splash-header-admin-form.php:241
 msgid "Link of the selected post or page dropdown will be inserted into Link Url field"
@@ -298,7 +296,7 @@ msgstr "القيمة الافتراضية (عدم التحديد) هو تنسي�
 
 #: splash-header-admin-form.php:443
 msgid "For custom value please refer to wordpress custom format date"
-msgstr "للحصول على قيمة المخصص، يرجى الرجوع إلى تاريخ التنسيق والمخصص لووردبرس "
+msgstr "للحصول على قيمة المخصص، يرجى الرجوع إلى تاريخ التنسيق والمخصص لووردبرس"
 
 #: splash-header-admin-form.php:443
 msgid "Time format"
@@ -354,16 +352,140 @@ msgstr "زخرفة الخط"
 
 # #: Plugin Name of the plugin/theme
 msgid "Splash header"
-msgstr "Splash header"
+msgstr "سبلاش هيدر"
 
 # #: Description of the plugin/theme
 msgid "Plugin to create splash header"
-msgstr "إضافة لخلق splash header"
+msgstr "إضافة لخلق سبلاش هيدر"
 
 # #: Author of the plugin/theme
 msgid "Techwebies team"
-msgstr "Techwebies team"
+msgstr "فريق تك وبيز"
 
 # #: Author URI of the plugin/theme
 msgid "http://techwebies.com"
 msgstr "http://techwebies.com"
+
+#. Author URI of the plugin/theme
+msgid "Plugin Info"
+msgstr "معلومات عن الإضافة"
+
+#. Author URI of the plugin/theme
+msgid "Name: Splash header"
+msgstr "الاسم: سبلاش هيدر"
+
+#. Author URI of the plugin/theme
+msgid "Author: Zeesweb team"
+msgstr "المؤلف: فريق Zeesweb"
+
+#. Author URI of the plugin/theme
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. Author URI of the plugin/theme
+msgid "Contact"
+msgstr "اتصل"
+
+#. Author URI of the plugin/theme
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#. Author URI of the plugin/theme
+msgid "Try our new social app"
+msgstr "جرب تطبيقنا الاجتماعي الجديد"
+
+#. Author URI of the plugin/theme
+msgid "SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice."
+msgstr "سوشابات هو تطبيق للشبكات الاجتماعية يتيح للمستخدمين إنشاء معارك أو مناقشات محدودة الوقت على الإنترنت - على غرار التصويت ولكن باختيارك."
+
+#. Author URI of the plugin/theme
+msgid "Take our survey"
+msgstr "شارك في الاستبيان"
+
+#. Author URI of the plugin/theme
+msgid "Help us improve the plugin"
+msgstr "ساعدنا في التحسين"
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Facebook"
+msgstr "Zeesweb موجود على فيسبوك"
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Twitter"
+msgstr "Zeesweb على تويتر"
+
+#. Author URI of the plugin/theme
+msgid "Size"
+msgstr "حجم"
+
+#. Author URI of the plugin/theme
+msgid "Align"
+msgstr "محاذاة"
+
+#. Author URI of the plugin/theme
+msgid "Weight"
+msgstr "ثقل"
+
+#. Author URI of the plugin/theme
+msgid "Style"
+msgstr "نمط"
+
+#. Author URI of the plugin/theme
+msgid "Decoration"
+msgstr "زخرفة"
+
+#. Author URI of the plugin/theme
+msgid "Normal"
+msgstr "عادي"
+
+#. Author URI of the plugin/theme
+msgid "Bolder"
+msgstr "عريض جداً"
+
+#. Author URI of the plugin/theme
+msgid "Lighter"
+msgstr "خفيف"
+
+#. Author URI of the plugin/theme
+msgid "Oblique"
+msgstr "منحرف - مائل"
+
+#. Author URI of the plugin/theme
+msgid "Overline"
+msgstr "فوقه خط"
+
+#. Author URI of the plugin/theme
+msgid "Underline Overline"
+msgstr "تحته و فوقه خط"
+
+#. Author URI of the plugin/theme
+msgid "Solid"
+msgstr "صلب"
+
+#. Author URI of the plugin/theme
+msgid "None"
+msgstr "لا شيء"
+
+#. Author URI of the plugin/theme
+msgid "Dotted"
+msgstr "منقط"
+
+#. Author URI of the plugin/theme
+msgid "Dashed"
+msgstr "متقطع"
+
+#. Author URI of the plugin/theme
+msgid "Double"
+msgstr "مزدوج"
+
+#. Author URI of the plugin/theme
+msgid "Groove"
+msgstr "أخدود"
+
+#. Author URI of the plugin/theme
+msgid "Inset"
+msgstr "حد داخلي"
+
+#. Author URI of the plugin/theme
+msgid "Outset"
+msgstr "حد خارجي"

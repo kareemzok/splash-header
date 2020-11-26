@@ -48,6 +48,28 @@
     font-weight: 700
 }
 
+.splashheader .right-sidebar .postbox .box-title{
+	font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+	font-weight:bold;
+}
+.splashheader .reset-wrapper{
+	float:right;
+}
+.splashheader .reset-btn,
+.splashheader .reset-btn:active,
+.splashheader .reset-btn:focus{
+	background-color:#ff6868;
+	border-color:#ffde94;
+}
+.splashheader .reset-btn:hover{
+	background-color:#32dca5;
+	border-color:#ffde94;
+}
+
+
 @keyframes yellowfade {
     from {
         border: 1px solid #ff0;
@@ -92,3 +114,5 @@ div.tab span.active {
 .tabcontenthidden {
     display: none
 }
+
+

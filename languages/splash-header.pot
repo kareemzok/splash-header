@@ -371,3 +371,126 @@ msgstr ""
 msgid "http://techwebies.com"
 msgstr ""
 
+#. Author URI of the plugin/theme
+msgid "Plugin Info"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Name: Splash header"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Author: Zeesweb team"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Email"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Contact"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Contact Us"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Try our new social app"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Take our survey"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Help us improve the plugin"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Facebook"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Zeesweb on Twitter"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Size"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Align"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Weight"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Style"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Decoration"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Normal"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Bolder"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Lighter"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Oblique"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Overline"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Underline Overline"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Solid"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "None"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Dotted"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Dashed"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Double"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Groove"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Inset"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Outset"
+msgstr ""
