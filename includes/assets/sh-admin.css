@@ -1,0 +1,39 @@
+.splashheader .sub-titles{
+    font-weight: bold;
+}
+.clearfix {
+    clear:both;
+}
+
+.splashheader  .button-primary{
+    margin:15px 0 0 0;
+}
+.splashheader .ui-tabs .ui-tabs-active a{
+	background-color:#fff;
+}
+.splashheader #tabs-links-setting .description{
+    font-size: 14px;
+    color: #6c7685;
+    font-weight: bold;
+}
+.splashheader #tabs-links-setting .label-link-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.bootstrap-wrapper {
+    @import (less) url( 'bootstrap.css' );
+}
+
+.splashheader #tabs-links-setting input.highlight{
+    animation: yellowfade 2s;
+}
+
+@keyframes yellowfade {
+  from {
+    border:1px solid yellow;
+    background-color: yellow;
+  }
+  to {
+    background: transparent;
+  }
+}
