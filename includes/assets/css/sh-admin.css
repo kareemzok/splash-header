@@ -61,12 +61,12 @@
 .splashheader .reset-btn,
 .splashheader .reset-btn:active,
 .splashheader .reset-btn:focus{
-	background-color:#ff6868;
-	border-color:#ffde94;
+	background-color:#79e7e4;
+	border-color:#79e7e4;
 }
 .splashheader .reset-btn:hover{
-	background-color:#32dca5;
-	border-color:#ffde94;
+	background-color:#ffdd5d;
+	border-color:#ffdd5d;
 }
 
 
@@ -116,3 +116,12 @@ div.tab span.active {
 }
 
 
+.sh-nav-tab-wrapper .nav-tab-active{
+	 background: #ffdd5d!important;
+}
+.sh-nav-tab-wrapper .nav-tab{
+	background: #79e7e4;
+}
+.splashheader .postbox{
+	border: 1px solid #ffdd5d;
+}
