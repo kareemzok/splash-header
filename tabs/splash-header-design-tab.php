@@ -1,14 +1,14 @@
     <?php
                                                 // @todo set as global array  
                                                 $border_style_array = array(
-                                                    'solid' => __('Solid', 'splash-header'),
-                                                    'none' => __('None', 'splash-header'),
-                                                    'dotted' => __('Dotted', 'splash-header'),
-                                                    'dashed' => __('Dashed', 'splash-header'),
-                                                    'double' => __('Double', 'splash-header'),
-                                                    'groove' => __('Groove', 'splash-header'),
-                                                    'inset' => __('Inset', 'splash-header'),
-                                                    'outset' => __('Outset', 'splash-header'),
+                                                    'solid' => __('Solid', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'none' => __('None', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'dotted' => __('Dotted', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'dashed' => __('Dashed', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'double' => __('Double', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'groove' => __('Groove', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'inset' => __('Inset', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'outset' => __('Outset', ZEE_SPLASHHEADER_DOMAIN),
                                                 );
 
                                                 $text_align_array = array(
@@ -18,10 +18,10 @@
                                                     'justify' => __('Justify'),
                                                 );
                                                 $font_weight_array = array(
-                                                    'normal' => __('Normal', 'splash-header'),
+                                                    'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
                                                     'bold' => __('Bold'),
-                                                    'bolder' => __('Bolder', 'splash-header'),
-                                                    'lighter' => __('Lighter', 'splash-header'),
+                                                    'bolder' => __('Bolder', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'lighter' => __('Lighter', ZEE_SPLASHHEADER_DOMAIN),
                                                     '100' => __('100'),
                                                     '200' => __('200'),
                                                     '300' => __('300'),
@@ -33,17 +33,17 @@
                                                     '900' => __('900'),
                                                 );
                                                 $font_style_array = array(
-                                                    'normal' => __('Normal', 'splash-header'),
-                                                    'italic' => __('Italic'),
-                                                    'oblique' => __('Oblique', 'splash-header'),
+                                                    'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'italic' => __('Italic', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'oblique' => __('Oblique', ZEE_SPLASHHEADER_DOMAIN),
                                                 );
 
                                                 $font_decoration_array = array(
                                                     'none' => __('None'),
-                                                    'overline' => __('Overline', 'splash-header'),
-                                                    'line-through' => __('Strikethrough'),
-                                                    'underline' => __('Underline'),
-                                                    'underline overline' => __('Underline Overline', 'splash-header'),
+                                                    'overline' => __('Overline', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'line-through' => __('Strikethrough', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'underline' => __('Underline', ZEE_SPLASHHEADER_DOMAIN),
+                                                    'underline overline' => __('Underline Overline', ZEE_SPLASHHEADER_DOMAIN),
                                                 );
                                                 ?>
 
@@ -53,7 +53,7 @@
 
 
 
-                                                <h3 class="handle"><?php echo esc_html("Design", 'splash-header'); ?></h3>
+                                                <h3 class="handle"><?php echo esc_html("Design", ZEE_SPLASHHEADER_DOMAIN); ?></h3>
 
                                                 <table cellspacing="0" class="widefat post">
 
@@ -61,7 +61,7 @@
 
                                                     <tr>
 
-                                                        <td style="" class="manage-column" scope="col" ><?php echo esc_html("Splash header background color", 'splash-header'); ?></td>
+                                                        <td style="" class="manage-column" scope="col" ><?php echo esc_html("Splash header background color", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                                                         <td style="" class="manage-column" scope="col" id="sh_bg_color_picker">
                                                             <input  type="text" class="sh-color-field" id="sh_bg_color" name="sh_bg_color" value="<?php echo get_option('sh_bg_color'); ?>">
@@ -73,7 +73,7 @@
 
                                                     <tr>
 
-                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Splash header border style", 'splash-header'); ?></td>
+                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Splash header border style", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                                                         <td style="" class="manage-column" scope="col">
 
@@ -104,7 +104,7 @@
 
                                                     <tr>
 
-                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Splash header border color and width in pixel", 'splash-header'); ?></td>
+                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Splash header border color and width in pixel", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                                                         <td style="" class="manage-column" scope="col" id="sh_border_color_picker">
 
@@ -143,15 +143,15 @@
                                                     <tr>
                                                         <td></td>
                                                         <td></td>
-                                                        <td class="col-header"><?php echo esc_html("Size", 'splash-header'); ?></td>
-                                                        <td class="col-header"><?php echo esc_html("Align", 'splash-header'); ?></td>
-                                                        <td class="col-header"><?php echo esc_html("Weight", 'splash-header'); ?></td>
-                                                        <td class="col-header"><?php echo esc_html("Style", 'splash-header'); ?></td>
-                                                        <td class="col-header"><?php echo esc_html("Decoration", 'splash-header'); ?></td>
+                                                        <td class="col-header"><?php echo esc_html("Size", ZEE_SPLASHHEADER_DOMAIN); ?></td>
+                                                        <td class="col-header"><?php echo esc_html("Align", ZEE_SPLASHHEADER_DOMAIN); ?></td>
+                                                        <td class="col-header"><?php echo esc_html("Weight", ZEE_SPLASHHEADER_DOMAIN); ?></td>
+                                                        <td class="col-header"><?php echo esc_html("Style", ZEE_SPLASHHEADER_DOMAIN); ?></td>
+                                                        <td class="col-header"><?php echo esc_html("Decoration", ZEE_SPLASHHEADER_DOMAIN); ?></td>
                                                     </tr>
                                                     <tr>
 
-                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Title", 'splash-header'); ?></td>
+                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Title", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                                                         <td style="" class="manage-column" scope="col" id="sh_title_color_picker">
                                                             <input  type="text" class="sh-color-field" id="sh_title_color"  name="sh_title_color" value="<?php echo esc_html(get_option('sh_title_color')); ?>"></td>
@@ -284,7 +284,7 @@
 
                                                     <tr>
 
-                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Message", 'splash-header'); ?></td>
+                                                        <td style="" class="manage-column" scope="col"><?php echo esc_html("Message", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                                                         <td style="" class="manage-column" scope="col" id="sh_message_color_picker"><input  type="text" class="sh-color-field" id="sh_message_color" name="sh_message_color" value="<?php echo esc_html(get_option('sh_message_color')); ?>"></td>
 
@@ -413,7 +413,7 @@
 
                                                         <tr>
 
-                                                            <td style="" class="manage-column" scope="col"><?php echo esc_html("Link title", 'splash-header') . ' ' . $i; ?></td>
+                                                            <td style="" class="manage-column" scope="col"><?php echo esc_html("Link title", ZEE_SPLASHHEADER_DOMAIN) . ' ' . $i; ?></td>
 
                                                             <td style="" class="manage-column" scope="col" id="sh_link_wrapper_title_color_<?php echo esc_html($i); ?>">
                                                                 <input  type="text" class="sh-color-field" id="sh_link_title_color_<?php echo esc_html($i); ?>" name="sh_link_title_color_<?php echo esc_html($i); ?>" value="<?php echo esc_html(get_option('sh_link_title_color_' . $i)); ?>">
