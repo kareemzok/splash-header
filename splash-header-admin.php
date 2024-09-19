@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 2.2.1
+  Version: 2.2.2
   Author: Zeesweb Team
   Text Domain: splash-header
   Author URI: http://zeesweb.com
@@ -797,7 +797,7 @@ add_action('wp_dashboard_setup', 'zee_splash_header_dashboard_widgets');
 
 function zee_splash_header_dashboard_widgets() {
     global $wp_meta_boxes;
-    wp_add_dashboard_widget('custom_help_widget', 'Splash Header Info', 'zee_splash_header_dashboard_help');
+    wp_add_dashboard_widget('custom_help_widget', esc_html__('Splash Header Info', ZEE_SPLASHHEADER_DOMAIN), 'zee_splash_header_dashboard_help');
 }
 
 function zee_splash_header_preview() {
@@ -810,16 +810,14 @@ function zee_splash_header_preview() {
 function zee_splash_header_dashboard_help() {
 
 
-    $dashboard = '<div class="survey-wrapper">
-	<a style=" font-size:16px;"  href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank">Help us improving our plugin by taking this survey!</a> 
-	</div>';
+    $dashboard = '';
 
     $dashboard .= '<div class="survey-wrapper"> <br/>
-	<a style=" font-size:16px;color: red;" href="admin.php?page=' . ZEE_SPLASHHEADER_PLUGIN_SlUG . '&tab=general" target="_blank">Take a look of how the splash header is displayed</a> 
+	<a style=" font-size:16px;color: red;" href="admin.php?page=' . ZEE_SPLASHHEADER_PLUGIN_SlUG . '&tab=general" target="_blank">'.esc_html__('Take a look of how the splash header is displayed', ZEE_SPLASHHEADER_DOMAIN).'</a> 
 	</div>';
 
     $dashboard .= '<br/><br/>
-        <div style="font-size:20px;margin-bottom:20px">Preview of your splash header:</div>';
+        <div style="font-size:20px;margin-bottom:20px">'.esc_html__('Preview of your splash header', ZEE_SPLASHHEADER_DOMAIN).':</div>';
     $allowed_html = array(
         'a' => array(
             'href' => array(),

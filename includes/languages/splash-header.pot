@@ -540,5 +540,19 @@ msgid "900"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "Demo"
+msgid "Example"
 msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Splash Header Info"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Preview of your splash header"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Take a look of how the splash header is displayed"
+msgstr ""
+
+

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Splash header 1.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
 "POT-Creation-Date: 2017-02-17 17:59+0200\n"
-"PO-Revision-Date: 2024-09-19 11:20+0300\n"
+"PO-Revision-Date: 2024-09-19 12:04+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -534,3 +534,15 @@ msgstr "٩٠٠"
 #. Author URI of the plugin/theme
 msgid "Example"
 msgstr "عرض المثال"
+
+#. Author URI of the plugin/theme
+msgid "Splash Header Info"
+msgstr "معلومات عن سبلاش هيدر"
+
+#. Author URI of the plugin/theme
+msgid "Preview of your splash header"
+msgstr "معاينة سبلاش هيدر"
+
+#. Author URI of the plugin/theme
+msgid "Take a look of how the splash header is displayed"
+msgstr "ألق نظرة على كيفية عرض سبلاش هيدر"
