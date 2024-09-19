@@ -73,7 +73,7 @@ if (get_option('sh_show_links_1') == 1) {
             <span class="tablinks" onclick="openTabs(event, 'tabs-links-2')"><?php echo esc_html__('Second links cols', ZEE_SPLASHHEADER_DOMAIN); ?></span>
         </div>
         <div id="tabs-links-1" class="tabcontent">
-            <h3><?php echo esc_html('First links cols', ZEE_SPLASHHEADER_DOMAIN); ?></h3>
+            <h3><?php echo esc_html__('First links cols', ZEE_SPLASHHEADER_DOMAIN); ?></h3>
             <p>
             <table cellspacing="0" class="widefat post">
                 <tr>
@@ -159,7 +159,7 @@ if (get_option('sh_show_links_1') == 1) {
 
                 <tr>
 
-                    <td colspan="2" class="display-links"><input type="checkbox" name="sh_show_links_2" value="1" <?php echo esc_html__($checked_2); ?>><?php echo esc_html("Display second links cols", ZEE_SPLASHHEADER_DOMAIN); ?></td>
+                    <td colspan="2" class="display-links"><input type="checkbox" name="sh_show_links_2" value="1" <?php echo esc_html($checked_2); ?>><?php echo esc_html__("Display second links cols", ZEE_SPLASHHEADER_DOMAIN); ?></td>
 
                 </tr>
 

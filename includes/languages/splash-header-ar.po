@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Splash header 1.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
 "POT-Creation-Date: 2017-02-17 17:59+0200\n"
-"PO-Revision-Date: 2024-09-19 01:26+0300\n"
+"PO-Revision-Date: 2024-09-19 11:20+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -176,11 +176,8 @@ msgid "Link url"
 msgstr "الرابط"
 
 #: splash-header-admin-form.php:227
-msgid ""
-"To use the Font Awesome for icons links please refer to the <a target='_blank' href='http://fontawesome.io/icons/'>documentation</a> v 4.6.3.  Ex:fa-"
-"camera-retro"
-msgstr ""
-"لاستخدام Font Awesome للروابط يرجى الرجوع إلى  <a target='_blank' href='http://fontawesome.io/icons/'>هذا التوثيق</a>   v 4.6.3. Ex:fa-camera-retro"
+msgid "To use the Font Awesome for icons links please refer to the <a target=\"_blank\" href=\"%s\">documentation</a> v5.15.1 Ex:fa-camera-retro"
+msgstr "لاستخدام Font Awesome لروابط الأيقونات، يرجى الرجوع إلى <a target=\"_blank\" href=\"%s\">الوثائق</a> v5.15.1 على سبيل المثال:fa-camera-retro"
 
 #: splash-header-admin-form.php:241
 msgid "Link of the selected post or page dropdown will be inserted into Link Url field"
@@ -439,6 +436,14 @@ msgid "Normal"
 msgstr "عادي"
 
 #. Author URI of the plugin/theme
+msgid "Italic"
+msgstr "مائل"
+
+#. Author URI of the plugin/theme
+msgid "Bold"
+msgstr "عريض"
+
+#. Author URI of the plugin/theme
 msgid "Bolder"
 msgstr "عريض جداً"
 
@@ -489,3 +494,43 @@ msgstr "حد داخلي"
 #. Author URI of the plugin/theme
 msgid "Outset"
 msgstr "حد خارجي"
+
+#. Author URI of the plugin/theme
+msgid "100"
+msgstr "١٠٠"
+
+#. Author URI of the plugin/theme
+msgid "200"
+msgstr "٢٠٠"
+
+#. Author URI of the plugin/theme
+msgid "300"
+msgstr "٣٠٠"
+
+#. Author URI of the plugin/theme
+msgid "400"
+msgstr "٤٠٠"
+
+#. Author URI of the plugin/theme
+msgid "500"
+msgstr "٥٠٠"
+
+#. Author URI of the plugin/theme
+msgid "600"
+msgstr "٦٠٠"
+
+#. Author URI of the plugin/theme
+msgid "700"
+msgstr "٧٠٠"
+
+#. Author URI of the plugin/theme
+msgid "800"
+msgstr "٨٠٠"
+
+#. Author URI of the plugin/theme
+msgid "900"
+msgstr "٩٠٠"
+
+#. Author URI of the plugin/theme
+msgid "Example"
+msgstr "عرض المثال"

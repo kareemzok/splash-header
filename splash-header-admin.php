@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 2.1.4
+  Version: 2.2.1
   Author: Zeesweb Team
   Text Domain: splash-header
   Author URI: http://zeesweb.com
@@ -202,7 +202,7 @@ function zee_splash_header_recentposts_dropdown($counter) {
 
     $elem = '';
 
-    $elem = '<select id="sh_recentpost_' . $counter . '" style="width:180px">
+    $elem = '<select id="sh_recentpost_' . $counter . '" style="width:170px">
 
 		<option  value="" selected>' . __('Select a post', ZEE_SPLASHHEADER_DOMAIN) . '<option>';
 
@@ -232,7 +232,7 @@ function zee_splash_header_recentpages_dropdown($counter) {
 
     $elem = '';
 
-    $elem = '<select id="sh_recentpages_' . $counter . '" style="width:180px">
+    $elem = '<select id="sh_recentpages_' . $counter . '" style="width:170px">
 
 		<option  value="" selected>' . __('Select a page', ZEE_SPLASHHEADER_DOMAIN) . '<option>';
 
@@ -487,7 +487,7 @@ function zee_splash_header_get_date_position($selected_value) {
 
     $elem = '';
 
-    $elem = '<select id="sh_date_position"  name="sh_date_position" style="width:180px">';
+    $elem = '<select id="sh_date_position"  name="sh_date_position" style="width:170px">';
 
     foreach ($positon_arr as $key => $value) {
 
@@ -521,7 +521,7 @@ function zee_splash_header_get_time_position($selected_value) {
 
     $elem = '';
 
-    $elem = '<select id="sh_time_position"  name="sh_time_position" style="width:180px">';
+    $elem = '<select id="sh_time_position"  name="sh_time_position" style="width:170px">';
 
     foreach ($positon_arr as $key => $value) {
 
@@ -548,24 +548,24 @@ function zee_splash_header_get_time_position($selected_value) {
 function zee_splash_header_get_date_font_weight($selected_value) {
 
     $weight_arr = array(
-        'normal' => __('Normal'),
-        'bold' => __('Bold'),
-        'bolder' => __('Bolder'),
-        'lighter' => __('Lighter'),
-        '100' => __('100'),
-        '200' => __('200'),
-        '300' => __('300'),
-        '400' => __('400'),
-        '500' => __('500'),
-        '600' => __('600'),
-        '700' => __('700'),
-        '800' => __('800'),
-        '900' => __('900'),
+        'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
+        'bold' => __('Bold', ZEE_SPLASHHEADER_DOMAIN),
+        'bolder' => __('Bolder', ZEE_SPLASHHEADER_DOMAIN),
+        'lighter' => __('Lighter', ZEE_SPLASHHEADER_DOMAIN),
+        '100' => __('100', ZEE_SPLASHHEADER_DOMAIN),
+        '200' => __('200', ZEE_SPLASHHEADER_DOMAIN),
+        '300' => __('300', ZEE_SPLASHHEADER_DOMAIN),
+        '400' => __('400', ZEE_SPLASHHEADER_DOMAIN),
+        '500' => __('500', ZEE_SPLASHHEADER_DOMAIN),
+        '600' => __('600', ZEE_SPLASHHEADER_DOMAIN),
+        '700' => __('700', ZEE_SPLASHHEADER_DOMAIN),
+        '800' => __('800', ZEE_SPLASHHEADER_DOMAIN),
+        '900' => __('900', ZEE_SPLASHHEADER_DOMAIN),
     );
 
     $elem = '';
 
-    $elem = '<select id="sh_date_font_weight"  name="sh_date_font_weight" style="width:180px">';
+    $elem = '<select id="sh_date_font_weight"  name="sh_date_font_weight" style="width:170px">';
 
     foreach ($weight_arr as $key => $value) {
 
@@ -592,24 +592,24 @@ function zee_splash_header_get_date_font_weight($selected_value) {
 function zee_splash_header_get_time_font_weight($selected_value) {
 
     $weight_arr = array(
-        'normal' => __('Normal'),
-        'bold' => __('Bold'),
-        'bolder' => __('Bolder'),
-        'lighter' => __('Lighter'),
-        '100' => __('100'),
-        '200' => __('200'),
-        '300' => __('300'),
-        '400' => __('400'),
-        '500' => __('500'),
-        '600' => __('600'),
-        '700' => __('700'),
-        '800' => __('800'),
-        '900' => __('900'),
+        'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
+        'bold' => __('Bold', ZEE_SPLASHHEADER_DOMAIN),
+        'bolder' => __('Bolder', ZEE_SPLASHHEADER_DOMAIN),
+        'lighter' => __('Lighter', ZEE_SPLASHHEADER_DOMAIN),
+        '100' => __('100', ZEE_SPLASHHEADER_DOMAIN),
+        '200' => __('200', ZEE_SPLASHHEADER_DOMAIN),
+        '300' => __('300', ZEE_SPLASHHEADER_DOMAIN),
+        '400' => __('400', ZEE_SPLASHHEADER_DOMAIN),
+        '500' => __('500', ZEE_SPLASHHEADER_DOMAIN),
+        '600' => __('600', ZEE_SPLASHHEADER_DOMAIN),
+        '700' => __('700', ZEE_SPLASHHEADER_DOMAIN),
+        '800' => __('800', ZEE_SPLASHHEADER_DOMAIN),
+        '900' => __('900', ZEE_SPLASHHEADER_DOMAIN),
     );
 
     $elem = '';
 
-    $elem = '<select id="sh_time_font_weight"  name="sh_time_font_weight" style="width:180px">';
+    $elem = '<select id="sh_time_font_weight"  name="sh_time_font_weight" style="width:170px">';
 
     foreach ($weight_arr as $key => $value) {
 
@@ -636,14 +636,14 @@ function zee_splash_header_get_time_font_weight($selected_value) {
 function zee_splash_header_get_time_font_style($selected_value) {
 
     $style_arr = array(
-        'normal' => __('Normal'),
-        'italic' => __('Italic'),
-        'oblique' => __('Oblique'),
+        'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
+        'italic' => __('Italic', ZEE_SPLASHHEADER_DOMAIN),
+        'oblique' => __('Oblique', ZEE_SPLASHHEADER_DOMAIN),
     );
 
     $elem = '';
 
-    $elem = '<select id="sh_time_font_style"  name="sh_time_font_style" style="width:180px">';
+    $elem = '<select id="sh_time_font_style"  name="sh_time_font_style" style="width:170px">';
 
     foreach ($style_arr as $key => $value) {
 
@@ -670,16 +670,16 @@ function zee_splash_header_get_time_font_style($selected_value) {
 function zee_splash_header_get_time_font_decoration($selected_value) {
 
     $decoration_arr = array(
-        'none' => __('None'),
-        'overline' => __('Overline'),
-        'line-through' => __('Line through'),
-        'underline' => __('Underline'),
-        'underline overline' => __('Underline overline'),
+        'none' => __('None', ZEE_SPLASHHEADER_DOMAIN),
+        'overline' => __('Overline', ZEE_SPLASHHEADER_DOMAIN),
+        'line-through' => __('Line through', ZEE_SPLASHHEADER_DOMAIN),
+        'underline' => __('Underline', ZEE_SPLASHHEADER_DOMAIN),
+        'underline overline' => __('Underline overline', ZEE_SPLASHHEADER_DOMAIN),
     );
 
     $elem = '';
 
-    $elem = '<select id="sh_time_font_decoration"  name="sh_time_font_decoration" style="width:180px">';
+    $elem = '<select id="sh_time_font_decoration"  name="sh_time_font_decoration" style="width:170px">';
 
     foreach ($decoration_arr as $key => $value) {
 
@@ -706,14 +706,14 @@ function zee_splash_header_get_time_font_decoration($selected_value) {
 function zee_splash_header_get_date_font_style($selected_value) {
 
     $style_arr = array(
-        'normal' => __('Normal'),
-        'italic' => __('Italic'),
-        'oblique' => __('Oblique'),
+        'normal' => __('Normal', ZEE_SPLASHHEADER_DOMAIN),
+        'italic' => __('Italic', ZEE_SPLASHHEADER_DOMAIN),
+        'oblique' => __('Oblique', ZEE_SPLASHHEADER_DOMAIN),
     );
 
     $elem = '';
 
-    $elem = '<select id="sh_date_font_style"  name="sh_date_font_style" style="width:180px">';
+    $elem = '<select id="sh_date_font_style"  name="sh_date_font_style" style="width:170px">';
 
     foreach ($style_arr as $key => $value) {
 
@@ -740,15 +740,15 @@ function zee_splash_header_get_date_font_style($selected_value) {
 function zee_splash_header_get_date_font_decoration($selected_value) {
 
     $decorationt_arr = array(
-        'none' => __('None'),
-        'overline' => __('Overline'),
-        'line-through' => __('Line through'),
-        'underline' => __('Underline'),
-        'underline overline' => __('Underline overline'),
+        'none' => __('None', ZEE_SPLASHHEADER_DOMAIN),
+        'overline' => __('Overline', ZEE_SPLASHHEADER_DOMAIN),
+        'line-through' => __('Line through', ZEE_SPLASHHEADER_DOMAIN),
+        'underline' => __('Underline', ZEE_SPLASHHEADER_DOMAIN),
+        'underline overline' => __('Underline overline', ZEE_SPLASHHEADER_DOMAIN),
     );
     $elem = '';
 
-    $elem = '<select id="sh_date_font_decoration"  name="sh_date_font_decoration" style="width:180px">';
+    $elem = '<select id="sh_date_font_decoration"  name="sh_date_font_decoration" style="width:170px">';
 
     foreach ($decorationt_arr as $key => $value) {
 

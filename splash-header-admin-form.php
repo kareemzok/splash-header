@@ -1,6 +1,6 @@
 <div id="fb-root"></div>
 
-<h3><?php echo esc_html("Splash Header", ZEE_SPLASHHEADER_DOMAIN); ?></h3>
+<h3><?php echo esc_html__("Splash Header", ZEE_SPLASHHEADER_DOMAIN); ?></h3>
 
 <?php settings_errors(); ?>
 
@@ -71,7 +71,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                             <?php wp_nonce_field('update-options'); ?>
 
-                                            <div class="survey-wrapper"><a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><?php echo esc_html("Help us improving our plugin by taking this survey", ZEE_SPLASHHEADER_DOMAIN); ?> !</a> </div>
+                                            <div class="survey-wrapper"><a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><?php echo esc_html__("Help us improving our plugin by taking this survey", ZEE_SPLASHHEADER_DOMAIN); ?> !</a> </div>
 
                                             <?php
                                             if ($tab == 'general') {
@@ -143,20 +143,20 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">
-                                            <span><?php echo esc_html("Plugin Info", ZEE_SPLASHHEADER_DOMAIN); ?></span>
+                                            <span><?php echo esc_html__("Plugin Info", ZEE_SPLASHHEADER_DOMAIN); ?></span>
                                         </div>
                                     </div>
 
                                     <div class="inside">
 
-                                        <p><a href="https://www.zeesweb.com/our-products/#1597485098433-bdfd2e81-64ac" target="_blank"><?php echo esc_html("Name: Splash header", ZEE_SPLASHHEADER_DOMAIN); ?></a></p>
+                                        <p><a href="https://www.zeesweb.com/our-products/#1597485098433-bdfd2e81-64ac" target="_blank"><?php echo esc_html__("Name: Splash header", ZEE_SPLASHHEADER_DOMAIN); ?></a></p>
 
 
-                                        <p><a href="http://www.zeesweb.com" target="_blank"><?php echo esc_html("Author: Zeesweb team", ZEE_SPLASHHEADER_DOMAIN); ?><a /></p>
+                                        <p><a href="http://www.zeesweb.com" target="_blank"><?php echo esc_html__("Author: Zeesweb team", ZEE_SPLASHHEADER_DOMAIN); ?><a /></p>
 
-                                        <p><?php echo esc_html("Email", ZEE_SPLASHHEADER_DOMAIN); ?>: <a href="mailto:info@zeesweb.com" target="_blank">info@zeesweb.com</a></p>
+                                        <p><?php echo esc_html__("Email", ZEE_SPLASHHEADER_DOMAIN); ?>: <a href="mailto:info@zeesweb.com" target="_blank">info@zeesweb.com</a></p>
 
-                                        <p><?php echo esc_html("Contact", ZEE_SPLASHHEADER_DOMAIN); ?>: <a href="http://www.zeesweb.com/#contact" target="_blank"><?php echo esc_html("Contact Us", ZEE_SPLASHHEADER_DOMAIN); ?></a></p>
+                                        <p><?php echo esc_html__("Contact", ZEE_SPLASHHEADER_DOMAIN); ?>: <a href="http://www.zeesweb.com/#contact" target="_blank"><?php echo esc_html("Contact Us", ZEE_SPLASHHEADER_DOMAIN); ?></a></p>
 
                                     </div>
 
@@ -167,13 +167,13 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                 <div class="postbox">
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">
-                                            <span><?php echo esc_html("Try our new social app", ZEE_SPLASHHEADER_DOMAIN); ?></span>
+                                            <span><?php echo esc_html__("Try our new social app", ZEE_SPLASHHEADER_DOMAIN); ?></span>
                                         </div>
                                     </div>
                                     <div class="inside">
 
                                         <a href="https://www.sociabatt.com/" target="_blank"><img src="<?php echo plugins_url('assets/img/sociabatt.png', __FILE__); ?>" /></a>
-                                        <p><b><?php echo esc_html("SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice.", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
+                                        <p><b><?php echo esc_html__("SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice.", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
 
                                     </div>
 
@@ -184,7 +184,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                 <div class="postbox">
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">
-                                            <span><?php echo esc_html("Take our survey", ZEE_SPLASHHEADER_DOMAIN); ?></span>
+                                            <span><?php echo esc_html__("Take our survey", ZEE_SPLASHHEADER_DOMAIN); ?></span>
                                         </div>
                                     </div>
 
@@ -193,7 +193,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                         <a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo plugins_url('assets/img/survey.png', __FILE__); ?>" /></a>
 
-                                        <p><b> <?php echo esc_html("Help us improve the plugin", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
+                                        <p><b> <?php echo esc_html__("Help us improve the plugin", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
 
                                     </div>
 
@@ -209,7 +209,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">
-                                            <span><?php echo esc_html("Zeesweb on Facebook", ZEE_SPLASHHEADER_DOMAIN); ?></span>
+                                            <span><?php echo esc_html__("Zeesweb on Facebook", ZEE_SPLASHHEADER_DOMAIN); ?></span>
                                         </div>
                                     </div>
 
@@ -235,12 +235,12 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">
-                                            <span><?php echo esc_html("Zeesweb on Twitter", ZEE_SPLASHHEADER_DOMAIN); ?></span>
+                                            <span><?php echo esc_html__("Zeesweb on Twitter", ZEE_SPLASHHEADER_DOMAIN); ?></span>
                                         </div>
                                     </div>
                                     <div class="inside">
 
-                                        <a class="twitter-timeline" data-height="500" href="https://twitter.com/ZeeSWEB"><?php echo esc_html("Tweets by ZeeSWEB", ZEE_SPLASHHEADER_DOMAIN); ?>
+                                        <a class="twitter-timeline" data-height="500" href="https://twitter.com/ZeeSWEB"><?php echo esc_html__("Tweets by ZeeSWEB", ZEE_SPLASHHEADER_DOMAIN); ?>
                                         </a>
 
                                         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

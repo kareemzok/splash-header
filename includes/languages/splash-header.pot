@@ -444,6 +444,14 @@ msgid "Normal"
 msgstr ""
 
 #. Author URI of the plugin/theme
+msgid "Italic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Bold"
+msgstr ""
+
+#. Author URI of the plugin/theme
 msgid "Bolder"
 msgstr ""
 
@@ -493,4 +501,44 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "Outset"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "100"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "200"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "300"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "400"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "500"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "600"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "700"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "800"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "900"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "Demo"
 msgstr ""
