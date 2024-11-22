@@ -160,9 +160,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     </div>
 
-                                    <!-- .inside -->
 
                                 </div>
+                                <!--
 
                                 <div class="postbox">
                                     <div class="postbox-header">
@@ -177,10 +177,9 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     </div>
 
-                                    <!-- .inside -->
 
-                                </div>
-
+                                    </div>
+                                            -->
                                 <div class="postbox">
                                     <div class="postbox-header">
                                         <div class="hndle ui-sortable-handle box-title">

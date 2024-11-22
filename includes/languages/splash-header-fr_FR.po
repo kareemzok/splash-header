@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Splash header 1.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/splash-header\n"
 "POT-Creation-Date: 2017-02-15 21:58+0200\n"
-"PO-Revision-Date: 2024-09-19 12:04+0300\n"
+"PO-Revision-Date: 2024-11-22 11:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -176,8 +176,8 @@ msgid "Link url"
 msgstr "Lien"
 
 #: splash-header-admin-form.php:11
-msgid "To use the Font Awesome for icons links please refer to the <a target=\"_blank\" href=\"%s\">documentation</a> v5.15.1 Ex:fa-camera-retro"
-msgstr "Pour utiliser Font Awesome pour les liens d'icônes, veuillez vous référer à la <a target=\\\"_blank\\\" href=\\\"%s\\\">documentation</a> v5.15.1 Ex : fa-camera-retro"
+msgid "To use the Font Awesome for icons links please refer to the <a target=\"_blank\" href=\"%s\">documentation</a> v6.7.1 Ex:fa-camera-retro"
+msgstr "Pour utiliser Font Awesome pour les liens d'icônes, veuillez vous référer à la <a target=\\\"_blank\\\" href=\\\"%s\\\">documentation</a> v6.7.1 Ex : fa-camera-retro"
 
 #: splash-header-admin-form.php:241
 msgid "Link of the selected post or page dropdown will be inserted into Link Url field"

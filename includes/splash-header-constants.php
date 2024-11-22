@@ -4,7 +4,7 @@
 define('ZEE_SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ZEE_SPLASHHEADER__LANG_URL', plugin_basename(dirname(__FILE__)) . '/languages/');
 define('ZEE_SPLASHHEADER_ASSETS', 'assets/');
-define('ZEE_SPLASHHEADER_VERSION', '2.2.2');
+define('ZEE_SPLASHHEADER_VERSION', '2.3.0');
 
 //define the root url of the plugin
 define('ZEE_SPLASHHEADER_PLUGIN_SlUG', 'splash-header');

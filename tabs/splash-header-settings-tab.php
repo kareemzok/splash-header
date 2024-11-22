@@ -59,8 +59,8 @@ if (get_option('sh_show_links_1') == 1) {
                     <p class="description">
                         *<?php
                             printf(
-                                __('To use the Font Awesome for icons links please refer to the <a target="_blank" href="%s">documentation</a> v5.15.1 Ex:fa-camera-retro', ZEE_SPLASHHEADER_DOMAIN),
-                                'http://fontawesome.io/icons/'
+                                __('To use the Font Awesome for icons links please refer to the <a target="_blank" href="%s">documentation</a> v6.7.1 Ex:fa-camera-retro', ZEE_SPLASHHEADER_DOMAIN),
+                                'https://fontawesome.com/v6/search?o=r&m=free'
                             );
                             ?>
                     </p>
