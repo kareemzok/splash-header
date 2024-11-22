@@ -3,7 +3,7 @@
 Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
-Tested up to: 6.6
+Tested up to: 6.7.x
 Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,22 +26,22 @@ Features:
 *   Ability to add a current date in different format
 
 
-Demo link to preview ( the box in yellow ): https://www.techwebies.com/about-us/
+Demo link to preview (the box in yellow): [Techwebies](https://www.techwebies.com/about-us/)
 
 
-> <strong>Bug Reports</strong><br>
+<strong>Bug Reports</strong><br>
 
 > Bug reports for Splash Header are also [welcomed on GitHub](https://github.com/kareemzok/splash-header). 
 
-Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed. 
+> Please note GitHub is _not_ a support forum, and issues that aren't properly qualified as bugs will be closed. 
 Support or help is welcomed by sending email to info@zeesweb.com.
 
 
-> <strong>Problems and Support</strong><br>
+<strong>Problems and Support</strong><br>
 
 > To get faster response You can create a Topics our Website [Support Forum](https://wordpress.org/support/plugin/splash-header) Contact Page.
 
-If you have any query about Splah Header then please check our [F.A.Q.](https://wordpress.org/plugins/splash-header/faq/)
+> If you have any query about Splah Header then please check our [F.A.Q.](https://wordpress.org/plugins/splash-header/faq/)
 
 
 
@@ -112,6 +112,13 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 
 
 == Changelog ==
+
+= 2.3.0 =
+
+* Tested compatibility with latest version of wordpress 6.7.x
+* Update ReadME file
+* Upgrade Font Awsome library from 5.x to 6.7.1 (free version)
+* Update translation in some text
 
 = 2.2.2 =
 
