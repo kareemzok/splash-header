@@ -1,1 +1,104 @@
-.sh-clearfix{clear:both}.splash-header{margin-bottom:2%!important;overflow:hidden;padding:2%}.splash-header .sh-col{float:left}.splash-header .sh-col-25{width:25%}.splash-header .sh-col-33{width:33%}.splash-header .sh-col-50{width:50%}.splash-header .sh-col-100{width:100%}.splash-header .sh-message{text-align:left}.splash-header .sh-links{text-align:center;padding:20px}.splash-header .sh-links a{margin:0 0 0 10px}.splash-header .icon img{height:32px;width:32px}.splash-header .splash-header-date .left{text-align:left}.splash-header .splash-header-date .center{text-align:center}.splash-header .splash-header-date .right{text-align:right}.splash-header .no-timezone{color:red}@media (max-width:550px){.splash-header .sh-col{float:none}.splash-header .sh-col-25,.splash-header .sh-col-33,.splash-header .sh-col-50{width:100%!important}}
+.sh-clearfix {
+    clear: both;
+}
+
+.splash-header {
+    position: relative;
+    margin: 0 auto 2% !important;
+    padding: 2%;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+    background-clip: padding-box;
+}
+
+.splash-header .sh-col {
+    float: left;
+}
+
+.splash-header .sh-col-25 {
+    width: 25%;
+}
+
+.splash-header .sh-col-33 {
+    width: 33%;
+}
+
+.splash-header .sh-col-50 {
+    width: 50%;
+}
+
+.splash-header .sh-col-100 {
+    width: 100%;
+}
+
+.splash-header .sh-title {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.splash-header .sh-message {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.splash-header .sh-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.splash-header .sh-links span {
+    flex: 0 0 auto;
+}
+
+.splash-header .sh-links a {
+    margin: 0;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.splash-header .sh-links a:hover {
+    text-decoration: underline;
+}
+
+.splash-header .icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.splash-header .splash-header-date,
+.splash-header .splash-header-time {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.splash-header .no-timezone {
+    color: #d14343;
+}
+
+@media (max-width: 700px) {
+    .splash-header {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .splash-header .sh-col {
+        float: none;
+    }
+
+    .splash-header .sh-col-25,
+    .splash-header .sh-col-33,
+    .splash-header .sh-col-50 {
+        width: 100% !important;
+    }
+
+    .splash-header .sh-links {
+        justify-content: flex-start;
+        text-align: left;
+        padding: 10px 0;
+    }
+}

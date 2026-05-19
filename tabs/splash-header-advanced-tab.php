@@ -13,8 +13,11 @@
 
             <th style="" class="manage-column" scope="col"><?php echo esc_html__("Container Width", ZEE_SPLASHHEADER_DOMAIN); ?>: </th> 
 
-            <td><input type="text" id="sh_width"  name="sh_width" value="<?php echo esc_html(get_option('sh_width')); ?>" size="10">%                                                     
-
+            <td>
+                <span class="sh-inline-percent">
+                    <input type="text" id="sh_width" name="sh_width" value="<?php echo esc_html(get_option('sh_width')); ?>" size="10">
+                    <span class="sh-inline-percent-symbol">%</span>
+                </span>
             </td>
 
         </tr>
@@ -41,8 +44,11 @@
 
                 <th style="" class="manage-column" scope="col"><?php echo esc_html__($arr_text[$j], ZEE_SPLASHHEADER_DOMAIN); ?>: </th>
 
-                <td><input type="text" id="sh_col_width_<?php echo esc_html($i); ?>" name="sh_col_width_<?php echo esc_html($i); ?>" value="<?php echo esc_html(get_option('sh_col_width_' . $i)); ?>" size="10">%                                                     
-
+                <td>
+                    <span class="sh-inline-percent">
+                        <input type="text" id="sh_col_width_<?php echo esc_html($i); ?>" name="sh_col_width_<?php echo esc_html($i); ?>" value="<?php echo esc_html(get_option('sh_col_width_' . $i)); ?>" size="10">
+                        <span class="sh-inline-percent-symbol">%</span>
+                    </span>
                 </td>
 
             </tr>
