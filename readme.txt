@@ -120,7 +120,10 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 * Centralize plugin bootstrap and hook registration for cleaner internal structure
 * Centralize option definitions and sanitization while preserving existing option keys
 * Standardize runtime asset loading to the root `assets` directory and remove duplicated internal asset copies
-* Prepare the codebase for the upcoming admin UI and documentation polish pass
+* Refresh the admin styling and frontend splash header styling with a cleaner, more modern presentation
+* Rewrite the admin JavaScript into a clearer structure and activate the first tab group automatically on load
+* Improve the advanced settings layout by tightening percentage inputs and aligning the `%` indicator beside each field
+* Prepare the codebase for the remaining documentation and validation pass
 	
 ## = 2.3.0 =
 
