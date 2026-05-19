@@ -1,0 +1,4 @@
+interface:
+  display_name: "WordPress Plugin Engineer"
+  short_description: "Expert guidance for WordPress plugin PHP work"
+  default_prompt: "Use $wordpress-plugin-engineer to implement, debug, or review a WordPress plugin PHP change."

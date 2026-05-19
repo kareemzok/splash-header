@@ -113,6 +113,15 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 
 # == Changelog ==
 
+## = Unreleased =
+
+* Refactor plugin rendering into a shared renderer used by both the shortcode output and the dashboard preview
+* Improve shortcode compatibility by returning rendered content instead of echoing directly
+* Centralize plugin bootstrap and hook registration for cleaner internal structure
+* Centralize option definitions and sanitization while preserving existing option keys
+* Standardize runtime asset loading to the root `assets` directory and remove duplicated internal asset copies
+* Prepare the codebase for the upcoming admin UI and documentation polish pass
+	
 ## = 2.3.0 =
 
 * Tested compatibility with latest version of wordpress 6.7.x

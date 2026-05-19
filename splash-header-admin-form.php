@@ -7,38 +7,16 @@
 <?php
 //The text domain name is  used to form the name of the MO file for your plugin
 
-global $tab;
+$tab = zee_splash_header_get_current_tab();
 
 // check which current tab is and add actvate class 
 
 zee_splash_header_admin_tabs($tab);
 
 
-$splashheader_settings_data = array('sh_title,sh_message,sh_show,sh_show_links_1,sh_show_links_2,sh_code_message,sh_show_custom_code');
-
-$splashheader_design_data = array('sh_title_color,sh_bg_color,sh_message_color,sh_title_font_size,sh_title_text_align, sh_title_font_weight,sh_title_font_style,sh_title_font_decoration,sh_message_font_size,sh_message_text_align,sh_message_font_weight,sh_message_font_style,sh_message_font_decoration,sh_border_width,sh_border_color,sh_border_style');
-
-$splashheader_advanced_settings = array('sh_width', 'sh_show_clock_date', 'sh_show_clock_time', 'sh_date_format', 'sh_date_position', 'sh_date_font_size', 'sh_date_font_color', 'sh_date_font_weight', 'sh_date_font_style', 'sh_date_font_decoration', 'sh_time_format', 'sh_time_position', 'sh_time_font_size', 'sh_time_font_color', 'sh_time_font_weight', 'sh_time_font_style', 'sh_time_font_decoration');
-
-
-for ($i = 1; $i <= 6; $i++) {
-
-    if ($i <= 4) {
-
-        array_push($splashheader_advanced_settings, 'sh_col_width_' . $i);
-    }
-
-    array_push($splashheader_settings_data, 'sh_link_title_' . $i, 'sh_link_url_' . $i, 'sh_font_icon_' . $i, 'sh_link_open_' . $i);
-
-    array_push($splashheader_design_data, 'sh_link_title_color_' . $i, 'sh_link_font_size_' . $i, 'sh_link_text_align_' . $i, 'sh_link_font_weight_' . $i, 'sh_link_font_style_' . $i, 'sh_link_font_decoration_' . $i);
-}
-
-
-$splashheader_settings_data = implode(",", $splashheader_settings_data);
-
-$splashheader_design_data = implode(",", $splashheader_design_data);
-
-$splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
+$splashheader_settings_data = Splash_Header_Settings::get_page_options_csv('settings');
+$splashheader_design_data = Splash_Header_Settings::get_page_options_csv('design');
+$splashheader_advanced_settings = Splash_Header_Settings::get_page_options_csv('advanced');
 ?>
 
 <div class="wrap splashheader">
@@ -172,7 +150,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
                                     </div>
                                     <div class="inside">
 
-                                        <a href="https://www.sociabatt.com/" target="_blank"><img src="<?php echo plugins_url('assets/img/sociabatt.png', __FILE__); ?>" /></a>
+                                        <a href="https://www.sociabatt.com/" target="_blank"><img src="<?php echo esc_url(ZEE_SPLASHHEADER_ASSET_URL . 'img/sociabatt.png'); ?>" /></a>
                                         <p><b><?php echo esc_html__("SociaBatt is a social network app that allows users to create limited time online battles or debates - similar to voting but with your choice.", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
 
                                     </div>
@@ -190,7 +168,7 @@ $splashheader_advanced_settings = implode(",", $splashheader_advanced_settings);
 
                                     <div class="inside">
 
-                                        <a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo plugins_url('assets/img/survey.png', __FILE__); ?>" /></a>
+                                        <a href="https://goo.gl/forms/lf71KyVdnTrudXpx1" target="_blank"><img src="<?php echo esc_url(ZEE_SPLASHHEADER_ASSET_URL . 'img/survey.png'); ?>" /></a>
 
                                         <p><b> <?php echo esc_html__("Help us improve the plugin", ZEE_SPLASHHEADER_DOMAIN); ?></b></p>
 

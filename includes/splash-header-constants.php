@@ -1,9 +1,11 @@
 <?php
 
 // define variables 
-define('ZEE_SPLASHHEADER__PLUGIN_URL', plugin_dir_url(__FILE__));
+define('ZEE_SPLASHHEADER_PLUGIN_DIR', plugin_dir_path(dirname(__FILE__)));
+define('ZEE_SPLASHHEADER_PLUGIN_URL', plugin_dir_url(dirname(__FILE__)));
+define('ZEE_SPLASHHEADER_ASSET_DIR', ZEE_SPLASHHEADER_PLUGIN_DIR . 'assets/');
+define('ZEE_SPLASHHEADER_ASSET_URL', ZEE_SPLASHHEADER_PLUGIN_URL . 'assets/');
 define('ZEE_SPLASHHEADER__LANG_URL', plugin_basename(dirname(__FILE__)) . '/languages/');
-define('ZEE_SPLASHHEADER_ASSETS', 'assets/');
 define('ZEE_SPLASHHEADER_VERSION', '2.3.1');
 
 //define the root url of the plugin

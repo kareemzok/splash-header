@@ -4,7 +4,7 @@
     <tbody> 
         <tr> 
             <td>       
-                <img width="100%" src="<?php echo plugins_url('assets/img/demo-image.jpg', __FILE__); ?>?r=<?php echo time(); ?>" />
+                <img width="100%" src="<?php echo esc_url(ZEE_SPLASHHEADER_ASSET_URL . 'img/demo-image.jpg'); ?>?r=<?php echo time(); ?>" />
             </td>
         </tr>
     </tbody>

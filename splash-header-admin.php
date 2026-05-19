@@ -16,16 +16,8 @@ if (!defined('WPINC')) {
     die;
 }
 require_once plugin_dir_path(__FILE__) . 'includes/splash-header-constants.php';
-
-
-// register fonctions 
-register_activation_hook(__FILE__, 'zee_splash_header_activate');
-register_deactivation_hook(__FILE__, 'zee_splash_header_deactivation');
-
-if (isset($_GET['tab']))
-    $tab = sanitize_title_for_query($_GET['tab']);
-else
-    $tab = 'general';
+require_once plugin_dir_path(__FILE__) . 'includes/class-splash-header-plugin.php';
+require_once plugin_dir_path(__FILE__) . 'includes/class-splash-header-settings.php';
 
 /**
  *  Plugin init .
@@ -41,9 +33,23 @@ function zee_splashheader_init() {
 
 }
 
+/**
+ * Get the current admin tab.
+ *
+ * @return string
+ */
+function zee_splash_header_get_current_tab() {
+
+    if (isset($_GET['tab'])) {
+        return sanitize_title_for_query(wp_unslash($_GET['tab']));
+    }
+
+    return 'general';
+}
+
 function zee_splash_header_admin() {
 
-    include('splash-header-admin-form.php');
+    include plugin_dir_path(__FILE__) . 'splash-header-admin-form.php';
 }
 
 /**
@@ -51,15 +57,13 @@ function zee_splash_header_admin() {
  */
 function zee_splash_header_admin_menu() {
 
-    global $tab;
-
     // get tabs label
 
-    $tablabel = zee_splashheader_get_tab_label($tab);
+    $tablabel = zee_splashheader_get_tab_label(zee_splash_header_get_current_tab());
 
     // This adds the main menu page
 
-    add_menu_page(__('Splash Header Display'), __('Splash Header'), 'manage_options', ZEE_SPLASHHEADER_PLUGIN_SlUG, 'zee_splash_header_admin', plugins_url('splash-header') . '/assets/menu-icon.png');
+    add_menu_page(__('Splash Header Display'), __('Splash Header'), 'manage_options', ZEE_SPLASHHEADER_PLUGIN_SlUG, 'zee_splash_header_admin', ZEE_SPLASHHEADER_ASSET_URL . 'menu-icon.png');
 
     add_submenu_page(ZEE_SPLASHHEADER_PLUGIN_SlUG, $tablabel, __('General'), 'manage_options', ZEE_SPLASHHEADER_PLUGIN_SlUG, 'zee_splash_header_admin');
 
@@ -85,12 +89,12 @@ function zee_splash_header_load_resources() {
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('wp-color-picker');
         wp_enqueue_style('thickbox');
-        wp_register_style('splash-header', ZEE_SPLASHHEADER__PLUGIN_URL . ZEE_SPLASHHEADER_ASSETS . 'css/sh-admin.css?t='.time(), array(), ZEE_SPLASHHEADER_VERSION);
+        wp_register_style('splash-header', ZEE_SPLASHHEADER_ASSET_URL . 'css/sh-admin.css?t='.time(), array(), ZEE_SPLASHHEADER_VERSION);
         wp_enqueue_style(ZEE_SPLASHHEADER_DOMAIN);
         // load media library
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
-        wp_register_script('splash-header', ZEE_SPLASHHEADER__PLUGIN_URL . ZEE_SPLASHHEADER_ASSETS . 'js/splashheader.js', array(), ZEE_SPLASHHEADER_VERSION);
+        wp_register_script('splash-header', ZEE_SPLASHHEADER_ASSET_URL . 'js/splashheader.js', array(), ZEE_SPLASHHEADER_VERSION);
         wp_enqueue_script(ZEE_SPLASHHEADER_DOMAIN);
     }
 }
@@ -115,9 +119,6 @@ function zee_splash_header_deactivation() {
     Splash_Header_Deactivator::deactivate();
 }
 
-
-add_action('init', 'zee_splashheader_init');
-
 /**
 
  *  Plugin setting page link .
@@ -132,10 +133,6 @@ function zee_add_splashheader_settings_link($links) {
     return $links;
 }
 
-$plugin = plugin_basename(__FILE__);
-
-add_filter("plugin_action_links_$plugin", 'zee_add_splashheader_settings_link');
-
 /**
 
  * Plugin short code .
@@ -144,10 +141,8 @@ add_filter("plugin_action_links_$plugin", 'zee_add_splashheader_settings_link');
 function zee_splashheader_shortcode() {
 
     require_once plugin_dir_path(__FILE__) . 'includes/class-splash-header-shortcodes.php';
-    Splash_Header_Shortcodes::splash_header_short_code();
+    return Splash_Header_Shortcodes::splash_header_short_code();
 }
-
-add_shortcode('splashheader', 'zee_splashheader_shortcode');
 
 /**
 
@@ -784,16 +779,15 @@ function zee_splash_header_register_buttons_editor($buttons) {
     return $buttons;
 }
 
-add_filter("mce_buttons", "zee_splash_header_register_buttons_editor");
-
 function ajax_splashheader_dashboard_welcome() {
-    include(ZEE_SPLASHHEADER__PLUGIN_URL . '/views/wordpress-dashboard-welcome-page.php');
-    exit;
+    $view_file = plugin_dir_path(__FILE__) . 'views/wordpress-dashboard-welcome-page.php';
+
+    if (file_exists($view_file)) {
+        include $view_file;
+    }
+
+    wp_die();
 }
-
-add_action('wp_ajax_splashheader_dashboard_welcome', 'ajax_splashheader_dashboard_welcome');
-
-add_action('wp_dashboard_setup', 'zee_splash_header_dashboard_widgets');
 
 function zee_splash_header_dashboard_widgets() {
     global $wp_meta_boxes;
@@ -836,4 +830,4 @@ function zee_splash_header_dashboard_help() {
     zee_splash_header_preview();
 }
 
-?>
+Splash_Header_Plugin::boot(__FILE__);
