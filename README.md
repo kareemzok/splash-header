@@ -4,7 +4,7 @@ Contributors: kareemzok
 Tags: content, shortcode
 Requires at least: 3.0
 Tested up to: 6.7.1
-Stable tag: 2.3.1
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,7 +113,7 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 
 # == Changelog ==
 
-## = Unreleased =
+## = 2.4.0 =
 
 * Refactor plugin rendering into a shared renderer used by both the shortcode output and the dashboard preview
 * Improve shortcode compatibility by returning rendered content instead of echoing directly
@@ -125,6 +125,10 @@ If you directly updated your plugin from plugin page and changes didn't work ple
 * Improve the advanced settings layout by tightening percentage inputs and aligning the `%` indicator beside each field
 * Prepare the codebase for the remaining documentation and validation pass
 	
+## = 2.3.1 =
+
+* Tested compatibility with latest version of wordpress 7.x
+
 ## = 2.3.0 =
 
 * Tested compatibility with latest version of wordpress 6.7.x

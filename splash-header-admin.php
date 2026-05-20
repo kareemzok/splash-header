@@ -4,7 +4,7 @@
   Plugin Name: Splash header
   Plugin URI:
   Description: Plugin to create splash header
-  Version: 2.3.1
+  Version: 2.4.0
   Author: Zeesweb Team
   Text Domain: splash-header
   Author URI: http://zeesweb.com
